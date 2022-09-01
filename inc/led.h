@@ -8,8 +8,8 @@
 #define LED_GPIO_PIN			GPIO_PIN_13
 
 //IO²Ù×÷º¯Êý
-#define LED_GPIO_SET()			do{GPIO_Pins_Set(LED_GPIO_PORT,LED_GPIO_PIN);}while(0);
-#define LED_GPIO_RESET() 		do{GPIO_Pins_Reset(LED_GPIO_PORT,LED_GPIO_PIN);}while(0);
+#define LED_GPIO_SET()			{ do{GPIO_Pins_Set(LED_GPIO_PORT,LED_GPIO_PIN);}while(0); }
+#define LED_GPIO_RESET() 		{ do{GPIO_Pins_Reset(LED_GPIO_PORT,LED_GPIO_PIN);}while(0); }
 
 #define LED_On		LED_GPIO_RESET()
 #define	LED_Off		LED_GPIO_SET()

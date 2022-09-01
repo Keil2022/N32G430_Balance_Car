@@ -28,7 +28,7 @@ void Key_Scanf(void)
     {
 		case 0:
 					//按键1
-					if(KEY == KEY_Press)
+					if(KEY_Status == KEY_Press)
 					{
 						KEY_TimeCount++;
 						if(KEY_TimeCount >=  KEY_LongTime)
@@ -46,7 +46,7 @@ void Key_Scanf(void)
         
         
         case 1:
-					if(KEY == KEY_Press)
+					if(KEY_Status == KEY_Press)
 					{
 						KEY_TimeCount++;
 						if(KEY_TimeCount >= KEY_EndTime)
@@ -64,7 +64,7 @@ void Key_Scanf(void)
         
         
         case 2:
-					if(KEY == KEY_Lift)		//等待松手
+					if(KEY_Status == KEY_Lift)		//等待松手
 					{
 						KEY_Phase = 0;
 						KEY_TimeCount = 0;

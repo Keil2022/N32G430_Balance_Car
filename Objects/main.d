@@ -2,13 +2,13 @@
 .\objects\main.o: .\inc\main.h
 .\objects\main.o: ..\firmware\CMSIS\device\n32g430.h
 .\objects\main.o: ..\firmware\CMSIS\core\core_cm4.h
-.\objects\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\main.o: D:\mdk5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\main.o: ..\firmware\CMSIS\core\cmsis_version.h
 .\objects\main.o: ..\firmware\CMSIS\core\cmsis_compiler.h
 .\objects\main.o: ..\firmware\CMSIS\core\cmsis_armcc.h
 .\objects\main.o: ..\firmware\CMSIS\core\mpu_armv7.h
 .\objects\main.o: ..\firmware\CMSIS\device\system_n32g430.h
-.\objects\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\main.o: D:\mdk5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\objects\main.o: ..\firmware\CMSIS\device\n32g430_conf.h
 .\objects\main.o: ..\firmware\n32g430_std_periph_driver\inc\n32g430_adc.h
 .\objects\main.o: ..\firmware\CMSIS\device\n32g430.h
@@ -36,3 +36,6 @@
 .\objects\main.o: .\inc\key.h
 .\objects\main.o: .\inc\adc.h
 .\objects\main.o: .\inc\exti.h
+.\objects\main.o: .\inc\pwm.h
+.\objects\main.o: ..\firmware\TIM_Src\TIM1_remap.h
+.\objects\main.o: ..\firmware\TIM_Src\TIM8_remap.h

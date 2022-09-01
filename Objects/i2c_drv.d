@@ -1,13 +1,13 @@
 .\objects\i2c_drv.o: src\i2c_drv.c
 .\objects\i2c_drv.o: ..\firmware\CMSIS\device\n32g430.h
 .\objects\i2c_drv.o: ..\firmware\CMSIS\core\core_cm4.h
-.\objects\i2c_drv.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\i2c_drv.o: D:\mdk5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\i2c_drv.o: ..\firmware\CMSIS\core\cmsis_version.h
 .\objects\i2c_drv.o: ..\firmware\CMSIS\core\cmsis_compiler.h
 .\objects\i2c_drv.o: ..\firmware\CMSIS\core\cmsis_armcc.h
 .\objects\i2c_drv.o: ..\firmware\CMSIS\core\mpu_armv7.h
 .\objects\i2c_drv.o: ..\firmware\CMSIS\device\system_n32g430.h
-.\objects\i2c_drv.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\i2c_drv.o: D:\mdk5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\objects\i2c_drv.o: ..\firmware\CMSIS\device\n32g430_conf.h
 .\objects\i2c_drv.o: ..\firmware\n32g430_std_periph_driver\inc\n32g430_adc.h
 .\objects\i2c_drv.o: ..\firmware\CMSIS\device\n32g430.h
@@ -32,5 +32,5 @@
 .\objects\i2c_drv.o: ..\firmware\n32g430_std_periph_driver\inc\misc.h
 .\objects\i2c_drv.o: .\inc\main.h
 .\objects\i2c_drv.o: .\inc\i2c_drv.h
-.\objects\i2c_drv.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\i2c_drv.o: D:\mdk5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\i2c_drv.o: .\inc\log.h

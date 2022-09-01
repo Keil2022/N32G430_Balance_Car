@@ -48,6 +48,7 @@
 #include "key.h"
 #include "adc.h"
 #include "exti.h"
+#include "pwm.h"
 
 /**
  *\*\name   main.
@@ -57,6 +58,7 @@
 **/
 int main(void)
 {
+
 	ESP12F_IO0_Init();
 	ADC_Configuration();
 	
@@ -65,9 +67,28 @@ int main(void)
 	
 	EXTI_Init(KEY_INPUT_PORT, KEY_INPUT_PIN);
 	
+	TIMx_PWM_Init();
+	
 	while(1)
 	{
-		//else	LED_On;
+		if(KEY_Status == 0)
+		{
+			TIM_Compare1_Set(ADTIM,12800);
+			TIM_Compare2_Set(ADTIM,9600);
+			TIM_Compare3_Set(ADTIM,6400);
+			TIM_Compare4_Set(ADTIM,3200);
+			
+			LED_On;
+		}
+		else
+		{
+			TIM_Compare1_Set(ADTIM,0);
+			TIM_Compare2_Set(ADTIM,0);
+			TIM_Compare3_Set(ADTIM,0);
+			TIM_Compare4_Set(ADTIM,0);
+			
+			LED_Off;
+		}
 	}
 }
 

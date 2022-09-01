@@ -15,7 +15,7 @@
 
 #define KEY_GPIO_PORT	GPIOB
 #define KEY_GPIO_PIN	GPIO_PIN_2
-#define KEY 			GPIO_Input_Pin_Data_Get(KEY_GPIO_PORT,KEY_GPIO_PIN)
+#define KEY_Status 		GPIO_Input_Pin_Data_Get(KEY_GPIO_PORT,KEY_GPIO_PIN)
 
 extern u8 	KEY_Phase;			//按键阶段
 extern u16 	KEY_TimeCount;		//按键时间

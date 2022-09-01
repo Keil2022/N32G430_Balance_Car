@@ -59,7 +59,7 @@ void ADC_Configuration(void)
 	DMA_Channel_Enable(DMA_CH1);	//使能DMA通道
 	
 	ADC_Initializes_Structure(&ADC_InitStructure);			//初始化ADC结构体成员
-    ADC_InitStructure.MultiChEn      = ENABLE;				//指定转换是在Scan(多通道)模式还是Single(单通道)模式下执行
+    ADC_InitStructure.MultiChEn      = DISABLE;				//指定转换是在Scan(多通道)模式还是Single(单通道)模式下执行
     ADC_InitStructure.ContinueConvEn = ENABLE;				//指定转换是在连续模式还是单模式中执行
     ADC_InitStructure.DatAlign       = ADC_DAT_ALIGN_R;						//指定ADC数据对齐是左对齐还是右对齐
     ADC_InitStructure.ExtTrigSelect  = ADC_EXT_TRIGCONV_REGULAR_SWSTRRCH;	//定义用于启动常规通道模拟到数字转换的外部触发器

@@ -184,7 +184,6 @@
             <hadXRAM>0</hadXRAM>
             <uocXRam>0</uocXRam>
             <RvdsVP>2</RvdsVP>
-            <RvdsMve>0</RvdsMve>
             <hadIRAM2>0</hadIRAM2>
             <hadIROM2>0</hadIROM2>
             <StupSel>8</StupSel>
@@ -338,7 +337,7 @@
               <MiscControls></MiscControls>
               <Define>N32G430, USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\firmware\CMSIS\device;..\firmware\CMSIS\core;..\firmware\n32g430_std_periph_driver\inc;.\inc;.\src\eMPL</IncludePath>
+              <IncludePath>..\firmware\CMSIS\device;..\firmware\CMSIS\core;..\firmware\n32g430_std_periph_driver\inc;.\inc;.\src\eMPL;..\firmware\TIM_Src</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -466,6 +465,11 @@
               <FileName>exti.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\src\exti.c</FilePath>
+            </File>
+            <File>
+              <FileName>pwm.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\pwm.c</FilePath>
             </File>
           </Files>
         </Group>

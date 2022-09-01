@@ -14,6 +14,7 @@
 ".\objects\key.o"
 ".\objects\adc.o"
 ".\objects\exti.o"
+".\objects\pwm.o"
 ".\objects\log.o"
 ".\objects\bsp_delay.o"
 ".\objects\misc.o"
