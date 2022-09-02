@@ -58,7 +58,6 @@
 **/
 int main(void)
 {
-
 	ESP12F_IO0_Init();
 	ADC_Configuration();
 	
