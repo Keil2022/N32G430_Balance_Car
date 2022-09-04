@@ -16,6 +16,7 @@
 ".\objects\exti.o"
 ".\objects\pwm.o"
 ".\objects\encoder.o"
+".\objects\gptim_common.o"
 ".\objects\log.o"
 ".\objects\bsp_delay.o"
 ".\objects\misc.o"

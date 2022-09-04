@@ -2,13 +2,13 @@
 .\objects\misc.o: ..\firmware\n32g430_std_periph_driver\inc\misc.h
 .\objects\misc.o: ..\firmware\CMSIS\device\n32g430.h
 .\objects\misc.o: ..\firmware\CMSIS\core\core_cm4.h
-.\objects\misc.o: D:\mdk5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\misc.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\misc.o: ..\firmware\CMSIS\core\cmsis_version.h
 .\objects\misc.o: ..\firmware\CMSIS\core\cmsis_compiler.h
 .\objects\misc.o: ..\firmware\CMSIS\core\cmsis_armcc.h
 .\objects\misc.o: ..\firmware\CMSIS\core\mpu_armv7.h
 .\objects\misc.o: ..\firmware\CMSIS\device\system_n32g430.h
-.\objects\misc.o: D:\mdk5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\misc.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\objects\misc.o: ..\firmware\CMSIS\device\n32g430_conf.h
 .\objects\misc.o: ..\firmware\n32g430_std_periph_driver\inc\n32g430_adc.h
 .\objects\misc.o: ..\firmware\CMSIS\device\n32g430.h

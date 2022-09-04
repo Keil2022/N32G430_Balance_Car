@@ -37,7 +37,7 @@
 //#include "i2c_drv.h"
 //#include "oled.h"
 //#include "mpu6050.h"
-//#include "bsp_delay.h"
+#include "bsp_delay.h"
 //#include "mpu6050.h"
 //#include "math.h"
 //#include "inv_mpu.h"
@@ -49,6 +49,9 @@
 #include "adc.h"
 #include "exti.h"
 #include "pwm.h"
+#include "encoder.h"
+
+int Speed;
 
 /**
  *\*\name   main.
@@ -68,14 +71,16 @@ int main(void)
 	
 	TIMx_PWM_Init();
 	
+	Encoder_TIM2_Init();
+	
 	while(1)
 	{
 		if(KEY_Status == 0)
 		{
-			TIM_Compare1_Set(ADTIM,12800);
-			TIM_Compare2_Set(ADTIM,9600);
-			TIM_Compare3_Set(ADTIM,6400);
-			TIM_Compare4_Set(ADTIM,3200);
+			TIM_Compare1_Set(ADTIM,9600);
+			TIM_Compare2_Set(ADTIM,0);
+			TIM_Compare3_Set(ADTIM,0);
+			TIM_Compare4_Set(ADTIM,0);
 			
 			LED_On;
 		}
@@ -88,6 +93,9 @@ int main(void)
 			
 			LED_Off;
 		}
+		
+		Speed = Read_Speed(2);
+		SysTick_Delay_Ms(100);
 	}
 }
 

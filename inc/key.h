@@ -14,7 +14,7 @@
 #define KEY_EndTime		300		//结束按键时间
 
 #define KEY_GPIO_PORT	GPIOB
-#define KEY_GPIO_PIN	GPIO_PIN_2
+#define KEY_GPIO_PIN	GPIO_PIN_6
 #define KEY_Status 		GPIO_Input_Pin_Data_Get(KEY_GPIO_PORT,KEY_GPIO_PIN)
 
 extern u8 	KEY_Phase;			//按键阶段
