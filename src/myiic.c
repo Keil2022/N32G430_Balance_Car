@@ -10,10 +10,10 @@ void IIC_Init(void)
 
 	GPIO_Structure_Initialize(&GPIO_InitStructure);
 	/*PB13 -- SCL; PB14 -- SDA*/
-	GPIO_InitStructure.Pin            = GPIO_PIN_13|GPIO_PIN_14 ;
-	GPIO_InitStructure.GPIO_Slew_Rate = GPIO_SLEW_RATE_FAST; 
+	GPIO_InitStructure.Pin            = GPIO_PIN_13|GPIO_PIN_14;
+	GPIO_InitStructure.GPIO_Slew_Rate = GPIO_SLEW_RATE_FAST;
 	GPIO_InitStructure.GPIO_Mode      = GPIO_MODE_OUT_PP;
-	GPIO_InitStructure.GPIO_Pull      = GPIO_PULL_UP; 
+	GPIO_InitStructure.GPIO_Pull      = GPIO_PULL_UP;
 	GPIO_Peripheral_Initialize(GPIOB, &GPIO_InitStructure);
 	
 	IIC_SCL_SET();

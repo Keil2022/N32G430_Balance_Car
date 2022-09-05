@@ -50,7 +50,7 @@
 #include "pwm.h"
 #include "encoder.h"
 
-int Speed;
+int Speed_L,Speed_R;
 
 /**
  *\*\name   main.
@@ -71,36 +71,16 @@ int main(void)
 	TIMx_PWM_Init();
 	
 	Encoder_TIM2_Init();
+	Encoder_TIM3_Init();
 	
 	log_init();
 	
-	//MPU_Init();								//初始化MPU6050
-	//while(mpu_dmp_init());					//等待MPU初始化完成
+	MPU_Init();								//初始化MPU6050
+	while( mpu_dmp_init() );				//等待MPU初始化完成
 	
 	while(1)
 	{
-		if(KEY_Status == 0)
-		{
-			TIM_Compare1_Set(ADTIM,9600);
-			TIM_Compare2_Set(ADTIM,0);
-			TIM_Compare3_Set(ADTIM,0);
-			TIM_Compare4_Set(ADTIM,0);
-			
-			LED_On;
-		}
-		else
-		{
-			TIM_Compare1_Set(ADTIM,0);
-			TIM_Compare2_Set(ADTIM,0);
-			TIM_Compare3_Set(ADTIM,0);
-			TIM_Compare4_Set(ADTIM,0);
-			
-			LED_Off;
-		}
 		
-		Speed = Read_Speed(2);
-		//log("Speed = %d\n\r",Speed);
-		SysTick_Delay_Ms(100);
 	}
 }
 

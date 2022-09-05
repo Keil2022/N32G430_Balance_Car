@@ -5,16 +5,17 @@
 #include "inv_mpu_dmp_motion_driver.h"
 #include "exti.h"
 #include "encoder.h"
+#include "led.h"
 
-float Med_Angle=-22;	//机械中值。---在这里修改你的机械中值即可。
-float Target_Speed=0;	//期望速度。---二次开发接口，用于控制小车前进后退及其速度。
+float Med_Angle = 0;	//机械中值。---在这里修改你的机械中值即可。
+float Target_Speed = 0;	//期望速度。---二次开发接口，用于控制小车前进后退及其速度。
 
 float 
-	Vertical_Kp=-210,//直立环KP、KD
-	Vertical_Kd=-0.4;
+	Vertical_Kp = -2100,//直立环KP、KD
+	Vertical_Kd = -4;
 float 
-	Velocity_Kp=0.3,//速度环KP、KI
-	Velocity_Ki=0.0015;
+	Velocity_Kp = 0.3,//速度环KP、KI
+	Velocity_Ki = 0.0015;
 
 int Vertical_out,Velocity_out,Turn_out;//直立环&速度环&转向环 的输出变量
 
@@ -33,13 +34,16 @@ void EXTI9_5_IRQHandler(void)
 		{
 			EXTI_Interrupt_Status_Clear(KEY_INPUT_EXTI_LINE);
 			
+			LED_Blink;
+			
 			//1.采集编码器数据&MPU6050角度信息。
 			Encoder_Left  = -Read_Speed(2);	//电机是相对安装，刚好相差180度，为了编码器输出极性一致，就需要对其中一个取反。
 			Encoder_Right = Read_Speed(4);
 			
-			mpu_dmp_get_data(&Pitch,&Roll,&Yaw);		//角度
-			MPU_Get_Gyroscope(&gyrox,&gyroy,&gyroz);	//陀螺仪
-			MPU_Get_Accelerometer(&aacx,&aacy,&aacz);	//加速度
+			while(mpu_dmp_get_data(&Pitch,&Roll,&Yaw)!=0)	//获取当前的航向角
+			MPU_Get_Accelerometer(&aacx,&aacy,&aacz);		//得到加速度传感器数据
+			MPU_Get_Gyroscope(&gyrox,&gyroy,&gyroz);		//得到陀螺仪数据
+			
 			//2.将数据压入闭环控制中，计算出控制输出量。
 			
 			/*
@@ -68,9 +72,9 @@ void EXTI9_5_IRQHandler(void)
 			-->若小铁快非常非常轻，还有可能救回来；若铁块不轻，则必然车子一直不断向前跑不会停下；若小铁块过重，系统来不及响应，车子会直接向前倒下；
 			这，就是结果。
 			*/			
-			Velocity_out = Velocity(Target_Speed,Encoder_Left,Encoder_Right);	//速度环
-			Vertical_out = Vertical(Velocity_out+Med_Angle,Pitch,gyroy);			//直立环
-			Turn_out = Turn(gyroz);																						//转向环
+			//Velocity_out = Velocity(Target_Speed,Encoder_Left,Encoder_Right);	//速度环
+			Vertical_out = Vertical(Velocity_out+Med_Angle,Pitch,gyroy);		//直立环
+			//Turn_out = Turn(gyroz);																						//转向环
 			
 			PWM_out = Vertical_out;//最终输出
 			

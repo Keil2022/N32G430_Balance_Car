@@ -7,7 +7,7 @@
 #define IIC_SCL_PORT			GPIOB
 #define IIC_SCL_PIN				GPIO_PIN_13
 
-#define IIC_SDA_PORT			GPIOB	
+#define IIC_SDA_PORT			GPIOB
 #define IIC_SDA_PIN				GPIO_PIN_14	
 
 //IO∑ΩœÚ…Ë÷√

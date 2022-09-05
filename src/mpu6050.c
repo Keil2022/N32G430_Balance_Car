@@ -14,7 +14,7 @@ u8 MPU_Init(void)
 	IIC_Init();//初始化IIC总线
 	Set_Slaver_Address();  //set addr 0 low level
 	MPU_Write_Byte(MPU_PWR_MGMT1_REG,0X80);	//复位MPU6050
-  SysTick_Delay_Ms(100);
+	SysTick_Delay_Ms(100);
 	MPU_Write_Byte(MPU_PWR_MGMT1_REG,0X00);	//唤醒MPU6050 
 	MPU_Set_Gyro_Fsr(3);					//陀螺仪传感器,±2000dps
 	MPU_Set_Accel_Fsr(0);					//加速度传感器,±2g
@@ -239,7 +239,7 @@ static void Set_Slaver_Address(void)
 
 	GPIO_Structure_Initialize(&GPIO_InitStructure);
 	/*PB13 -- SCL; PB14 -- SDA*/
-	GPIO_InitStructure.Pin            = GPIO_PIN_2 ;
+	GPIO_InitStructure.Pin            = GPIO_PIN_2;
 	GPIO_InitStructure.GPIO_Slew_Rate = GPIO_SLEW_RATE_FAST; 
 	GPIO_InitStructure.GPIO_Mode      = GPIO_MODE_OUT_PP;
 	GPIO_InitStructure.GPIO_Pull      = GPIO_PULL_DOWN; 
