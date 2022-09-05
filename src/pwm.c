@@ -181,18 +181,7 @@ void Common_ADTIM_GPIO_Initialize(TIM_Module* TIMx)
     }
 }
 
-void Common_TIM_Base_Initialize(TIM_Module *TIMx, uint16_t period, uint16_t prescaler)
-{
-    TIM_TimeBaseInitType TIM_TimeBaseStructure;
-	
-	TIM_Base_Struct_Initialize(&TIM_TimeBaseStructure);
-    TIM_TimeBaseStructure.Period    = period;
-    TIM_TimeBaseStructure.Prescaler = prescaler;
-    TIM_TimeBaseStructure.ClkDiv    = 0;
-    TIM_TimeBaseStructure.CntMode   = TIM_CNT_MODE_UP;
 
-    TIM_Base_Initialize(TIMx, &TIM_TimeBaseStructure);   
-}
 
 
 

@@ -2,7 +2,7 @@
 #include "motor.h"
 #include "pwm.h"
 
-char PWM_Zero=0,stop=0;
+char PWM_Zero=0, stop=0;
 
 /*限幅函数*/
 void Limit(int *motoA,int *motoB)
@@ -36,7 +36,7 @@ void Load(int moto1,int moto2)//moto1=-200：反转200个脉冲
 
 void Stop(float *Med_Jiaodu,float *Jiaodu)
 {
-	if(GFP_abs(*Jiaodu-*Med_Jiaodu)>20)Load(PWM_Zero,PWM_Zero);
+	if(GFP_abs(*Jiaodu-*Med_Jiaodu)>20)	Load(PWM_Zero,PWM_Zero);
 }
 
 

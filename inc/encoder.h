@@ -1,6 +1,8 @@
 #ifndef __ENCODER_H
 #define __ENCODER_H
 
+#include "timer_common.h"
+
 #define EN_TIM2_GPIO_PORT	GPIOA
 #define EN_TIM2_GPIO_PIN	GPIO_PIN_0 | GPIO_PIN_1
 

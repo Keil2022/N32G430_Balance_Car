@@ -41,8 +41,6 @@ extern "C" {
 #endif
 
 #include "n32g430.h"
-
-void EXTI9_5_IRQHandler(void);
 	
 #ifdef __cplusplus
 }

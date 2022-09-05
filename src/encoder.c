@@ -14,7 +14,10 @@ void Encoder_TIM2_Init(void)
 
 	GPIO_InitStructure.Pin            = EN_TIM2_GPIO_PIN;
 	GPIO_InitStructure.GPIO_Mode      = GPIO_MODE_INPUT;
+	GPIO_InitStructure.GPIO_Alternate = GPIO_AF3_TIM2;		//TIM2复用PA0 PA1
 	GPIO_Peripheral_Initialize(EN_TIM2_GPIO_PORT, &GPIO_InitStructure);
+	
+	//Common_TIM_NVIC_Initialize(TIM2_IRQn, ENABLE);	//【*】这里不配置能进中断么
 	
 	TIM_Base_Struct_Initialize(&TIM_TimeBaseStructure);		//填入缺省值
     TIM_TimeBaseStructure.Period    = 65535;
@@ -23,17 +26,25 @@ void Encoder_TIM2_Init(void)
     TIM_TimeBaseStructure.CntMode   = TIM_CNT_MODE_UP;
     TIM_Base_Initialize(TIM2, &TIM_TimeBaseStructure);
 	
-	//TIM_Base_Auto_Reload_Set(TIM2, 65535);
-	
-	TIM_Hall_Sensor_Disable(TIM2);
-	TIM_Encoder_Interface_Set(TIM2, TIM_ENCODE_MODE_TI12, TIM_IC_POLARITY_RISING, TIM_IC_POLARITY_RISING);
+	//TIM_Hall_Sensor_Enable(TIM2);
+	TIM_Encoder_Interface_Set(TIM2, TIM_ENCODE_MODE_TI12, TIM_IC_POLARITY_RISING, TIM_IC_POLARITY_RISING);	//【*】改变 TIM_ENCODE_MODE_TI12
+
+//	TIM_Input_Struct_Initialize(&TIM_ICInitStructure);
+//	TIM_ICInitStructure.IcFilter = 10;
+//	TIM_Input_Channel_Initialize(TIM2, &TIM_ICInitStructure);
 
 	TIM_Input_Struct_Initialize(&TIM_ICInitStructure);
-	TIM_ICInitStructure.IcFilter = 10;
-	TIM_Input_Channel_Initialize(TIM2, &TIM_ICInitStructure);
+    TIM_ICInitStructure.Channel     = TIM_CH_1;
+    TIM_ICInitStructure.IcPolarity  = TIM_IC_POLARITY_RISING;
+    TIM_ICInitStructure.IcSelection = TIM_IC_SELECTION_DIRECTTI;
+    TIM_ICInitStructure.IcPrescaler = TIM_IC_PSC_DIV1;
+    TIM_ICInitStructure.IcFilter    = 0;
+    TIM_Input_Channel_Initialize(TIM2, &TIM_ICInitStructure);
 	
-	TIM_Interrupt_Status_Clear(TIM2, TIM_INT_UPDATE);	//配置溢出更新中断标志位
-	//Common_TIM_NVIC_Initialize(TIM2_IRQn, ENABLE);
+//	TIM_ICInitStructure.Channel     = TIM_CH_2;					//【*】看看不配置有什么影响
+//	TIM_Input_Channel_Initialize(TIM2, &TIM_ICInitStructure);
+	
+	TIM_Interrupt_Status_Clear(TIM2, TIM_INT_UPDATE);	//配置溢出中断标志位
 	TIM_Interrupt_Enable(TIM2, TIM_INT_UPDATE);
 	
 	TIM_Base_Count_Set(TIM2, 0);	//清零定时器计数值
@@ -60,7 +71,7 @@ int Read_Speed(int TIMx)
 
 void TIM2_IRQHandler(void)
 {
-	if(TIM_Interrupt_Status_Get(TIM2,TIM_INT_UPDATE)!=0)
+	if(TIM_Interrupt_Status_Get(TIM2,TIM_INT_UPDATE) == SET)
 	{
 		TIM_Interrupt_Status_Clear(TIM2,TIM_INT_UPDATE);
 	}
@@ -68,7 +79,7 @@ void TIM2_IRQHandler(void)
 
 void TIM3_IRQHandler(void)
 {
-	if(TIM_Interrupt_Status_Get(TIM3,TIM_INT_UPDATE)!=0)
+	if(TIM_Interrupt_Status_Get(TIM3,TIM_INT_UPDATE) == SET)
 	{
 		TIM_Interrupt_Status_Clear(TIM3,TIM_INT_UPDATE);
 	}

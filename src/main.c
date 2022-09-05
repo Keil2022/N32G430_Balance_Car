@@ -33,15 +33,14 @@
 **/
 
 #include "main.h"
-//#include "log.h"
+#include "log.h"
 //#include "i2c_drv.h"
 //#include "oled.h"
-//#include "mpu6050.h"
-#include "bsp_delay.h"
-//#include "mpu6050.h"
 //#include "math.h"
-//#include "inv_mpu.h"
-//#include "inv_mpu_dmp_motion_driver.h"
+#include "mpu6050.h"
+#include "inv_mpu.h"
+#include "inv_mpu_dmp_motion_driver.h"
+#include "bsp_delay.h"
 
 #include "esp12f_io0.h"
 #include "led.h"
@@ -73,6 +72,11 @@ int main(void)
 	
 	Encoder_TIM2_Init();
 	
+	log_init();
+	
+	//MPU_Init();								//初始化MPU6050
+	//while(mpu_dmp_init());					//等待MPU初始化完成
+	
 	while(1)
 	{
 		if(KEY_Status == 0)
@@ -95,20 +99,9 @@ int main(void)
 		}
 		
 		Speed = Read_Speed(2);
+		//log("Speed = %d\n\r",Speed);
 		SysTick_Delay_Ms(100);
 	}
-}
-
-void EXTI9_5_IRQHandler(void)
-{
-    if (RESET != EXTI_Interrupt_Status_Get(KEY_INPUT_EXTI_LINE))	//一级判断
-    {
-        if(Exti == 0)	//二级判断
-		{
-			LED_Blink;
-			EXTI_Interrupt_Status_Clear(KEY_INPUT_EXTI_LINE);
-		}
-    }
 }
 
 

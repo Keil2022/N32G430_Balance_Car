@@ -72,6 +72,8 @@
 #define log_debug(...)
 #endif
 
+#define log(...)	printf(__VA_ARGS__)
+
 void log_init(void);
 void Usart_SendByte(USART_Module* USARTx, uint8_t byte);
 void Usart_SendString(USART_Module* USARTx, char *str);
