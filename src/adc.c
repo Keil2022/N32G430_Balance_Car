@@ -42,9 +42,9 @@ void ADC_Configuration(void)
 	
 	/* DMA通道1配置 */
 	DMA_Reset(DMA_CH1);		//重置通道1寄存器
-	DMA_InitStructure.PeriphAddr     = (uint32_t)&ADC->DAT;		//外围基地址
+	DMA_InitStructure.PeriphAddr     = (uint32_t)&ADC->DAT;		//外设基地址
 	DMA_InitStructure.MemAddr        = (uint32_t)&ADC_Value;	//内存基地址
-	DMA_InitStructure.Direction      = DMA_DIR_PERIPH_SRC;		//指定外设是源还是目标。
+	DMA_InitStructure.Direction      = DMA_DIR_PERIPH_SRC;		//DMA数据传输方向：从外设到存储器的数据传输
 	DMA_InitStructure.BufSize        = 1;						//指定缓存区大小
 	DMA_InitStructure.PeriphInc      = DMA_PERIPH_INC_MODE_DISABLE;		//指定外设地址寄存器是否递增。
     DMA_InitStructure.MemoryInc      = DMA_MEM_INC_MODE_ENABLE;			//指定内存地址寄存器是否递增。

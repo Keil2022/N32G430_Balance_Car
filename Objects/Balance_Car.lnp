@@ -21,6 +21,7 @@
 ".\objects\motor.o"
 ".\objects\control.o"
 ".\objects\log.o"
+".\objects\usart.o"
 ".\objects\bsp_delay.o"
 ".\objects\misc.o"
 ".\objects\n32g430_adc.o"

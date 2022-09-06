@@ -66,17 +66,18 @@ int main(void)
 	LED_GPIO_Init();
 	Key_GPIO_Init();
 	
-	EXTI_Init(KEY_INPUT_PORT, KEY_INPUT_PIN);
-	
 	TIMx_PWM_Init();
 	
 	Encoder_TIM2_Init();
 	Encoder_TIM3_Init();
 	
-	log_init();
+	//log_init();
 	
 	MPU_Init();								//初始化MPU6050
 	while( mpu_dmp_init() );				//等待MPU初始化完成
+	LED_On;
+	
+	EXTI_Init(KEY_INPUT_PORT, KEY_INPUT_PIN);
 	
 	while(1)
 	{

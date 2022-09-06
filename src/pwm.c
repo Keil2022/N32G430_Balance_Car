@@ -16,7 +16,7 @@ void TIMx_PWM_Init(void)
 	Common_ADTIM_GPIO_Initialize(ADTIM);
 	
 	/* 计算AR寄存器中设置的值，以产生10 Khz的信号频率 */
-    TimerPeriod = (ADTIMClockFrequency / 10000) - 1;
+    TimerPeriod = (ADTIMClockFrequency / 5000) - 1;
 //	/* 计算CCDAT1值，为通道1生成50%的占空比 */
 //    Channel1Pulse = (uint16_t)(((uint32_t)5 * (TimerPeriod - 1)) / 10);
 //    /*计算CCDAT2值，为通道2生成25%的占空比 */
@@ -46,12 +46,12 @@ void TIMx_PWM_Init(void)
     TIM_Output_Channel2_Initialize(ADTIM, &TIM_OCInitStructure);
 
     //TIM_OCInitStructure.Pulse = Channel3Pulse;
-    TIM_Output_Channel3_Initialize(ADTIM, &TIM_OCInitStructure);
+    //TIM_Output_Channel3_Initialize(ADTIM, &TIM_OCInitStructure);
 
     /* 输出比较Active模式配置:Channel4 */
     /* The CH4N if only for ADTIM, not for ADTIM */
     //TIM_OCInitStructure.Pulse = channel4Pulse;
-    TIM_Output_Channel4_Initialize(ADTIM, &TIM_OCInitStructure);
+    //TIM_Output_Channel4_Initialize(ADTIM, &TIM_OCInitStructure);
 	
 	/* 自动输出使能，断线，死区时间和锁定配置*/
     TIM_Break_And_Dead_Time_Struct_Initialize(&TIM_BDTRInitStructure);

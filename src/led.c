@@ -5,7 +5,7 @@
 void LED_GPIO_Init(void)
 {
 	GPIO_InitType GPIO_InitStructure;
-	RCC_AHB_Peripheral_Clock_Enable(RCC_AHB_PERIPH_GPIOB);
+	RCC_AHB_Peripheral_Clock_Enable(RCC_AHB_PERIPH_GPIOB | RCC_AHB_PERIPH_GPIOC);
 
 	GPIO_Structure_Initialize(&GPIO_InitStructure);
 	/* PA5_ */

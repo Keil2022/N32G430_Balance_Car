@@ -3,7 +3,7 @@
 
 #include "n32g430_gpio.h"
 
-//ESP12F Config
+//
 #define LED_GPIO_PORT			GPIOB
 #define LED_GPIO_PIN			GPIO_PIN_5
 

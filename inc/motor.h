@@ -1,8 +1,12 @@
 #ifndef __MOTOR_H
 #define __MOTOR_H
 
-#define PWM_MAX	12800	//PWM限幅变量
-#define PWM_MIN -12800	
+#include "pwm.h"
+
+extern uint16_t TimerPeriod;
+
+#define PWM_MAX	( TimerPeriod + 1 )	//PWM限幅变量
+#define PWM_MIN ( -PWM_MAX )
 
 extern char PWM_Zero,stop;
 
