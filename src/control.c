@@ -34,6 +34,7 @@ void EXTI9_5_IRQHandler(void)
 		{
 			EXTI_Interrupt_Status_Clear(KEY_INPUT_EXTI_LINE);
 			
+			//LED_On;	//50ms+ 的运行时间
 			//LED_Blink;
 			
 			//【1】采集编码器数据&MPU6050角度信息。
@@ -55,9 +56,10 @@ void EXTI9_5_IRQHandler(void)
 			MOTO1 = PWM_out-Turn_out;	//左电机
 			MOTO2 = PWM_out+Turn_out;	//右电机
 			Limit(&MOTO1,&MOTO2);	 	//PWM限幅			
-			Load(MOTO1,MOTO2);		 	//加载到电机上。
+			//Load(MOTO1,MOTO2);		 	//加载到电机上。
 			
 //			Stop(&Med_Angle,&Pitch);
+			//LED_Off;
 		}
 	}
 }

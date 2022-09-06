@@ -49,8 +49,11 @@
 #include "exti.h"
 #include "pwm.h"
 #include "encoder.h"
+#include "motor.h"
 
 int Speed_L,Speed_R;
+
+extern uint16_t Channel3Pulse;
 
 /**
  *\*\name   main.
@@ -71,17 +74,24 @@ int main(void)
 	Encoder_TIM2_Init();
 	Encoder_TIM3_Init();
 	
-	//log_init();
+	log_init();
 	
 	MPU_Init();								//初始化MPU6050
-	while( mpu_dmp_init() );				//等待MPU初始化完成
+	while( mpu_dmp_init() )	{;}				//等待MPU初始化完成
 	LED_On;
 	
 	EXTI_Init(KEY_INPUT_PORT, KEY_INPUT_PIN);
 	
 	while(1)
 	{
-		
+		if(KEY_Status == KEY_Press)
+		{
+			Load(Channel3Pulse,0);
+		}
+		else
+		{
+			Load(0,0);
+		}
 	}
 }
 

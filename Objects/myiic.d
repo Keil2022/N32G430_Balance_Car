@@ -3,13 +3,13 @@
 .\objects\myiic.o: ..\firmware\n32g430_std_periph_driver\inc\n32g430_gpio.h
 .\objects\myiic.o: ..\firmware\CMSIS\device\n32g430.h
 .\objects\myiic.o: ..\firmware\CMSIS\core\core_cm4.h
-.\objects\myiic.o: D:\mdk5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\myiic.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\myiic.o: ..\firmware\CMSIS\core\cmsis_version.h
 .\objects\myiic.o: ..\firmware\CMSIS\core\cmsis_compiler.h
 .\objects\myiic.o: ..\firmware\CMSIS\core\cmsis_armcc.h
 .\objects\myiic.o: ..\firmware\CMSIS\core\mpu_armv7.h
 .\objects\myiic.o: ..\firmware\CMSIS\device\system_n32g430.h
-.\objects\myiic.o: D:\mdk5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\myiic.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\objects\myiic.o: ..\firmware\CMSIS\device\n32g430_conf.h
 .\objects\myiic.o: ..\firmware\n32g430_std_periph_driver\inc\n32g430_adc.h
 .\objects\myiic.o: ..\firmware\CMSIS\device\n32g430.h

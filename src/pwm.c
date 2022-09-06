@@ -1,8 +1,8 @@
 #include "n32g430.h"
 #include "pwm.h"
 
-uint16_t TimerPeriod   = 0;
-//uint16_t Channel1Pulse = 0, Channel2Pulse = 0, Channel3Pulse = 0, channel4Pulse = 0;
+uint32_t TimerPeriod   = 0;
+uint16_t Channel1Pulse = 0, Channel2Pulse = 0, Channel3Pulse = 0, channel4Pulse = 0;
 
 uint32_t ADTIMClockFrequency = 0;
 
@@ -16,13 +16,13 @@ void TIMx_PWM_Init(void)
 	Common_ADTIM_GPIO_Initialize(ADTIM);
 	
 	/* 计算AR寄存器中设置的值，以产生10 Khz的信号频率 */
-    TimerPeriod = (ADTIMClockFrequency / 5000) - 1;
+    TimerPeriod = (ADTIMClockFrequency / 1000) - 1;
 //	/* 计算CCDAT1值，为通道1生成50%的占空比 */
 //    Channel1Pulse = (uint16_t)(((uint32_t)5 * (TimerPeriod - 1)) / 10);
 //    /*计算CCDAT2值，为通道2生成25%的占空比 */
 //    Channel2Pulse = (uint16_t)(((uint32_t)25 * (TimerPeriod - 1)) / 100);
 //    /* 计算CCDAT3值，为通道3生成12.5%的占空比 */
-//    Channel3Pulse = (uint16_t)(((uint32_t)125 * (TimerPeriod - 1)) / 1000);
+    Channel3Pulse = (uint16_t)(((uint32_t)125 * (TimerPeriod - 1)) / 1000);
 //    /* 计算CCDAT4值，为通道4生成12.5%的占空比 */
 //    channel4Pulse = (uint16_t)(((uint32_t)125 * (TimerPeriod - 1)) / 1000);
 	
