@@ -4,13 +4,13 @@
 .\objects\control.o: .\inc\pwm.h
 .\objects\control.o: ..\firmware\CMSIS\device\n32g430.h
 .\objects\control.o: ..\firmware\CMSIS\core\core_cm4.h
-.\objects\control.o: D:\mdk5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\control.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\control.o: ..\firmware\CMSIS\core\cmsis_version.h
 .\objects\control.o: ..\firmware\CMSIS\core\cmsis_compiler.h
 .\objects\control.o: ..\firmware\CMSIS\core\cmsis_armcc.h
 .\objects\control.o: ..\firmware\CMSIS\core\mpu_armv7.h
 .\objects\control.o: ..\firmware\CMSIS\device\system_n32g430.h
-.\objects\control.o: D:\mdk5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\control.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\objects\control.o: ..\firmware\CMSIS\device\n32g430_conf.h
 .\objects\control.o: ..\firmware\n32g430_std_periph_driver\inc\n32g430_adc.h
 .\objects\control.o: ..\firmware\CMSIS\device\n32g430.h

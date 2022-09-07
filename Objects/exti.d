@@ -1,13 +1,13 @@
 .\objects\exti.o: src\exti.c
 .\objects\exti.o: ..\firmware\CMSIS\device\n32g430.h
 .\objects\exti.o: ..\firmware\CMSIS\core\core_cm4.h
-.\objects\exti.o: D:\mdk5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\exti.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\exti.o: ..\firmware\CMSIS\core\cmsis_version.h
 .\objects\exti.o: ..\firmware\CMSIS\core\cmsis_compiler.h
 .\objects\exti.o: ..\firmware\CMSIS\core\cmsis_armcc.h
 .\objects\exti.o: ..\firmware\CMSIS\core\mpu_armv7.h
 .\objects\exti.o: ..\firmware\CMSIS\device\system_n32g430.h
-.\objects\exti.o: D:\mdk5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\exti.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\objects\exti.o: ..\firmware\CMSIS\device\n32g430_conf.h
 .\objects\exti.o: ..\firmware\n32g430_std_periph_driver\inc\n32g430_adc.h
 .\objects\exti.o: ..\firmware\CMSIS\device\n32g430.h

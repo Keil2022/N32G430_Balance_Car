@@ -21,6 +21,8 @@ int GFP_abs(int p)
 	return q;
 }
 
+extern uint16_t Channel1Pulse;
+
 /*赋值函数*/
 /*入口参数：PID运算完成后的最终PWM值*/
 void Load(int moto1,int moto2)//moto1=-200：反转200个脉冲

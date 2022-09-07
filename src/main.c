@@ -53,7 +53,8 @@
 
 int Speed_L,Speed_R;
 
-extern uint16_t Channel3Pulse;
+extern uint16_t Channel1Pulse;
+extern int Encoder_Left,Encoder_Right;	//编码器数据（速度）
 
 /**
  *\*\name   main.
@@ -76,15 +77,19 @@ int main(void)
 	
 	log_init();
 	
-	//MPU_Init();								//初始化MPU6050
-	//while( mpu_dmp_init() )	{;}				//等待MPU初始化完成
+	MPU_Init();								//初始化MPU6050
+	while( mpu_dmp_init() )	{;}				//等待MPU初始化完成
 	LED_On;
 	
 	EXTI_Init(KEY_INPUT_PORT, KEY_INPUT_PIN);
 	
 	while(1)
 	{
-		Load(Channel3Pulse,0);
+//		Load(Channel1Pulse,Channel1Pulse);
+//		Encoder_Left  = Read_Speed(2);	//电机是相对安装，刚好相差180度，为了编码器输出极性一致，就需要对其中一个取反。
+//		Encoder_Right = -Read_Speed(3);
+//		SysTick_Delay_Ms(100);
+		
 	}
 }
 

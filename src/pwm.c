@@ -11,18 +11,19 @@ void TIMx_PWM_Init(void)
 	OCInitType TIM_OCInitStructure;
 	TIM_BDTRInitType TIM_BDTRInitStructure;
 	
-	ADTIMClockFrequency = Common_ADTIM_RCC_Initialize(ADTIM, RCC_HCLK_DIV4);	//TIM1 
+	ADTIMClockFrequency = Common_ADTIM_RCC_Initialize(ADTIM, RCC_HCLK_DIV4);	//TIM1
 	
 	Common_ADTIM_GPIO_Initialize(ADTIM);
 	
 	/* 计算AR寄存器中设置的值，以产生10 Khz的信号频率 */
-    TimerPeriod = (ADTIMClockFrequency / 1000) - 1;
+    TimerPeriod = (ADTIMClockFrequency / 500) - 1;
 //	/* 计算CCDAT1值，为通道1生成50%的占空比 */
-//    Channel1Pulse = (uint16_t)(((uint32_t)5 * (TimerPeriod - 1)) / 10);
+    Channel1Pulse = (uint16_t)(((uint32_t)2 * (TimerPeriod - 1)) / 10);
+//	Channel1Pulse = 0;
 //    /*计算CCDAT2值，为通道2生成25%的占空比 */
 //    Channel2Pulse = (uint16_t)(((uint32_t)25 * (TimerPeriod - 1)) / 100);
 //    /* 计算CCDAT3值，为通道3生成12.5%的占空比 */
-    Channel3Pulse = (uint16_t)(((uint32_t)10 * (TimerPeriod - 1)) / 100);
+//    Channel3Pulse = (uint16_t)(((uint32_t)125 * (TimerPeriod - 1)) / 1000);
 //    /* 计算CCDAT4值，为通道4生成12.5%的占空比 */
 //    channel4Pulse = (uint16_t)(((uint32_t)125 * (TimerPeriod - 1)) / 1000);
 	
@@ -46,12 +47,12 @@ void TIMx_PWM_Init(void)
     TIM_Output_Channel2_Initialize(ADTIM, &TIM_OCInitStructure);
 
     //TIM_OCInitStructure.Pulse = Channel3Pulse;
-    //TIM_Output_Channel3_Initialize(ADTIM, &TIM_OCInitStructure);
+    TIM_Output_Channel3_Initialize(ADTIM, &TIM_OCInitStructure);
 
     /* 输出比较Active模式配置:Channel4 */
     /* The CH4N if only for ADTIM, not for ADTIM */
     //TIM_OCInitStructure.Pulse = channel4Pulse;
-    //TIM_Output_Channel4_Initialize(ADTIM, &TIM_OCInitStructure);
+    TIM_Output_Channel4_Initialize(ADTIM, &TIM_OCInitStructure);
 	
 	/* 自动输出使能，断线，死区时间和锁定配置*/
     TIM_Break_And_Dead_Time_Struct_Initialize(&TIM_BDTRInitStructure);

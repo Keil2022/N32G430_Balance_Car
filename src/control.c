@@ -11,11 +11,11 @@ float Med_Angle = 0;	//机械中值。---在这里修改你的机械中值即可。
 float Target_Speed = 0;	//期望速度。---二次开发接口，用于控制小车前进后退及其速度。
 
 float 
-	Vertical_Kp = 200,//直立环KP、KD
-	Vertical_Kd = 0;
+	Vertical_Kp = 1800,//直立环KP、KD
+	Vertical_Kd = 40;
 float 
-	Velocity_Kp = 0,//速度环KP、KI
-	Velocity_Ki = 0;
+	Velocity_Kp = -1,//速度环KP、KI
+	Velocity_Ki = -0.005;
 
 int Vertical_out,Velocity_out,Turn_out;//直立环&速度环&转向环 的输出变量
 
@@ -45,18 +45,24 @@ void EXTI9_5_IRQHandler(void)
 			MPU_Get_Accelerometer(&aacx,&aacy,&aacz);		//得到加速度传感器数据
 			MPU_Get_Gyroscope(&gyrox,&gyroy,&gyroz);		//得到陀螺仪数据
 			
-			//【2】将数据压入闭环控制中，计算出控制输出量。
-			//Velocity_out = Velocity(Target_Speed,Encoder_Left,Encoder_Right);	//速度环
-			Vertical_out = Vertical(Velocity_out+Med_Angle,Pitch,gyroy);		//直立环
-			//Turn_out = Turn(gyroz);											//转向环
+//			//【2】将数据压入闭环控制中，计算出控制输出量。
+//			Velocity_out = Velocity(Target_Speed,Encoder_Left,Encoder_Right);	//速度环
+//			Vertical_out = Vertical(Velocity_out+Med_Angle,Pitch,gyroy);		//直立环
+//			//Turn_out = Turn(gyroz);											//转向环
+//			PWM_out = Vertical_out;//最终输出
 			
-			PWM_out = Vertical_out;//最终输出
+			//2.将数据压入闭环控制中，计算出控制输出量。
+			Vertical_out = Vertical(Med_Angle,Pitch,gyroy);				//直立环
+			Velocity_out = Velocity(Target_Speed,Encoder_Left,Encoder_Right);			//速度环
+			//Turn_out = Turn(gyroz);										//转向环
+			
+			PWM_out=Vertical_out-Vertical_Kp*Velocity_out;//最终输出
 			
 			//【3】把控制输出量加载到电机上，完成最终的的控制。
 			MOTO1 = PWM_out-Turn_out;	//左电机
 			MOTO2 = PWM_out+Turn_out;	//右电机
 			Limit(&MOTO1,&MOTO2);	 	//PWM限幅			
-			//Load(MOTO1,MOTO2);		 	//加载到电机上。
+			Load(MOTO1,MOTO2);		 	//加载到电机上。
 			
 //			Stop(&Med_Angle,&Pitch);
 			//LED_Off;
