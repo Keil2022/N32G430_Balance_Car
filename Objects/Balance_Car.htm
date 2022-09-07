@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\Balance_Car.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\Balance_Car.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Wed Sep 07 01:29:15 2022
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Wed Sep 07 10:59:31 2022
 <BR><P>
 <H3>Maximum Stack Usage =        348 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -286,21 +286,18 @@ Global Symbols
 </UL>
 <P><STRONG><a name="[1a2]"></a>System_Clock_Frequency_Update</STRONG> (Thumb, 182 bytes, Stack size 8 bytes, system_n32g430.o(.text), UNUSED)
 
-<P><STRONG><a name="[40]"></a>main</STRONG> (Thumb, 102 bytes, Stack size 0 bytes, main.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 324<LI>Call Chain = main &rArr; mpu_dmp_init &rArr; run_self_test &rArr; mpu_run_self_test &rArr; mpu_set_dmp_state &rArr; mpu_set_sample_rate &rArr; mpu_lp_accel_mode &rArr; mpu_configure_fifo &rArr; set_int_enable &rArr; MPU_Write_Len &rArr; IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
+<P><STRONG><a name="[40]"></a>main</STRONG> (Thumb, 68 bytes, Stack size 0 bytes, main.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 140<LI>Call Chain = main &rArr; log_init &rArr; USART_Initializes &rArr; USART_Baud_Rate_Config &rArr; RCC_Clocks_Frequencies_Value_Get
 </UL>
-<BR>[Calls]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_dmp_init
-<LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;log_init
+<BR>[Calls]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;log_init
 <LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMx_PWM_Init
-<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Init
-<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Load
+<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Load
 <LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_GPIO_Init
 <LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Key_GPIO_Init
-<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Pins_Reset
-<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Input_Pin_Data_Get
+<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Pins_Reset
 <LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Encoder_TIM3_Init
 <LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Encoder_TIM2_Init
-<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Init
+<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Init
 <LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ESP12F_IO0_Init
 <LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Configuration
 </UL>
@@ -330,540 +327,496 @@ Global Symbols
 <P><STRONG><a name="[a]"></a>SysTick_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, n32g430_it.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_n32g430.o(RESET)
 </UL>
-<P><STRONG><a name="[55]"></a>IIC_Init</STRONG> (Thumb, 74 bytes, Stack size 32 bytes, myiic.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = IIC_Init &rArr; GPIO_Peripheral_Initialize &rArr; GPIO_Mode_Set
+<P><STRONG><a name="[52]"></a>IIC_Init</STRONG> (Thumb, 74 bytes, Stack size 32 bytes, myiic.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHB_Peripheral_Clock_Enable
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Structure_Initialize
+<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Pins_Set
+<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Peripheral_Initialize
 </UL>
-<BR>[Calls]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHB_Peripheral_Clock_Enable
-<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Structure_Initialize
-<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Pins_Set
-<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Peripheral_Initialize
-</UL>
-<BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_dmp_init
-<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Init
+<BR>[Called By]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_dmp_init
+<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Init
 </UL>
 
-<P><STRONG><a name="[5a]"></a>IIC_Start</STRONG> (Thumb, 94 bytes, Stack size 8 bytes, myiic.o(.text))
+<P><STRONG><a name="[57]"></a>IIC_Start</STRONG> (Thumb, 94 bytes, Stack size 8 bytes, myiic.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = IIC_Start &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Delay_Us
-<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Pins_Set
-<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Pins_Reset
+<BR>[Calls]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Delay_Us
+<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Pins_Set
+<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Pins_Reset
 </UL>
-<BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Len
-<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Len
-<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Byte
-<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Byte
+<BR>[Called By]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Len
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Len
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Byte
+<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Byte
 </UL>
 
-<P><STRONG><a name="[5c]"></a>IIC_Stop</STRONG> (Thumb, 94 bytes, Stack size 8 bytes, myiic.o(.text))
+<P><STRONG><a name="[59]"></a>IIC_Stop</STRONG> (Thumb, 94 bytes, Stack size 8 bytes, myiic.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = IIC_Stop &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Delay_Us
-<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Pins_Set
-<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Pins_Reset
+<BR>[Calls]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Delay_Us
+<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Pins_Set
+<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Pins_Reset
 </UL>
-<BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Len
-<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Len
-<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Byte
-<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Byte
-<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Wait_Ack
+<BR>[Called By]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Len
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Len
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Byte
+<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Byte
+<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Wait_Ack
 </UL>
 
-<P><STRONG><a name="[5d]"></a>IIC_Wait_Ack</STRONG> (Thumb, 112 bytes, Stack size 8 bytes, myiic.o(.text))
+<P><STRONG><a name="[5a]"></a>IIC_Wait_Ack</STRONG> (Thumb, 112 bytes, Stack size 8 bytes, myiic.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 76<LI>Call Chain = IIC_Wait_Ack &rArr; IIC_Stop &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Delay_Us
-<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Stop
-<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Pins_Set
-<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Pins_Reset
-<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Input_Pin_Data_Get
+<BR>[Calls]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Delay_Us
+<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Input_Pin_Data_Get
+<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Stop
+<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Pins_Set
+<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Pins_Reset
 </UL>
-<BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Len
-<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Len
-<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Byte
-<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Byte
+<BR>[Called By]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Len
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Len
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Byte
+<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Byte
 </UL>
 
-<P><STRONG><a name="[5e]"></a>IIC_Ack</STRONG> (Thumb, 94 bytes, Stack size 8 bytes, myiic.o(.text))
+<P><STRONG><a name="[5c]"></a>IIC_Ack</STRONG> (Thumb, 94 bytes, Stack size 8 bytes, myiic.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = IIC_Ack &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Delay_Us
-<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Pins_Set
-<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Pins_Reset
+<BR>[Calls]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Delay_Us
+<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Pins_Set
+<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Pins_Reset
 </UL>
-<BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Read_Byte
+<BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Read_Byte
 </UL>
 
-<P><STRONG><a name="[5f]"></a>IIC_NAck</STRONG> (Thumb, 94 bytes, Stack size 8 bytes, myiic.o(.text))
+<P><STRONG><a name="[5d]"></a>IIC_NAck</STRONG> (Thumb, 94 bytes, Stack size 8 bytes, myiic.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = IIC_NAck &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Delay_Us
-<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Pins_Set
-<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Pins_Reset
+<BR>[Calls]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Delay_Us
+<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Pins_Set
+<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Pins_Reset
 </UL>
-<BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Read_Byte
+<BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Read_Byte
 </UL>
 
-<P><STRONG><a name="[60]"></a>IIC_Send_Byte</STRONG> (Thumb, 136 bytes, Stack size 16 bytes, myiic.o(.text))
+<P><STRONG><a name="[5e]"></a>IIC_Send_Byte</STRONG> (Thumb, 136 bytes, Stack size 16 bytes, myiic.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 76<LI>Call Chain = IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Delay_Us
-<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Pins_Set
-<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Pins_Reset
+<BR>[Calls]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Delay_Us
+<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Pins_Set
+<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Pins_Reset
 </UL>
-<BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Len
-<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Len
-<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Byte
-<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Byte
+<BR>[Called By]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Len
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Len
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Byte
+<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Byte
 </UL>
 
-<P><STRONG><a name="[61]"></a>IIC_Read_Byte</STRONG> (Thumb, 112 bytes, Stack size 16 bytes, myiic.o(.text))
+<P><STRONG><a name="[5f]"></a>IIC_Read_Byte</STRONG> (Thumb, 112 bytes, Stack size 16 bytes, myiic.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 84<LI>Call Chain = IIC_Read_Byte &rArr; IIC_NAck &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Delay_Us
-<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_NAck
-<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Ack
-<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Pins_Set
-<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Pins_Reset
-<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Input_Pin_Data_Get
+<BR>[Calls]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Delay_Us
+<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Input_Pin_Data_Get
+<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_NAck
+<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Ack
+<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Pins_Set
+<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Pins_Reset
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Len
-<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Byte
-</UL>
-
-<P><STRONG><a name="[62]"></a>MPU_Write_Byte</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, mpu6050.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 92<LI>Call Chain = MPU_Write_Byte &rArr; IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
-</UL>
-<BR>[Calls]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Send_Byte
-<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Wait_Ack
-<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Stop
-<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Start
-</UL>
-<BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Set_Gyro_Fsr
-<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Set_Accel_Fsr
-<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Set_Rate
-<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Set_LPF
-<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Init
+<BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Len
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Byte
 </UL>
 
-<P><STRONG><a name="[63]"></a>MPU_Set_LPF</STRONG> (Thumb, 58 bytes, Stack size 16 bytes, mpu6050.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 108<LI>Call Chain = MPU_Set_LPF &rArr; MPU_Write_Byte &rArr; IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
+<P><STRONG><a name="[60]"></a>MPU_Write_Byte</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, mpu6050.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Send_Byte
+<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Wait_Ack
+<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Stop
+<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Start
 </UL>
-<BR>[Calls]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Byte
-</UL>
-<BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Set_Rate
-</UL>
-
-<P><STRONG><a name="[64]"></a>MPU_Set_Rate</STRONG> (Thumb, 58 bytes, Stack size 16 bytes, mpu6050.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 124<LI>Call Chain = MPU_Set_Rate &rArr; MPU_Set_LPF &rArr; MPU_Write_Byte &rArr; IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
-</UL>
-<BR>[Calls]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Set_LPF
-<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Byte
-</UL>
-<BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Init
+<BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Init
+<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Set_Gyro_Fsr
+<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Set_Accel_Fsr
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Set_Rate
+<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Set_LPF
 </UL>
 
-<P><STRONG><a name="[65]"></a>MPU_Read_Byte</STRONG> (Thumb, 58 bytes, Stack size 16 bytes, mpu6050.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 100<LI>Call Chain = MPU_Read_Byte &rArr; IIC_Read_Byte &rArr; IIC_NAck &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
+<P><STRONG><a name="[61]"></a>MPU_Set_LPF</STRONG> (Thumb, 58 bytes, Stack size 16 bytes, mpu6050.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Byte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Read_Byte
-<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Send_Byte
-<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Wait_Ack
-<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Stop
-<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Start
-</UL>
-<BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Init
+<BR>[Called By]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Set_Rate
 </UL>
 
-<P><STRONG><a name="[66]"></a>MPU_Set_Accel_Fsr</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, mpu6050.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 100<LI>Call Chain = MPU_Set_Accel_Fsr &rArr; MPU_Write_Byte &rArr; IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
+<P><STRONG><a name="[62]"></a>MPU_Set_Rate</STRONG> (Thumb, 58 bytes, Stack size 16 bytes, mpu6050.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Set_LPF
+<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Byte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Byte
-</UL>
-<BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Init
-</UL>
-
-<P><STRONG><a name="[67]"></a>MPU_Set_Gyro_Fsr</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, mpu6050.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 100<LI>Call Chain = MPU_Set_Gyro_Fsr &rArr; MPU_Write_Byte &rArr; IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
-</UL>
-<BR>[Calls]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Byte
-</UL>
-<BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Init
+<BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Init
 </UL>
 
-<P><STRONG><a name="[4f]"></a>MPU_Init</STRONG> (Thumb, 134 bytes, Stack size 8 bytes, mpu6050.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 132<LI>Call Chain = MPU_Init &rArr; MPU_Set_Rate &rArr; MPU_Set_LPF &rArr; MPU_Write_Byte &rArr; IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
+<P><STRONG><a name="[63]"></a>MPU_Read_Byte</STRONG> (Thumb, 58 bytes, Stack size 16 bytes, mpu6050.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Read_Byte
+<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Send_Byte
+<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Wait_Ack
+<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Stop
+<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Start
 </UL>
-<BR>[Calls]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Delay_Ms
-<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Set_Gyro_Fsr
-<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Set_Accel_Fsr
-<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Byte
-<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Set_Rate
-<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Byte
-<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Init
-<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-</UL>
-<BR>[Called By]<UL><LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Init
 </UL>
 
-<P><STRONG><a name="[6a]"></a>MPU_Read_Len</STRONG> (Thumb, 116 bytes, Stack size 24 bytes, mpu6050.o(.text))
+<P><STRONG><a name="[64]"></a>MPU_Set_Accel_Fsr</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, mpu6050.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Byte
+</UL>
+<BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Init
+</UL>
+
+<P><STRONG><a name="[65]"></a>MPU_Set_Gyro_Fsr</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, mpu6050.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Byte
+</UL>
+<BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Init
+</UL>
+
+<P><STRONG><a name="[66]"></a>MPU_Init</STRONG> (Thumb, 134 bytes, Stack size 8 bytes, mpu6050.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Delay_Ms
+<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Set_Gyro_Fsr
+<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Set_Accel_Fsr
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Byte
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Set_Rate
+<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Byte
+<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Init
+<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+</UL>
+
+<P><STRONG><a name="[69]"></a>MPU_Read_Len</STRONG> (Thumb, 116 bytes, Stack size 24 bytes, mpu6050.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 108<LI>Call Chain = MPU_Read_Len &rArr; IIC_Read_Byte &rArr; IIC_NAck &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
 </UL>
-<BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Read_Byte
-<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Send_Byte
-<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Wait_Ack
-<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Stop
-<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Start
+<BR>[Calls]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Read_Byte
+<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Send_Byte
+<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Wait_Ack
+<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Stop
+<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Start
 </UL>
-<BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_read_mem
-<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_read_fifo_stream
-<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_read_fifo
-<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_int_status
-<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_accel_bias
-<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_temperature
-<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_accel_reg
-<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_gyro_reg
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_init
-<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_bypass
-<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_read_reg
-<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_reg_dump
-<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_st_biases
-<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gyro_self_test
-<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_accel_prod_shift
-<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Get_Accelerometer
-<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Get_Gyroscope
-<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Get_Temperature
-</UL>
-
-<P><STRONG><a name="[6b]"></a>MPU_Get_Temperature</STRONG> (Thumb, 110 bytes, Stack size 48 bytes, mpu6050.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2d
-<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
-<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
-<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2f
-<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Len
+<BR>[Called By]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_read_mem
+<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_read_fifo_stream
+<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_read_fifo
+<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_int_status
+<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_accel_bias
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_temperature
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_accel_reg
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_gyro_reg
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_init
+<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_bypass
+<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_read_reg
+<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_reg_dump
+<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_st_biases
+<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gyro_self_test
+<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_accel_prod_shift
+<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Get_Accelerometer
+<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Get_Gyroscope
+<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Get_Temperature
 </UL>
 
-<P><STRONG><a name="[70]"></a>MPU_Get_Gyroscope</STRONG> (Thumb, 80 bytes, Stack size 32 bytes, mpu6050.o(.text))
+<P><STRONG><a name="[6a]"></a>MPU_Get_Temperature</STRONG> (Thumb, 110 bytes, Stack size 48 bytes, mpu6050.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2d
+<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
+<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2f
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Len
+</UL>
+
+<P><STRONG><a name="[6f]"></a>MPU_Get_Gyroscope</STRONG> (Thumb, 80 bytes, Stack size 32 bytes, mpu6050.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 140<LI>Call Chain = MPU_Get_Gyroscope &rArr; MPU_Read_Len &rArr; IIC_Read_Byte &rArr; IIC_NAck &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Len
+<BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Len
 </UL>
 <BR>[Called By]<UL><LI><a href="#[21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI9_5_IRQHandler
 </UL>
 
-<P><STRONG><a name="[71]"></a>MPU_Get_Accelerometer</STRONG> (Thumb, 80 bytes, Stack size 32 bytes, mpu6050.o(.text))
+<P><STRONG><a name="[70]"></a>MPU_Get_Accelerometer</STRONG> (Thumb, 80 bytes, Stack size 32 bytes, mpu6050.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 140<LI>Call Chain = MPU_Get_Accelerometer &rArr; MPU_Read_Len &rArr; IIC_Read_Byte &rArr; IIC_NAck &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Len
+<BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Len
 </UL>
 <BR>[Called By]<UL><LI><a href="#[21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI9_5_IRQHandler
 </UL>
 
-<P><STRONG><a name="[72]"></a>MPU_Write_Len</STRONG> (Thumb, 96 bytes, Stack size 24 bytes, mpu6050.o(.text))
+<P><STRONG><a name="[71]"></a>MPU_Write_Len</STRONG> (Thumb, 96 bytes, Stack size 24 bytes, mpu6050.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 100<LI>Call Chain = MPU_Write_Len &rArr; IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
 </UL>
-<BR>[Calls]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Send_Byte
-<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Wait_Ack
-<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Stop
-<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Start
+<BR>[Calls]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Send_Byte
+<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Wait_Ack
+<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Stop
+<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Start
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_lp_motion_interrupt
-<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_load_firmware
-<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_read_mem
-<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_write_mem
-<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_dmp_state
-<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_accel_bias
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_init
-<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_gyro_fsr
-<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_accel_fsr
-<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_sample_rate
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_lp_accel_mode
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_lpf
-<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_reset_fifo
-<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_bypass
-<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_sensors
-<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_int_latched
-<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_st_biases
-<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_int_enable
-</UL>
-
-<P><STRONG><a name="[75]"></a>mpu_reg_dump</STRONG> (Thumb, 84 bytes, Stack size 16 bytes, inv_mpu.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Len
-<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_lp_motion_interrupt
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_load_firmware
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_read_mem
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_write_mem
+<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_dmp_state
+<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_accel_bias
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_init
+<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_gyro_fsr
+<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_accel_fsr
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_sample_rate
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_lp_accel_mode
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_lpf
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_reset_fifo
+<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_bypass
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_sensors
+<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_int_latched
+<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_st_biases
+<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_int_enable
 </UL>
 
-<P><STRONG><a name="[76]"></a>mpu_read_reg</STRONG> (Thumb, 66 bytes, Stack size 16 bytes, inv_mpu.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Len
+<P><STRONG><a name="[74]"></a>mpu_reg_dump</STRONG> (Thumb, 84 bytes, Stack size 16 bytes, inv_mpu.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Len
+<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 
-<P><STRONG><a name="[77]"></a>mpu_set_int_latched</STRONG> (Thumb, 102 bytes, Stack size 16 bytes, inv_mpu.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 116<LI>Call Chain = mpu_set_int_latched &rArr; MPU_Write_Len &rArr; IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
-</UL>
-<BR>[Calls]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Len
-</UL>
-<BR>[Called By]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_lp_accel_mode
-<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_sensors
+<P><STRONG><a name="[75]"></a>mpu_read_reg</STRONG> (Thumb, 66 bytes, Stack size 16 bytes, inv_mpu.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Len
 </UL>
 
-<P><STRONG><a name="[78]"></a>mpu_set_sensors</STRONG> (Thumb, 202 bytes, Stack size 16 bytes, inv_mpu.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 132<LI>Call Chain = mpu_set_sensors &rArr; mpu_set_int_latched &rArr; MPU_Write_Len &rArr; IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
+<P><STRONG><a name="[76]"></a>mpu_set_int_latched</STRONG> (Thumb, 102 bytes, Stack size 16 bytes, inv_mpu.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Len
 </UL>
-<BR>[Calls]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_int_latched
-<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Delay_Ms
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Len
-</UL>
-<BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_lp_motion_interrupt
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_run_self_test
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_init
-<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_dmp_init
+<BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_lp_accel_mode
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_sensors
 </UL>
 
-<P><STRONG><a name="[79]"></a>mpu_set_bypass</STRONG> (Thumb, 328 bytes, Stack size 16 bytes, inv_mpu.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 124<LI>Call Chain = mpu_set_bypass &rArr; MPU_Read_Len &rArr; IIC_Read_Byte &rArr; IIC_NAck &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
+<P><STRONG><a name="[77]"></a>mpu_set_sensors</STRONG> (Thumb, 202 bytes, Stack size 16 bytes, inv_mpu.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_int_latched
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Delay_Ms
+<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Len
 </UL>
-<BR>[Calls]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Delay_Ms
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Len
-<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Len
-</UL>
-<BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_dmp_state
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_init
+<BR>[Called By]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_dmp_init
+<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_lp_motion_interrupt
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_run_self_test
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_init
 </UL>
 
-<P><STRONG><a name="[7a]"></a>mpu_reset_fifo</STRONG> (Thumb, 472 bytes, Stack size 8 bytes, inv_mpu.o(.text))
+<P><STRONG><a name="[78]"></a>mpu_set_bypass</STRONG> (Thumb, 328 bytes, Stack size 16 bytes, inv_mpu.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Delay_Ms
+<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Len
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Len
+</UL>
+<BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_dmp_state
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_init
+</UL>
+
+<P><STRONG><a name="[79]"></a>mpu_reset_fifo</STRONG> (Thumb, 472 bytes, Stack size 8 bytes, inv_mpu.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 108<LI>Call Chain = mpu_reset_fifo &rArr; MPU_Write_Len &rArr; IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
 </UL>
-<BR>[Calls]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Delay_Ms
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Len
+<BR>[Calls]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Delay_Ms
+<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Len
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_enable_lp_quat
 <LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_enable_6x_lp_quat
 <LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_read_fifo
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_enable_feature
-<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_dmp_state
-<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_read_fifo_stream
-<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_read_fifo
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_configure_fifo
+<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_dmp_state
+<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_read_fifo_stream
+<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_read_fifo
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_configure_fifo
 </UL>
 
-<P><STRONG><a name="[7b]"></a>mpu_configure_fifo</STRONG> (Thumb, 106 bytes, Stack size 16 bytes, inv_mpu.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 132<LI>Call Chain = mpu_configure_fifo &rArr; set_int_enable &rArr; MPU_Write_Len &rArr; IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
+<P><STRONG><a name="[7a]"></a>mpu_configure_fifo</STRONG> (Thumb, 106 bytes, Stack size 16 bytes, inv_mpu.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_reset_fifo
+<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_int_enable
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_reset_fifo
-<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_int_enable
-</UL>
-<BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_lp_motion_interrupt
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_run_self_test
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_init
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_lp_accel_mode
-<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_dmp_init
+<BR>[Called By]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_dmp_init
+<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_lp_motion_interrupt
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_run_self_test
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_init
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_lp_accel_mode
 </UL>
 
-<P><STRONG><a name="[7c]"></a>mpu_set_lpf</STRONG> (Thumb, 126 bytes, Stack size 16 bytes, inv_mpu.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 116<LI>Call Chain = mpu_set_lpf &rArr; MPU_Write_Len &rArr; IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
+<P><STRONG><a name="[7b]"></a>mpu_set_lpf</STRONG> (Thumb, 126 bytes, Stack size 16 bytes, inv_mpu.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Len
 </UL>
-<BR>[Calls]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Len
-</UL>
-<BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_lp_motion_interrupt
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_run_self_test
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_init
-<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_sample_rate
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_lp_accel_mode
+<BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_lp_motion_interrupt
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_run_self_test
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_init
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_sample_rate
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_lp_accel_mode
 </UL>
 
-<P><STRONG><a name="[7d]"></a>mpu_lp_accel_mode</STRONG> (Thumb, 218 bytes, Stack size 16 bytes, inv_mpu.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 148<LI>Call Chain = mpu_lp_accel_mode &rArr; mpu_configure_fifo &rArr; set_int_enable &rArr; MPU_Write_Len &rArr; IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
+<P><STRONG><a name="[7c]"></a>mpu_lp_accel_mode</STRONG> (Thumb, 218 bytes, Stack size 16 bytes, inv_mpu.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_lpf
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_configure_fifo
+<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_int_latched
+<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Len
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_lpf
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_configure_fifo
-<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_int_latched
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Len
-</UL>
-<BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_lp_motion_interrupt
-<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_sample_rate
+<BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_lp_motion_interrupt
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_sample_rate
 </UL>
 
-<P><STRONG><a name="[7e]"></a>mpu_set_sample_rate</STRONG> (Thumb, 152 bytes, Stack size 16 bytes, inv_mpu.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 164<LI>Call Chain = mpu_set_sample_rate &rArr; mpu_lp_accel_mode &rArr; mpu_configure_fifo &rArr; set_int_enable &rArr; MPU_Write_Len &rArr; IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
+<P><STRONG><a name="[7d]"></a>mpu_set_sample_rate</STRONG> (Thumb, 152 bytes, Stack size 16 bytes, inv_mpu.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_lp_accel_mode
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_lpf
+<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Len
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_lp_accel_mode
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_lpf
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Len
-</UL>
-<BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_lp_motion_interrupt
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_run_self_test
-<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_dmp_state
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_init
-<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_dmp_init
+<BR>[Called By]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_dmp_init
+<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_lp_motion_interrupt
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_run_self_test
+<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_dmp_state
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_init
 </UL>
 
-<P><STRONG><a name="[7f]"></a>mpu_set_accel_fsr</STRONG> (Thumb, 132 bytes, Stack size 16 bytes, inv_mpu.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 116<LI>Call Chain = mpu_set_accel_fsr &rArr; MPU_Write_Len &rArr; IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
+<P><STRONG><a name="[7e]"></a>mpu_set_accel_fsr</STRONG> (Thumb, 132 bytes, Stack size 16 bytes, inv_mpu.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Len
 </UL>
-<BR>[Calls]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Len
-</UL>
-<BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_lp_motion_interrupt
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_run_self_test
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_init
+<BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_lp_motion_interrupt
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_run_self_test
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_init
 </UL>
 
-<P><STRONG><a name="[80]"></a>mpu_set_gyro_fsr</STRONG> (Thumb, 132 bytes, Stack size 16 bytes, inv_mpu.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 116<LI>Call Chain = mpu_set_gyro_fsr &rArr; MPU_Write_Len &rArr; IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
+<P><STRONG><a name="[7f]"></a>mpu_set_gyro_fsr</STRONG> (Thumb, 132 bytes, Stack size 16 bytes, inv_mpu.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Len
 </UL>
-<BR>[Calls]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Len
-</UL>
-<BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_lp_motion_interrupt
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_run_self_test
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_init
+<BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_lp_motion_interrupt
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_run_self_test
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_init
 </UL>
 
-<P><STRONG><a name="[81]"></a>mpu_init</STRONG> (Thumb, 416 bytes, Stack size 16 bytes, inv_mpu.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 180<LI>Call Chain = mpu_init &rArr; mpu_set_sample_rate &rArr; mpu_lp_accel_mode &rArr; mpu_configure_fifo &rArr; set_int_enable &rArr; MPU_Write_Len &rArr; IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
+<P><STRONG><a name="[80]"></a>mpu_init</STRONG> (Thumb, 416 bytes, Stack size 16 bytes, inv_mpu.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_gyro_fsr
+<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_accel_fsr
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_sample_rate
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_lpf
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_configure_fifo
+<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_bypass
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_sensors
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Delay_Ms
+<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Len
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Len
+<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_gyro_fsr
-<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_accel_fsr
-<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_sample_rate
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_lpf
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_configure_fifo
-<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_bypass
-<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_sensors
-<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Delay_Ms
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Len
-<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Len
-<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-</UL>
-<BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_dmp_init
+<BR>[Called By]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_dmp_init
 </UL>
 
-<P><STRONG><a name="[83]"></a>mget_ms</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, inv_mpu.o(.text))
+<P><STRONG><a name="[82]"></a>mget_ms</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, inv_mpu.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_read_fifo
-<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_read_fifo
-<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_temperature
-<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_accel_reg
-<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_gyro_reg
+<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_read_fifo
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_temperature
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_accel_reg
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_gyro_reg
 </UL>
 
-<P><STRONG><a name="[82]"></a>mpu_get_gyro_reg</STRONG> (Thumb, 110 bytes, Stack size 24 bytes, inv_mpu.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mget_ms
-<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Len
+<P><STRONG><a name="[81]"></a>mpu_get_gyro_reg</STRONG> (Thumb, 110 bytes, Stack size 24 bytes, inv_mpu.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mget_ms
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Len
 </UL>
 
-<P><STRONG><a name="[84]"></a>mpu_get_accel_reg</STRONG> (Thumb, 110 bytes, Stack size 24 bytes, inv_mpu.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mget_ms
-<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Len
+<P><STRONG><a name="[83]"></a>mpu_get_accel_reg</STRONG> (Thumb, 110 bytes, Stack size 24 bytes, inv_mpu.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mget_ms
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Len
 </UL>
 
-<P><STRONG><a name="[85]"></a>mpu_get_temperature</STRONG> (Thumb, 142 bytes, Stack size 24 bytes, inv_mpu.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mget_ms
-<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Len
+<P><STRONG><a name="[84]"></a>mpu_get_temperature</STRONG> (Thumb, 142 bytes, Stack size 24 bytes, inv_mpu.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mget_ms
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Len
 </UL>
 
-<P><STRONG><a name="[86]"></a>mpu_set_accel_bias</STRONG> (Thumb, 472 bytes, Stack size 40 bytes, inv_mpu.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Len
-<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Len
+<P><STRONG><a name="[85]"></a>mpu_set_accel_bias</STRONG> (Thumb, 472 bytes, Stack size 40 bytes, inv_mpu.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Len
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Len
 </UL>
 
-<P><STRONG><a name="[91]"></a>mpu_get_gyro_fsr</STRONG> (Thumb, 64 bytes, Stack size 0 bytes, inv_mpu.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_lp_motion_interrupt
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_run_self_test
+<P><STRONG><a name="[90]"></a>mpu_get_gyro_fsr</STRONG> (Thumb, 64 bytes, Stack size 0 bytes, inv_mpu.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_lp_motion_interrupt
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_run_self_test
 </UL>
 
-<P><STRONG><a name="[92]"></a>mpu_get_accel_fsr</STRONG> (Thumb, 72 bytes, Stack size 0 bytes, inv_mpu.o(.text))
+<P><STRONG><a name="[91]"></a>mpu_get_accel_fsr</STRONG> (Thumb, 72 bytes, Stack size 0 bytes, inv_mpu.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_set_tap_thresh
-<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_lp_motion_interrupt
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_run_self_test
+<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_lp_motion_interrupt
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_run_self_test
 </UL>
 
-<P><STRONG><a name="[93]"></a>mpu_get_lpf</STRONG> (Thumb, 74 bytes, Stack size 0 bytes, inv_mpu.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_lp_motion_interrupt
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_run_self_test
+<P><STRONG><a name="[92]"></a>mpu_get_lpf</STRONG> (Thumb, 74 bytes, Stack size 0 bytes, inv_mpu.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_lp_motion_interrupt
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_run_self_test
 </UL>
 
-<P><STRONG><a name="[94]"></a>mpu_get_sample_rate</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, inv_mpu.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_lp_motion_interrupt
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_run_self_test
+<P><STRONG><a name="[93]"></a>mpu_get_sample_rate</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, inv_mpu.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_lp_motion_interrupt
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_run_self_test
 </UL>
 
 <P><STRONG><a name="[1a3]"></a>mpu_get_compass_sample_rate</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, inv_mpu.o(.text), UNUSED)
 
 <P><STRONG><a name="[1a4]"></a>mpu_set_compass_sample_rate</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, inv_mpu.o(.text), UNUSED)
 
-<P><STRONG><a name="[9c]"></a>mpu_get_gyro_sens</STRONG> (Thumb, 74 bytes, Stack size 0 bytes, inv_mpu.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;run_self_test
+<P><STRONG><a name="[9b]"></a>mpu_get_gyro_sens</STRONG> (Thumb, 74 bytes, Stack size 0 bytes, inv_mpu.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;run_self_test
 </UL>
 
-<P><STRONG><a name="[9e]"></a>mpu_get_accel_sens</STRONG> (Thumb, 78 bytes, Stack size 0 bytes, inv_mpu.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_set_accel_bias
-<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;run_self_test
+<P><STRONG><a name="[9d]"></a>mpu_get_accel_sens</STRONG> (Thumb, 78 bytes, Stack size 0 bytes, inv_mpu.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_set_accel_bias
+<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;run_self_test
 </UL>
 
-<P><STRONG><a name="[95]"></a>mpu_get_fifo_config</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, inv_mpu.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_lp_motion_interrupt
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_run_self_test
+<P><STRONG><a name="[94]"></a>mpu_get_fifo_config</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, inv_mpu.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_lp_motion_interrupt
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_run_self_test
 </UL>
 
 <P><STRONG><a name="[1a5]"></a>mpu_get_power_state</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, inv_mpu.o(.text), UNUSED)
 
-<P><STRONG><a name="[87]"></a>mpu_get_int_status</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, inv_mpu.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Len
+<P><STRONG><a name="[86]"></a>mpu_get_int_status</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, inv_mpu.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Len
 </UL>
 
-<P><STRONG><a name="[88]"></a>mpu_read_fifo</STRONG> (Thumb, 520 bytes, Stack size 48 bytes, inv_mpu.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mget_ms
-<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_reset_fifo
-<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Len
+<P><STRONG><a name="[87]"></a>mpu_read_fifo</STRONG> (Thumb, 520 bytes, Stack size 48 bytes, inv_mpu.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mget_ms
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_reset_fifo
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Len
 </UL>
 
-<P><STRONG><a name="[89]"></a>mpu_read_fifo_stream</STRONG> (Thumb, 186 bytes, Stack size 24 bytes, inv_mpu.o(.text))
+<P><STRONG><a name="[88]"></a>mpu_read_fifo_stream</STRONG> (Thumb, 186 bytes, Stack size 24 bytes, inv_mpu.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 132<LI>Call Chain = mpu_read_fifo_stream &rArr; mpu_reset_fifo &rArr; MPU_Write_Len &rArr; IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_reset_fifo
-<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Len
+<BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_reset_fifo
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Len
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_read_fifo
 </UL>
 
 <P><STRONG><a name="[1a6]"></a>mpu_set_int_level</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, inv_mpu.o(.text), UNUSED)
 
-<P><STRONG><a name="[8f]"></a>mpu_set_dmp_state</STRONG> (Thumb, 138 bytes, Stack size 16 bytes, inv_mpu.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 180<LI>Call Chain = mpu_set_dmp_state &rArr; mpu_set_sample_rate &rArr; mpu_lp_accel_mode &rArr; mpu_configure_fifo &rArr; set_int_enable &rArr; MPU_Write_Len &rArr; IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
+<P><STRONG><a name="[8e]"></a>mpu_set_dmp_state</STRONG> (Thumb, 138 bytes, Stack size 16 bytes, inv_mpu.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_sample_rate
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_reset_fifo
+<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_bypass
+<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_int_enable
+<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Len
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_sample_rate
-<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_reset_fifo
-<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_bypass
-<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_int_enable
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Len
-</UL>
-<BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_lp_motion_interrupt
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_run_self_test
-<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_dmp_init
+<BR>[Called By]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_dmp_init
+<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_lp_motion_interrupt
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_run_self_test
 </UL>
 
-<P><STRONG><a name="[90]"></a>mpu_run_self_test</STRONG> (Thumb, 278 bytes, Stack size 88 bytes, inv_mpu.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 268<LI>Call Chain = mpu_run_self_test &rArr; mpu_set_dmp_state &rArr; mpu_set_sample_rate &rArr; mpu_lp_accel_mode &rArr; mpu_configure_fifo &rArr; set_int_enable &rArr; MPU_Write_Len &rArr; IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
+<P><STRONG><a name="[8f]"></a>mpu_run_self_test</STRONG> (Thumb, 278 bytes, Stack size 88 bytes, inv_mpu.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_dmp_state
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_fifo_config
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_sample_rate
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_lpf
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_accel_fsr
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_gyro_fsr
+<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_gyro_fsr
+<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_accel_fsr
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_sample_rate
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_lpf
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_configure_fifo
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_sensors
+<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_st_biases
+<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gyro_self_test
+<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;accel_self_test
 </UL>
-<BR>[Calls]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_dmp_state
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_fifo_config
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_sample_rate
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_lpf
-<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_accel_fsr
-<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_gyro_fsr
-<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_gyro_fsr
-<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_accel_fsr
-<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_sample_rate
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_lpf
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_configure_fifo
-<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_sensors
-<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_st_biases
-<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gyro_self_test
-<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;accel_self_test
-</UL>
-<BR>[Called By]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;run_self_test
+<BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;run_self_test
 </UL>
 
-<P><STRONG><a name="[96]"></a>mpu_write_mem</STRONG> (Thumb, 122 bytes, Stack size 24 bytes, inv_mpu.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 124<LI>Call Chain = mpu_write_mem &rArr; MPU_Write_Len &rArr; IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
-</UL>
-<BR>[Calls]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Len
+<P><STRONG><a name="[95]"></a>mpu_write_mem</STRONG> (Thumb, 122 bytes, Stack size 24 bytes, inv_mpu.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Len
 </UL>
 <BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_set_interrupt_mode
 <LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_enable_gyro_cal
@@ -880,31 +833,27 @@ Global Symbols
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_set_tap_axes
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_set_tap_thresh
 <LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_set_orientation
-<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_set_gyro_bias
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_set_gyro_bias
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_set_fifo_rate
-<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_set_accel_bias
+<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_set_accel_bias
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_enable_feature
-<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_load_firmware
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_load_firmware
 </UL>
 
-<P><STRONG><a name="[97]"></a>mpu_read_mem</STRONG> (Thumb, 122 bytes, Stack size 24 bytes, inv_mpu.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 132<LI>Call Chain = mpu_read_mem &rArr; MPU_Read_Len &rArr; IIC_Read_Byte &rArr; IIC_NAck &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
-</UL>
-<BR>[Calls]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Len
-<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Len
+<P><STRONG><a name="[96]"></a>mpu_read_mem</STRONG> (Thumb, 122 bytes, Stack size 24 bytes, inv_mpu.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Len
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Len
 </UL>
 <BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_get_pedometer_walk_time
 <LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_get_pedometer_step_count
-<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_load_firmware
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_load_firmware
 </UL>
 
-<P><STRONG><a name="[98]"></a>mpu_load_firmware</STRONG> (Thumb, 190 bytes, Stack size 48 bytes, inv_mpu.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 180<LI>Call Chain = mpu_load_firmware &rArr; mpu_read_mem &rArr; MPU_Read_Len &rArr; IIC_Read_Byte &rArr; IIC_NAck &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
-</UL>
-<BR>[Calls]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_read_mem
-<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_write_mem
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Len
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;memcmp
+<P><STRONG><a name="[97]"></a>mpu_load_firmware</STRONG> (Thumb, 190 bytes, Stack size 48 bytes, inv_mpu.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_read_mem
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_write_mem
+<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Len
+<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;memcmp
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_load_motion_driver_firmware
 </UL>
@@ -917,66 +866,58 @@ Global Symbols
 
 <P><STRONG><a name="[1aa]"></a>mpu_get_compass_fsr</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, inv_mpu.o(.text), UNUSED)
 
-<P><STRONG><a name="[9a]"></a>mpu_lp_motion_interrupt</STRONG> (Thumb, 512 bytes, Stack size 24 bytes, inv_mpu.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_dmp_state
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_fifo_config
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_sample_rate
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_lpf
-<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_accel_fsr
-<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_gyro_fsr
-<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_gyro_fsr
-<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_accel_fsr
-<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_sample_rate
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_lp_accel_mode
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_lpf
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_configure_fifo
-<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_sensors
-<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_int_enable
-<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Delay_Ms
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Len
+<P><STRONG><a name="[99]"></a>mpu_lp_motion_interrupt</STRONG> (Thumb, 512 bytes, Stack size 24 bytes, inv_mpu.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_dmp_state
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_fifo_config
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_sample_rate
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_lpf
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_accel_fsr
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_gyro_fsr
+<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_gyro_fsr
+<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_accel_fsr
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_sample_rate
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_lp_accel_mode
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_lpf
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_configure_fifo
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_sensors
+<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_int_enable
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Delay_Ms
+<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Len
 </UL>
 
-<P><STRONG><a name="[9b]"></a>run_self_test</STRONG> (Thumb, 154 bytes, Stack size 40 bytes, inv_mpu.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 308<LI>Call Chain = run_self_test &rArr; mpu_run_self_test &rArr; mpu_set_dmp_state &rArr; mpu_set_sample_rate &rArr; mpu_lp_accel_mode &rArr; mpu_configure_fifo &rArr; set_int_enable &rArr; MPU_Write_Len &rArr; IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
+<P><STRONG><a name="[9a]"></a>run_self_test</STRONG> (Thumb, 154 bytes, Stack size 40 bytes, inv_mpu.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_set_gyro_bias
+<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_set_accel_bias
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_run_self_test
+<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_accel_sens
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_gyro_sens
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_set_gyro_bias
-<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_set_accel_bias
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_run_self_test
-<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_accel_sens
-<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_gyro_sens
-</UL>
-<BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_dmp_init
+<BR>[Called By]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_dmp_init
 </UL>
 
-<P><STRONG><a name="[a1]"></a>inv_row_2_scale</STRONG> (Thumb, 78 bytes, Stack size 0 bytes, inv_mpu.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;inv_orientation_matrix_to_scalar
+<P><STRONG><a name="[a0]"></a>inv_row_2_scale</STRONG> (Thumb, 78 bytes, Stack size 0 bytes, inv_mpu.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;inv_orientation_matrix_to_scalar
 </UL>
 
-<P><STRONG><a name="[a0]"></a>inv_orientation_matrix_to_scalar</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, inv_mpu.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = inv_orientation_matrix_to_scalar
+<P><STRONG><a name="[9f]"></a>inv_orientation_matrix_to_scalar</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, inv_mpu.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;inv_row_2_scale
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;inv_row_2_scale
-</UL>
-<BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_dmp_init
+<BR>[Called By]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_dmp_init
 </UL>
 
-<P><STRONG><a name="[50]"></a>mpu_dmp_init</STRONG> (Thumb, 160 bytes, Stack size 16 bytes, inv_mpu.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 324<LI>Call Chain = mpu_dmp_init &rArr; run_self_test &rArr; mpu_run_self_test &rArr; mpu_set_dmp_state &rArr; mpu_set_sample_rate &rArr; mpu_lp_accel_mode &rArr; mpu_configure_fifo &rArr; set_int_enable &rArr; MPU_Write_Len &rArr; IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
-</UL>
-<BR>[Calls]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_set_orientation
+<P><STRONG><a name="[a1]"></a>mpu_dmp_init</STRONG> (Thumb, 160 bytes, Stack size 16 bytes, inv_mpu.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_set_orientation
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_set_fifo_rate
 <LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_load_motion_driver_firmware
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_enable_feature
-<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;inv_orientation_matrix_to_scalar
-<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;run_self_test
-<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_dmp_state
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_init
-<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_sample_rate
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_configure_fifo
-<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_sensors
-<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Init
-</UL>
-<BR>[Called By]<UL><LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;inv_orientation_matrix_to_scalar
+<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;run_self_test
+<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_dmp_state
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_init
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_sample_rate
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_configure_fifo
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_sensors
+<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Init
 </UL>
 
 <P><STRONG><a name="[a6]"></a>mpu_dmp_get_data</STRONG> (Thumb, 520 bytes, Stack size 120 bytes, inv_mpu.o(.text))
@@ -984,7 +925,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_read_fifo
 <LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
-<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2f
+<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2f
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
 <LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_asin
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan2
@@ -992,162 +933,128 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI9_5_IRQHandler
 </UL>
 
-<P><STRONG><a name="[a2]"></a>dmp_load_motion_driver_firmware</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, inv_mpu_dmp_motion_driver.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 188<LI>Call Chain = dmp_load_motion_driver_firmware &rArr; mpu_load_firmware &rArr; mpu_read_mem &rArr; MPU_Read_Len &rArr; IIC_Read_Byte &rArr; IIC_NAck &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
+<P><STRONG><a name="[a2]"></a>dmp_load_motion_driver_firmware</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, inv_mpu_dmp_motion_driver.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_load_firmware
 </UL>
-<BR>[Calls]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_load_firmware
-</UL>
-<BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_dmp_init
+<BR>[Called By]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_dmp_init
 </UL>
 
-<P><STRONG><a name="[a3]"></a>dmp_set_orientation</STRONG> (Thumb, 290 bytes, Stack size 32 bytes, inv_mpu_dmp_motion_driver.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 156<LI>Call Chain = dmp_set_orientation &rArr; mpu_write_mem &rArr; MPU_Write_Len &rArr; IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
+<P><STRONG><a name="[a3]"></a>dmp_set_orientation</STRONG> (Thumb, 290 bytes, Stack size 32 bytes, inv_mpu_dmp_motion_driver.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_write_mem
 </UL>
-<BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_write_mem
-</UL>
-<BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_dmp_init
+<BR>[Called By]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_dmp_init
 </UL>
 
-<P><STRONG><a name="[9d]"></a>dmp_set_gyro_bias</STRONG> (Thumb, 294 bytes, Stack size 24 bytes, inv_mpu_dmp_motion_driver.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 148<LI>Call Chain = dmp_set_gyro_bias &rArr; mpu_write_mem &rArr; MPU_Write_Len &rArr; IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
+<P><STRONG><a name="[9c]"></a>dmp_set_gyro_bias</STRONG> (Thumb, 294 bytes, Stack size 24 bytes, inv_mpu_dmp_motion_driver.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_write_mem
 </UL>
-<BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_write_mem
-</UL>
-<BR>[Called By]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;run_self_test
+<BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;run_self_test
 </UL>
 
-<P><STRONG><a name="[9f]"></a>dmp_set_accel_bias</STRONG> (Thumb, 300 bytes, Stack size 48 bytes, inv_mpu_dmp_motion_driver.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 172<LI>Call Chain = dmp_set_accel_bias &rArr; mpu_write_mem &rArr; MPU_Write_Len &rArr; IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
+<P><STRONG><a name="[9e]"></a>dmp_set_accel_bias</STRONG> (Thumb, 300 bytes, Stack size 48 bytes, inv_mpu_dmp_motion_driver.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_write_mem
+<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_accel_sens
 </UL>
-<BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_write_mem
-<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_accel_sens
-</UL>
-<BR>[Called By]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;run_self_test
+<BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;run_self_test
 </UL>
 
-<P><STRONG><a name="[a5]"></a>dmp_set_fifo_rate</STRONG> (Thumb, 136 bytes, Stack size 32 bytes, inv_mpu_dmp_motion_driver.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 156<LI>Call Chain = dmp_set_fifo_rate &rArr; mpu_write_mem &rArr; MPU_Write_Len &rArr; IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
+<P><STRONG><a name="[a5]"></a>dmp_set_fifo_rate</STRONG> (Thumb, 136 bytes, Stack size 32 bytes, inv_mpu_dmp_motion_driver.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_write_mem
 </UL>
-<BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_write_mem
-</UL>
-<BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_dmp_init
+<BR>[Called By]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_dmp_init
 </UL>
 
 <P><STRONG><a name="[1ab]"></a>dmp_get_fifo_rate</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, inv_mpu_dmp_motion_driver.o(.text), UNUSED)
 
-<P><STRONG><a name="[ac]"></a>dmp_set_tap_thresh</STRONG> (Thumb, 412 bytes, Stack size 40 bytes, inv_mpu_dmp_motion_driver.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 164<LI>Call Chain = dmp_set_tap_thresh &rArr; mpu_write_mem &rArr; MPU_Write_Len &rArr; IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
-</UL>
-<BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_write_mem
-<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_accel_fsr
+<P><STRONG><a name="[ac]"></a>dmp_set_tap_thresh</STRONG> (Thumb, 412 bytes, Stack size 40 bytes, inv_mpu_dmp_motion_driver.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_write_mem
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_get_accel_fsr
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_enable_feature
 </UL>
 
-<P><STRONG><a name="[ad]"></a>dmp_set_tap_axes</STRONG> (Thumb, 70 bytes, Stack size 16 bytes, inv_mpu_dmp_motion_driver.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 140<LI>Call Chain = dmp_set_tap_axes &rArr; mpu_write_mem &rArr; MPU_Write_Len &rArr; IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
-</UL>
-<BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_write_mem
+<P><STRONG><a name="[ad]"></a>dmp_set_tap_axes</STRONG> (Thumb, 70 bytes, Stack size 16 bytes, inv_mpu_dmp_motion_driver.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_write_mem
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_enable_feature
 </UL>
 
-<P><STRONG><a name="[ae]"></a>dmp_set_tap_count</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, inv_mpu_dmp_motion_driver.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 140<LI>Call Chain = dmp_set_tap_count &rArr; mpu_write_mem &rArr; MPU_Write_Len &rArr; IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
-</UL>
-<BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_write_mem
+<P><STRONG><a name="[ae]"></a>dmp_set_tap_count</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, inv_mpu_dmp_motion_driver.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_write_mem
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_enable_feature
 </UL>
 
-<P><STRONG><a name="[af]"></a>dmp_set_tap_time</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, inv_mpu_dmp_motion_driver.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 140<LI>Call Chain = dmp_set_tap_time &rArr; mpu_write_mem &rArr; MPU_Write_Len &rArr; IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
-</UL>
-<BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_write_mem
+<P><STRONG><a name="[af]"></a>dmp_set_tap_time</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, inv_mpu_dmp_motion_driver.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_write_mem
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_enable_feature
 </UL>
 
-<P><STRONG><a name="[b0]"></a>dmp_set_tap_time_multi</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, inv_mpu_dmp_motion_driver.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 140<LI>Call Chain = dmp_set_tap_time_multi &rArr; mpu_write_mem &rArr; MPU_Write_Len &rArr; IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
-</UL>
-<BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_write_mem
+<P><STRONG><a name="[b0]"></a>dmp_set_tap_time_multi</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, inv_mpu_dmp_motion_driver.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_write_mem
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_enable_feature
 </UL>
 
-<P><STRONG><a name="[b1]"></a>dmp_set_shake_reject_thresh</STRONG> (Thumb, 56 bytes, Stack size 24 bytes, inv_mpu_dmp_motion_driver.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 148<LI>Call Chain = dmp_set_shake_reject_thresh &rArr; mpu_write_mem &rArr; MPU_Write_Len &rArr; IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
-</UL>
-<BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_write_mem
+<P><STRONG><a name="[b1]"></a>dmp_set_shake_reject_thresh</STRONG> (Thumb, 56 bytes, Stack size 24 bytes, inv_mpu_dmp_motion_driver.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_write_mem
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_enable_feature
 </UL>
 
-<P><STRONG><a name="[b2]"></a>dmp_set_shake_reject_time</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, inv_mpu_dmp_motion_driver.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 140<LI>Call Chain = dmp_set_shake_reject_time &rArr; mpu_write_mem &rArr; MPU_Write_Len &rArr; IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
-</UL>
-<BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_write_mem
+<P><STRONG><a name="[b2]"></a>dmp_set_shake_reject_time</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, inv_mpu_dmp_motion_driver.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_write_mem
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_enable_feature
 </UL>
 
-<P><STRONG><a name="[b3]"></a>dmp_set_shake_reject_timeout</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, inv_mpu_dmp_motion_driver.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 140<LI>Call Chain = dmp_set_shake_reject_timeout &rArr; mpu_write_mem &rArr; MPU_Write_Len &rArr; IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
-</UL>
-<BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_write_mem
+<P><STRONG><a name="[b3]"></a>dmp_set_shake_reject_timeout</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, inv_mpu_dmp_motion_driver.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_write_mem
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_enable_feature
 </UL>
 
 <P><STRONG><a name="[b4]"></a>dmp_get_pedometer_step_count</STRONG> (Thumb, 66 bytes, Stack size 16 bytes, inv_mpu_dmp_motion_driver.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_read_mem
+<BR><BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_read_mem
 </UL>
 
 <P><STRONG><a name="[b5]"></a>dmp_set_pedometer_step_count</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, inv_mpu_dmp_motion_driver.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_write_mem
+<BR><BR>[Calls]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_write_mem
 </UL>
 
 <P><STRONG><a name="[b6]"></a>dmp_get_pedometer_walk_time</STRONG> (Thumb, 72 bytes, Stack size 16 bytes, inv_mpu_dmp_motion_driver.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_read_mem
+<BR><BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_read_mem
 </UL>
 
 <P><STRONG><a name="[b7]"></a>dmp_set_pedometer_walk_time</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, inv_mpu_dmp_motion_driver.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_write_mem
+<BR><BR>[Calls]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_write_mem
 </UL>
 
-<P><STRONG><a name="[b8]"></a>dmp_enable_6x_lp_quat</STRONG> (Thumb, 100 bytes, Stack size 16 bytes, inv_mpu_dmp_motion_driver.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 140<LI>Call Chain = dmp_enable_6x_lp_quat &rArr; mpu_write_mem &rArr; MPU_Write_Len &rArr; IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
-</UL>
-<BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_write_mem
-<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_reset_fifo
+<P><STRONG><a name="[b8]"></a>dmp_enable_6x_lp_quat</STRONG> (Thumb, 100 bytes, Stack size 16 bytes, inv_mpu_dmp_motion_driver.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_write_mem
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_reset_fifo
 <LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_enable_feature
 </UL>
 
-<P><STRONG><a name="[ba]"></a>dmp_enable_lp_quat</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, inv_mpu_dmp_motion_driver.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 140<LI>Call Chain = dmp_enable_lp_quat &rArr; mpu_write_mem &rArr; MPU_Write_Len &rArr; IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
-</UL>
-<BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_write_mem
-<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_reset_fifo
+<P><STRONG><a name="[ba]"></a>dmp_enable_lp_quat</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, inv_mpu_dmp_motion_driver.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_write_mem
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_reset_fifo
 <LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_enable_feature
 </UL>
 
-<P><STRONG><a name="[bb]"></a>dmp_enable_gyro_cal</STRONG> (Thumb, 62 bytes, Stack size 24 bytes, inv_mpu_dmp_motion_driver.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 148<LI>Call Chain = dmp_enable_gyro_cal &rArr; mpu_write_mem &rArr; MPU_Write_Len &rArr; IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
-</UL>
-<BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_write_mem
+<P><STRONG><a name="[bb]"></a>dmp_enable_gyro_cal</STRONG> (Thumb, 62 bytes, Stack size 24 bytes, inv_mpu_dmp_motion_driver.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_write_mem
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_enable_feature
 </UL>
 
-<P><STRONG><a name="[a4]"></a>dmp_enable_feature</STRONG> (Thumb, 530 bytes, Stack size 24 bytes, inv_mpu_dmp_motion_driver.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 188<LI>Call Chain = dmp_enable_feature &rArr; dmp_set_tap_thresh &rArr; mpu_write_mem &rArr; MPU_Write_Len &rArr; IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
-</UL>
-<BR>[Calls]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_enable_gyro_cal
+<P><STRONG><a name="[a4]"></a>dmp_enable_feature</STRONG> (Thumb, 530 bytes, Stack size 24 bytes, inv_mpu_dmp_motion_driver.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_enable_gyro_cal
 <LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_enable_lp_quat
 <LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_enable_6x_lp_quat
 <LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_set_shake_reject_timeout
@@ -1158,25 +1065,25 @@ Global Symbols
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_set_tap_count
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_set_tap_axes
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_set_tap_thresh
-<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_write_mem
-<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_reset_fifo
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_write_mem
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_reset_fifo
 </UL>
-<BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_dmp_init
+<BR>[Called By]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_dmp_init
 </UL>
 
 <P><STRONG><a name="[1ac]"></a>dmp_get_enabled_features</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, inv_mpu_dmp_motion_driver.o(.text), UNUSED)
 
 <P><STRONG><a name="[bc]"></a>dmp_set_interrupt_mode</STRONG> (Thumb, 66 bytes, Stack size 32 bytes, inv_mpu_dmp_motion_driver.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_write_mem
+<BR><BR>[Calls]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_write_mem
 </UL>
 
 <P><STRONG><a name="[a7]"></a>dmp_read_fifo</STRONG> (Thumb, 514 bytes, Stack size 88 bytes, inv_mpu_dmp_motion_driver.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 220<LI>Call Chain = dmp_read_fifo &rArr; mpu_read_fifo_stream &rArr; mpu_reset_fifo &rArr; MPU_Write_Len &rArr; IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
 </UL>
 <BR>[Calls]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;decode_gesture
-<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_read_fifo_stream
-<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mget_ms
-<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_reset_fifo
+<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_read_fifo_stream
+<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mget_ms
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_reset_fifo
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_dmp_get_data
 </UL>
@@ -1188,10 +1095,10 @@ Global Symbols
 <P><STRONG><a name="[47]"></a>ESP12F_IO0_Init</STRONG> (Thumb, 58 bytes, Stack size 32 bytes, esp12f_io0.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = ESP12F_IO0_Init &rArr; GPIO_Peripheral_Initialize &rArr; GPIO_Mode_Set
 </UL>
-<BR>[Calls]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHB_Peripheral_Clock_Enable
-<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Structure_Initialize
-<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Pins_Set
-<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Peripheral_Initialize
+<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHB_Peripheral_Clock_Enable
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Structure_Initialize
+<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Pins_Set
+<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Peripheral_Initialize
 </UL>
 <BR>[Called By]<UL><LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1199,10 +1106,10 @@ Global Symbols
 <P><STRONG><a name="[49]"></a>LED_GPIO_Init</STRONG> (Thumb, 56 bytes, Stack size 32 bytes, led.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = LED_GPIO_Init &rArr; GPIO_Peripheral_Initialize &rArr; GPIO_Mode_Set
 </UL>
-<BR>[Calls]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHB_Peripheral_Clock_Enable
-<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Structure_Initialize
-<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Pins_Set
-<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Peripheral_Initialize
+<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHB_Peripheral_Clock_Enable
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Structure_Initialize
+<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Pins_Set
+<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Peripheral_Initialize
 </UL>
 <BR>[Called By]<UL><LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1210,15 +1117,15 @@ Global Symbols
 <P><STRONG><a name="[4a]"></a>Key_GPIO_Init</STRONG> (Thumb, 44 bytes, Stack size 32 bytes, key.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = Key_GPIO_Init &rArr; GPIO_Peripheral_Initialize &rArr; GPIO_Mode_Set
 </UL>
-<BR>[Calls]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHB_Peripheral_Clock_Enable
-<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Structure_Initialize
-<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Peripheral_Initialize
+<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHB_Peripheral_Clock_Enable
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Structure_Initialize
+<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Peripheral_Initialize
 </UL>
 <BR>[Called By]<UL><LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[be]"></a>Key_Scanf</STRONG> (Thumb, 178 bytes, Stack size 8 bytes, key.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Input_Pin_Data_Get
+<BR><BR>[Calls]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Input_Pin_Data_Get
 </UL>
 
 <P><STRONG><a name="[1af]"></a>KEY_Handle</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, key.o(.text), UNUSED)
@@ -1226,7 +1133,7 @@ Global Symbols
 <P><STRONG><a name="[bf]"></a>ADC_RCC_Configuration</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, adc.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = ADC_RCC_Configuration &rArr; ADC_Clock_Mode_Config
 </UL>
-<BR>[Calls]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHB_Peripheral_Clock_Enable
+<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHB_Peripheral_Clock_Enable
 <LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_ADC_1M_Clock_Config
 <LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Clock_Mode_Config
 </UL>
@@ -1236,8 +1143,8 @@ Global Symbols
 <P><STRONG><a name="[c2]"></a>ADC_GPIO_Configuration</STRONG> (Thumb, 30 bytes, Stack size 32 bytes, adc.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = ADC_GPIO_Configuration &rArr; GPIO_Peripheral_Initialize &rArr; GPIO_Mode_Set
 </UL>
-<BR>[Calls]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Structure_Initialize
-<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Peripheral_Initialize
+<BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Structure_Initialize
+<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Peripheral_Initialize
 </UL>
 <BR>[Called By]<UL><LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Configuration
 </UL>
@@ -1264,12 +1171,12 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[52]"></a>EXTI_Init</STRONG> (Thumb, 182 bytes, Stack size 48 bytes, exti.o(.text))
+<P><STRONG><a name="[50]"></a>EXTI_Init</STRONG> (Thumb, 182 bytes, Stack size 48 bytes, exti.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 84<LI>Call Chain = EXTI_Init &rArr; GPIO_Peripheral_Initialize &rArr; GPIO_Mode_Set
 </UL>
-<BR>[Calls]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHB_Peripheral_Clock_Enable
-<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Structure_Initialize
-<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Peripheral_Initialize
+<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHB_Peripheral_Clock_Enable
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Structure_Initialize
+<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Peripheral_Initialize
 <LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2_Peripheral_Clock_Enable
 <LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_Initializes
 <LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_EXTI_Line_Set
@@ -1281,8 +1188,8 @@ Global Symbols
 <P><STRONG><a name="[d4]"></a>Common_ADTIM_GPIO_Initialize</STRONG> (Thumb, 106 bytes, Stack size 32 bytes, pwm.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = Common_ADTIM_GPIO_Initialize &rArr; GPIO_Peripheral_Initialize &rArr; GPIO_Mode_Set
 </UL>
-<BR>[Calls]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Structure_Initialize
-<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Peripheral_Initialize
+<BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Structure_Initialize
+<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Peripheral_Initialize
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMx_PWM_Init
 </UL>
@@ -1290,7 +1197,7 @@ Global Symbols
 <P><STRONG><a name="[d5]"></a>Common_ADTIM_RCC_Initialize</STRONG> (Thumb, 82 bytes, Stack size 40 bytes, pwm.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 60<LI>Call Chain = Common_ADTIM_RCC_Initialize &rArr; RCC_Clocks_Frequencies_Value_Get
 </UL>
-<BR>[Calls]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHB_Peripheral_Clock_Enable
+<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHB_Peripheral_Clock_Enable
 <LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_Pclk2_Config
 <LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_Clocks_Frequencies_Value_Get
 <LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2_Peripheral_Clock_Enable
@@ -1298,7 +1205,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMx_PWM_Init
 </UL>
 
-<P><STRONG><a name="[4b]"></a>TIMx_PWM_Init</STRONG> (Thumb, 234 bytes, Stack size 40 bytes, pwm.o(.text))
+<P><STRONG><a name="[4b]"></a>TIMx_PWM_Init</STRONG> (Thumb, 228 bytes, Stack size 40 bytes, pwm.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 108<LI>Call Chain = TIMx_PWM_Init &rArr; Common_ADTIM_GPIO_Initialize &rArr; GPIO_Peripheral_Initialize &rArr; GPIO_Mode_Set
 </UL>
 <BR>[Calls]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_PWM_Output_Enable
@@ -1318,7 +1225,7 @@ Global Symbols
 <P><STRONG><a name="[4c]"></a>Encoder_TIM2_Init</STRONG> (Thumb, 170 bytes, Stack size 56 bytes, encoder.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 116<LI>Call Chain = Encoder_TIM2_Init &rArr; Common_GPTIM_RCC_Initialize &rArr; RCC_Clocks_Frequencies_Value_Get
 </UL>
-<BR>[Calls]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Peripheral_Initialize
+<BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Peripheral_Initialize
 <LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Interrupt_Status_Clear
 <LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Interrupt_Enable
 <LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Input_Struct_Initialize
@@ -1336,7 +1243,7 @@ Global Symbols
 <P><STRONG><a name="[4d]"></a>Encoder_TIM3_Init</STRONG> (Thumb, 160 bytes, Stack size 56 bytes, encoder.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 116<LI>Call Chain = Encoder_TIM3_Init &rArr; Common_GPTIM_RCC_Initialize &rArr; RCC_Clocks_Frequencies_Value_Get
 </UL>
-<BR>[Calls]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Peripheral_Initialize
+<BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Peripheral_Initialize
 <LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Interrupt_Status_Clear
 <LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Interrupt_Enable
 <LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Input_Struct_Initialize
@@ -1380,7 +1287,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 60<LI>Call Chain = Common_GPTIM_RCC_Initialize &rArr; RCC_Clocks_Frequencies_Value_Get
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB1_Peripheral_Clock_Enable
-<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHB_Peripheral_Clock_Enable
+<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHB_Peripheral_Clock_Enable
 <LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_Pclk1_Config
 <LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_Clocks_Frequencies_Value_Get
 <LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2_Peripheral_Clock_Enable
@@ -1390,8 +1297,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[ee]"></a>Common_GPTIM_GPIO_Initialize</STRONG> (Thumb, 324 bytes, Stack size 32 bytes, gptim_common.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Structure_Initialize
-<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Peripheral_Initialize
+<BR><BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Structure_Initialize
+<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Peripheral_Initialize
 </UL>
 
 <P><STRONG><a name="[d8]"></a>Common_TIM_Base_Initialize</STRONG> (Thumb, 36 bytes, Stack size 16 bytes, timer_common.o(.text))
@@ -1408,7 +1315,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[f0]"></a>Common_TIM_DMA_Config</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, timer_common.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHB_Peripheral_Clock_Enable
+<BR><BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHB_Peripheral_Clock_Enable
 <LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Reset
 <LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Initializes
 <LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Channel_Request_Remap
@@ -1424,11 +1331,11 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[f4]"></a>GFP_abs</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, motor.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Load
+<BR><BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Load
 <LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Stop
 </UL>
 
-<P><STRONG><a name="[54]"></a>Load</STRONG> (Thumb, 116 bytes, Stack size 16 bytes, motor.o(.text))
+<P><STRONG><a name="[51]"></a>Load</STRONG> (Thumb, 116 bytes, Stack size 16 bytes, motor.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = Load
 </UL>
 <BR>[Calls]<UL><LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Compare4_Set
@@ -1442,7 +1349,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[f8]"></a>Stop</STRONG> (Thumb, 46 bytes, Stack size 16 bytes, motor.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Load
+<BR><BR>[Calls]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Load
 <LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GFP_abs
 </UL>
 
@@ -1454,8 +1361,8 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 348<LI>Call Chain = EXTI9_5_IRQHandler &rArr; mpu_dmp_get_data &rArr; dmp_read_fifo &rArr; mpu_read_fifo_stream &rArr; mpu_reset_fifo &rArr; MPU_Write_Len &rArr; IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_dmp_get_data
-<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Get_Accelerometer
-<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Get_Gyroscope
+<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Get_Accelerometer
+<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Get_Gyroscope
 <LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Interrupt_Status_Get
 <LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Interrupt_Status_Clear
 <LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Vertical
@@ -1467,7 +1374,7 @@ Global Symbols
 <P><STRONG><a name="[1b0]"></a>Velocity</STRONG> (Thumb, 178 bytes, Stack size 8 bytes, control.o(.text), UNUSED)
 
 <P><STRONG><a name="[fd]"></a>Turn</STRONG> (Thumb, 48 bytes, Stack size 32 bytes, control.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2d
+<BR><BR>[Calls]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2d
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
 <LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2iz
 </UL>
@@ -1475,9 +1382,9 @@ Global Symbols
 <P><STRONG><a name="[4e]"></a>log_init</STRONG> (Thumb, 124 bytes, Stack size 48 bytes, log.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 140<LI>Call Chain = log_init &rArr; USART_Initializes &rArr; USART_Baud_Rate_Config &rArr; RCC_Clocks_Frequencies_Value_Get
 </UL>
-<BR>[Calls]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHB_Peripheral_Clock_Enable
-<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Structure_Initialize
-<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Peripheral_Initialize
+<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHB_Peripheral_Clock_Enable
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Structure_Initialize
+<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Peripheral_Initialize
 <LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Initializes
 <LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Enable
 <LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2_Peripheral_Clock_Enable
@@ -1510,34 +1417,34 @@ Global Symbols
 <LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Data_Receive
 </UL>
 
-<P><STRONG><a name="[5b]"></a>SysTick_Delay_Us</STRONG> (Thumb, 72 bytes, Stack size 40 bytes, bsp_delay.o(.text))
+<P><STRONG><a name="[58]"></a>SysTick_Delay_Us</STRONG> (Thumb, 72 bytes, Stack size 40 bytes, bsp_delay.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 60<LI>Call Chain = SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
 </UL>
 <BR>[Calls]<UL><LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DBG_SysTick_Config
 <LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_Clocks_Frequencies_Value_Get
 </UL>
-<BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Read_Byte
-<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Send_Byte
-<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_NAck
-<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Ack
-<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Wait_Ack
-<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Stop
-<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Start
+<BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Read_Byte
+<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Send_Byte
+<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_NAck
+<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Ack
+<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Wait_Ack
+<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Stop
+<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Start
 </UL>
 
-<P><STRONG><a name="[68]"></a>SysTick_Delay_Ms</STRONG> (Thumb, 74 bytes, Stack size 40 bytes, bsp_delay.o(.text))
+<P><STRONG><a name="[67]"></a>SysTick_Delay_Ms</STRONG> (Thumb, 74 bytes, Stack size 40 bytes, bsp_delay.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 60<LI>Call Chain = SysTick_Delay_Ms &rArr; RCC_Clocks_Frequencies_Value_Get
 </UL>
 <BR>[Calls]<UL><LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DBG_SysTick_Config
 <LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_Clocks_Frequencies_Value_Get
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_lp_motion_interrupt
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_init
-<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_reset_fifo
-<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_bypass
-<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_sensors
-<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_st_biases
-<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Init
+<BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_lp_motion_interrupt
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_init
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_reset_fifo
+<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_bypass
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_sensors
+<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_st_biases
+<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Init
 </UL>
 
 <P><STRONG><a name="[1b1]"></a>NVIC_Priority_Group_Set</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, misc.o(.text), UNUSED)
@@ -1545,7 +1452,7 @@ Global Symbols
 <P><STRONG><a name="[d3]"></a>NVIC_Initializes</STRONG> (Thumb, 100 bytes, Stack size 16 bytes, misc.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = NVIC_Initializes
 </UL>
-<BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Init
+<BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Init
 <LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Common_TIM_NVIC_Initialize
 </UL>
 
@@ -1912,7 +1819,7 @@ Global Symbols
 <LI><a href="#[130]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Trigger_Config
 <LI><a href="#[131]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_LineCmd_Disable
 </UL>
-<BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Init
+<BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Init
 </UL>
 
 <P><STRONG><a name="[1dd]"></a>EXTI_Structure_Initializes</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_exti.o(.text), UNUSED)
@@ -1965,34 +1872,34 @@ Global Symbols
 <P><STRONG><a name="[138]"></a>GPIO_Alternate_Set</STRONG> (Thumb, 86 bytes, Stack size 12 bytes, n32g430_gpio.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = GPIO_Alternate_Set
 </UL>
-<BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Peripheral_Initialize
+<BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Peripheral_Initialize
 </UL>
 
 <P><STRONG><a name="[139]"></a>GPIO_Mode_Set</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, n32g430_gpio.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = GPIO_Mode_Set
 </UL>
-<BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Peripheral_Initialize
+<BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Peripheral_Initialize
 </UL>
 
 <P><STRONG><a name="[13a]"></a>GPIO_Pull_Set</STRONG> (Thumb, 28 bytes, Stack size 12 bytes, n32g430_gpio.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = GPIO_Pull_Set
 </UL>
-<BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Peripheral_Initialize
+<BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Peripheral_Initialize
 </UL>
 
 <P><STRONG><a name="[13b]"></a>GPIO_SlewRate_Set</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, n32g430_gpio.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = GPIO_SlewRate_Set
 </UL>
-<BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Peripheral_Initialize
+<BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Peripheral_Initialize
 </UL>
 
 <P><STRONG><a name="[13c]"></a>GPIO_Driver_Set</STRONG> (Thumb, 28 bytes, Stack size 12 bytes, n32g430_gpio.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = GPIO_Driver_Set
 </UL>
-<BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Peripheral_Initialize
+<BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Peripheral_Initialize
 </UL>
 
-<P><STRONG><a name="[58]"></a>GPIO_Peripheral_Initialize</STRONG> (Thumb, 86 bytes, Stack size 20 bytes, n32g430_gpio.o(.text))
+<P><STRONG><a name="[55]"></a>GPIO_Peripheral_Initialize</STRONG> (Thumb, 86 bytes, Stack size 20 bytes, n32g430_gpio.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = GPIO_Peripheral_Initialize &rArr; GPIO_Mode_Set
 </UL>
 <BR>[Calls]<UL><LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Driver_Set
@@ -2001,14 +1908,14 @@ Global Symbols
 <LI><a href="#[139]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Mode_Set
 <LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Alternate_Set
 </UL>
-<BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_Slaver_Address
-<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Init
+<BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_Slaver_Address
+<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Init
 <LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;log_init
 <LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_GPIO_Init
 <LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Key_GPIO_Init
 <LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Encoder_TIM3_Init
 <LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Encoder_TIM2_Init
-<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Init
+<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Init
 <LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ESP12F_IO0_Init
 <LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Common_GPTIM_GPIO_Initialize
 <LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Common_ADTIM_GPIO_Initialize
@@ -2019,23 +1926,22 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[13e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2_Peripheral_Reset
 </UL>
 
-<P><STRONG><a name="[57]"></a>GPIO_Structure_Initialize</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, n32g430_gpio.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_Slaver_Address
-<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Init
+<P><STRONG><a name="[54]"></a>GPIO_Structure_Initialize</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, n32g430_gpio.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_Slaver_Address
+<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Init
 <LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;log_init
 <LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_GPIO_Init
 <LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Key_GPIO_Init
-<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Init
+<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Init
 <LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ESP12F_IO0_Init
 <LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Common_GPTIM_GPIO_Initialize
 <LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Common_ADTIM_GPIO_Initialize
 <LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_GPIO_Configuration
 </UL>
 
-<P><STRONG><a name="[53]"></a>GPIO_Input_Pin_Data_Get</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_gpio.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Read_Byte
-<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Wait_Ack
-<LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<P><STRONG><a name="[5b]"></a>GPIO_Input_Pin_Data_Get</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_gpio.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Read_Byte
+<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Wait_Ack
 <LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Key_Scanf
 </UL>
 
@@ -2045,28 +1951,28 @@ Global Symbols
 
 <P><STRONG><a name="[1e5]"></a>GPIO_Output_Data_Get</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, n32g430_gpio.o(.text), UNUSED)
 
-<P><STRONG><a name="[59]"></a>GPIO_Pins_Set</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, n32g430_gpio.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Read_Byte
-<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Send_Byte
-<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_NAck
-<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Ack
-<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Wait_Ack
-<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Stop
-<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Start
-<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Init
+<P><STRONG><a name="[56]"></a>GPIO_Pins_Set</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, n32g430_gpio.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Read_Byte
+<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Send_Byte
+<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_NAck
+<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Ack
+<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Wait_Ack
+<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Stop
+<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Start
+<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Init
 <LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_GPIO_Init
 <LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ESP12F_IO0_Init
 </UL>
 
-<P><STRONG><a name="[51]"></a>GPIO_Pins_Reset</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, n32g430_gpio.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_Slaver_Address
-<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Read_Byte
-<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Send_Byte
-<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_NAck
-<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Ack
-<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Wait_Ack
-<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Stop
-<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Start
+<P><STRONG><a name="[4f]"></a>GPIO_Pins_Reset</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, n32g430_gpio.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_Slaver_Address
+<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Read_Byte
+<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Send_Byte
+<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_NAck
+<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Ack
+<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Wait_Ack
+<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Stop
+<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Start
 <LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -2085,7 +1991,7 @@ Global Symbols
 <P><STRONG><a name="[d1]"></a>GPIO_EXTI_Line_Set</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, n32g430_gpio.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = GPIO_EXTI_Line_Set
 </UL>
-<BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Init
+<BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Init
 </UL>
 
 <P><STRONG><a name="[1ec]"></a>AFIO_SPI_NSS_Mode_Set</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, n32g430_gpio.o(.text), UNUSED)
@@ -2120,8 +2026,8 @@ Global Symbols
 <P><STRONG><a name="[d7]"></a>RCC_Clocks_Frequencies_Value_Get</STRONG> (Thumb, 250 bytes, Stack size 20 bytes, n32g430_rcc.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = RCC_Clocks_Frequencies_Value_Get
 </UL>
-<BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Delay_Ms
-<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Delay_Us
+<BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Delay_Ms
+<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Delay_Us
 <LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Common_GPTIM_RCC_Initialize
 <LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Common_ADTIM_RCC_Initialize
 <LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Baud_Rate_Config
@@ -2250,13 +2156,13 @@ Global Symbols
 
 <P><STRONG><a name="[210]"></a>RCC_LPTIM_Disable</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, n32g430_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[56]"></a>RCC_AHB_Peripheral_Clock_Enable</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, n32g430_rcc.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_Slaver_Address
-<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Init
+<P><STRONG><a name="[53]"></a>RCC_AHB_Peripheral_Clock_Enable</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, n32g430_rcc.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_Slaver_Address
+<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Init
 <LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;log_init
 <LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_GPIO_Init
 <LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Key_GPIO_Init
-<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Init
+<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Init
 <LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ESP12F_IO0_Init
 <LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Common_TIM_DMA_Config
 <LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Common_GPTIM_RCC_Initialize
@@ -2268,7 +2174,7 @@ Global Symbols
 
 <P><STRONG><a name="[d0]"></a>RCC_APB2_Peripheral_Clock_Enable</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, n32g430_rcc.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;log_init
-<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Init
+<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Init
 <LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Common_GPTIM_RCC_Initialize
 <LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Common_ADTIM_RCC_Initialize
 </UL>
@@ -2447,19 +2353,19 @@ Global Symbols
 <P><STRONG><a name="[232]"></a>TIM_Capture_Compare_Control_Preload_Disable</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, n32g430_tim.o(.text), UNUSED)
 
 <P><STRONG><a name="[f3]"></a>TIM_Compare1_Set</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Load
+<BR><BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Load
 </UL>
 
 <P><STRONG><a name="[f5]"></a>TIM_Compare2_Set</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Load
+<BR><BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Load
 </UL>
 
 <P><STRONG><a name="[f6]"></a>TIM_Compare3_Set</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Load
+<BR><BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Load
 </UL>
 
 <P><STRONG><a name="[f7]"></a>TIM_Compare4_Set</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Load
+<BR><BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Load
 </UL>
 
 <P><STRONG><a name="[233]"></a>TIM_Compare5_Set</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, n32g430_tim.o(.text), UNUSED)
@@ -2620,12 +2526,12 @@ Global Symbols
 
 <P><STRONG><a name="[255]"></a>TIM_One_Pulse_Mode_Select</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[e4]"></a>TIM_Input_Struct_Initialize</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
+<P><STRONG><a name="[e4]"></a>TIM_Input_Struct_Initialize</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Encoder_TIM3_Init
 <LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Encoder_TIM2_Init
 </UL>
 
-<P><STRONG><a name="[e5]"></a>TIM_Input_Channel_Initialize</STRONG> (Thumb, 134 bytes, Stack size 12 bytes, n32g430_tim.o(.text))
+<P><STRONG><a name="[e5]"></a>TIM_Input_Channel_Initialize</STRONG> (Thumb, 136 bytes, Stack size 12 bytes, n32g430_tim.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = TIM_Input_Channel_Initialize &rArr; Input_Channel4_Config
 </UL>
 <BR>[Calls]<UL><LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Input_Capture4_Prescaler_Set
@@ -3061,15 +2967,13 @@ Global Symbols
 
 <P><STRONG><a name="[29e]"></a>USART_Interrupt_Status_Clear</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, n32g430_usart.o(.text), UNUSED)
 
-<P><STRONG><a name="[8e]"></a>__aeabi_ldivmod</STRONG> (Thumb, 98 bytes, Stack size 24 bytes, ldiv.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = __aeabi_ldivmod &rArr; __aeabi_uldivmod
+<P><STRONG><a name="[8d]"></a>__aeabi_ldivmod</STRONG> (Thumb, 98 bytes, Stack size 24 bytes, ldiv.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
-</UL>
-<BR>[Called By]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_st_biases
+<BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_st_biases
 </UL>
 
-<P><STRONG><a name="[b9]"></a>__aeabi_memset</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, memseta.o(.text))
+<P><STRONG><a name="[b9]"></a>__aeabi_memset</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_enable_lp_quat
 <LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_enable_6x_lp_quat
 <LI><a href="#[182]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_memset$wrapper
@@ -3092,13 +2996,11 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
 </UL>
 
-<P><STRONG><a name="[99]"></a>memcmp</STRONG> (Thumb, 26 bytes, Stack size 12 bytes, memcmp.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = memcmp
-</UL>
-<BR>[Called By]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_load_firmware
+<P><STRONG><a name="[98]"></a>memcmp</STRONG> (Thumb, 26 bytes, Stack size 12 bytes, memcmp.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_load_firmware
 </UL>
 
-<P><STRONG><a name="[6e]"></a>__aeabi_dadd</STRONG> (Thumb, 322 bytes, Stack size 48 bytes, dadd.o(.text))
+<P><STRONG><a name="[6d]"></a>__aeabi_dadd</STRONG> (Thumb, 322 bytes, Stack size 48 bytes, dadd.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[184]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_lasr
@@ -3106,7 +3008,7 @@ Global Symbols
 <LI><a href="#[186]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_round
 <LI><a href="#[185]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Get_Temperature
+<BR>[Called By]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Get_Temperature
 <LI><a href="#[188]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
 <LI><a href="#[187]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
 <LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_asin
@@ -3119,7 +3021,7 @@ Global Symbols
 <P><STRONG><a name="[187]"></a>__aeabi_dsub</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, dadd.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = __aeabi_dsub &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+<BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_asin
 <LI><a href="#[197]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan
@@ -3129,7 +3031,7 @@ Global Symbols
 <P><STRONG><a name="[188]"></a>__aeabi_drsub</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, dadd.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = __aeabi_drsub &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+<BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_asin
 <LI><a href="#[197]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan
@@ -3149,22 +3051,22 @@ Global Symbols
 <LI><a href="#[197]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan
 </UL>
 
-<P><STRONG><a name="[6d]"></a>__aeabi_ddiv</STRONG> (Thumb, 222 bytes, Stack size 32 bytes, ddiv.o(.text))
+<P><STRONG><a name="[6c]"></a>__aeabi_ddiv</STRONG> (Thumb, 222 bytes, Stack size 32 bytes, ddiv.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = __aeabi_ddiv &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[186]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_round
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Get_Temperature
+<BR>[Called By]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Get_Temperature
 <LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_asin
 <LI><a href="#[191]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_invalid
 <LI><a href="#[197]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan2
 </UL>
 
-<P><STRONG><a name="[6c]"></a>__aeabi_i2d</STRONG> (Thumb, 34 bytes, Stack size 16 bytes, dflti.o(.text), UNUSED)
+<P><STRONG><a name="[6b]"></a>__aeabi_i2d</STRONG> (Thumb, 34 bytes, Stack size 16 bytes, dflti.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[185]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Get_Temperature
+<BR>[Called By]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Get_Temperature
 <LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Turn
 </UL>
 
@@ -3178,27 +3080,25 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_dmp_get_data
 </UL>
 
-<P><STRONG><a name="[6f]"></a>__aeabi_d2f</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, d2f.o(.text))
+<P><STRONG><a name="[6e]"></a>__aeabi_d2f</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, d2f.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __aeabi_d2f
 </UL>
 <BR>[Calls]<UL><LI><a href="#[18a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_float_round
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_dmp_get_data
-<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Get_Temperature
+<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Get_Temperature
 </UL>
 
-<P><STRONG><a name="[180]"></a>__aeabi_uldivmod</STRONG> (Thumb, 98 bytes, Stack size 40 bytes, uldiv.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = __aeabi_uldivmod
-</UL>
-<BR>[Calls]<UL><LI><a href="#[189]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
+<P><STRONG><a name="[180]"></a>__aeabi_uldivmod</STRONG> (Thumb, 98 bytes, Stack size 40 bytes, uldiv.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[189]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
 <LI><a href="#[183]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
 </UL>
 <BR>[Called By]<UL><LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
-<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ldivmod
+<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ldivmod
 </UL>
 
 <P><STRONG><a name="[183]"></a>__aeabi_llsl</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, llshl.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+<BR><BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 <LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
 <LI><a href="#[185]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
 </UL>
@@ -3215,7 +3115,7 @@ Global Symbols
 <P><STRONG><a name="[2a4]"></a>_ll_ushift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llushr.o(.text), UNUSED)
 
 <P><STRONG><a name="[184]"></a>__aeabi_lasr</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, llsshr.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+<BR><BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 </UL>
 
 <P><STRONG><a name="[2a5]"></a>_ll_sshift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llsshr.o(.text), UNUSED)
@@ -3223,7 +3123,7 @@ Global Symbols
 <P><STRONG><a name="[2a6]"></a>__I$use$fp</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, iusefp.o(.text), UNUSED)
 
 <P><STRONG><a name="[18a]"></a>_float_round</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, fepilogue.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2f
+<BR><BR>[Called By]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2f
 </UL>
 
 <P><STRONG><a name="[2a7]"></a>_float_epilogue</STRONG> (Thumb, 92 bytes, Stack size 4 bytes, fepilogue.o(.text), UNUSED)
@@ -3231,8 +3131,8 @@ Global Symbols
 <P><STRONG><a name="[186]"></a>_double_round</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, depilogue.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = _double_round
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
-<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+<BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
+<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 <LI><a href="#[18c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dsqrt
 <LI><a href="#[185]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
 </UL>
@@ -3244,8 +3144,8 @@ Global Symbols
 <LI><a href="#[183]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
 <LI><a href="#[186]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_round
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2d
-<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+<BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2d
+<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
 </UL>
 
@@ -3272,12 +3172,10 @@ Global Symbols
 
 <P><STRONG><a name="[2a9]"></a>__1printf$8</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf8.o(i.__0printf$8), UNUSED)
 
-<P><STRONG><a name="[69]"></a>__2printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf8.o(i.__0printf$8))
-<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __2printf
-</UL>
-<BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_init
-<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_reg_dump
-<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Init
+<P><STRONG><a name="[68]"></a>__2printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf8.o(i.__0printf$8), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_init
+<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_reg_dump
+<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Init
 </UL>
 
 <P><STRONG><a name="[192]"></a>__ARM_fpclassify</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, fpclassify.o(i.__ARM_fpclassify))
@@ -3290,8 +3188,8 @@ Global Symbols
 <P><STRONG><a name="[a9]"></a>__hardfp_asin</STRONG> (Thumb, 770 bytes, Stack size 88 bytes, asin.o(i.__hardfp_asin))
 <BR><BR>[Stack]<UL><LI>Max Depth = 200<LI>Call Chain = __hardfp_asin &rArr; __kernel_poly &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
-<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+<BR>[Calls]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
+<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 <LI><a href="#[188]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
 <LI><a href="#[187]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
@@ -3310,8 +3208,8 @@ Global Symbols
 <P><STRONG><a name="[197]"></a>__hardfp_atan</STRONG> (Thumb, 622 bytes, Stack size 48 bytes, atan.o(i.__hardfp_atan))
 <BR><BR>[Stack]<UL><LI>Max Depth = 160<LI>Call Chain = __hardfp_atan &rArr; __kernel_poly &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
-<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+<BR>[Calls]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
+<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 <LI><a href="#[188]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
 <LI><a href="#[187]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
@@ -3327,7 +3225,7 @@ Global Symbols
 <P><STRONG><a name="[ab]"></a>__hardfp_atan2</STRONG> (Thumb, 432 bytes, Stack size 48 bytes, atan2.o(i.__hardfp_atan2))
 <BR><BR>[Stack]<UL><LI>Max Depth = 216<LI>Call Chain = __hardfp_atan2 &rArr; atan &rArr; __hardfp_atan &rArr; __kernel_poly &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
+<BR>[Calls]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
 <LI><a href="#[188]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
 <LI><a href="#[187]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
 <LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fabs
@@ -3340,7 +3238,7 @@ Global Symbols
 <P><STRONG><a name="[194]"></a>__kernel_poly</STRONG> (Thumb, 248 bytes, Stack size 24 bytes, poly.o(i.__kernel_poly))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = __kernel_poly &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+<BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_asin
@@ -3350,7 +3248,7 @@ Global Symbols
 <P><STRONG><a name="[18f]"></a>__mathlib_dbl_infnan</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, dunder.o(i.__mathlib_dbl_infnan))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = __mathlib_dbl_infnan &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+<BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_asin
 <LI><a href="#[197]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan
@@ -3359,7 +3257,7 @@ Global Symbols
 <P><STRONG><a name="[198]"></a>__mathlib_dbl_infnan2</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, dunder.o(i.__mathlib_dbl_infnan2))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = __mathlib_dbl_infnan2 &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+<BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan2
 </UL>
@@ -3367,7 +3265,7 @@ Global Symbols
 <P><STRONG><a name="[191]"></a>__mathlib_dbl_invalid</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, dunder.o(i.__mathlib_dbl_invalid))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = __mathlib_dbl_invalid &rArr; __aeabi_ddiv &rArr; _double_round
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
+<BR>[Calls]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_asin
 </UL>
@@ -3426,56 +3324,46 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;System_Initializes
 </UL>
 
-<P><STRONG><a name="[73]"></a>Set_Slaver_Address</STRONG> (Thumb, 54 bytes, Stack size 32 bytes, mpu6050.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHB_Peripheral_Clock_Enable
-<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Structure_Initialize
-<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Peripheral_Initialize
-<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Pins_Reset
+<P><STRONG><a name="[72]"></a>Set_Slaver_Address</STRONG> (Thumb, 54 bytes, Stack size 32 bytes, mpu6050.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHB_Peripheral_Clock_Enable
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Structure_Initialize
+<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Peripheral_Initialize
+<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Pins_Reset
 </UL>
 
-<P><STRONG><a name="[74]"></a>set_int_enable</STRONG> (Thumb, 138 bytes, Stack size 16 bytes, inv_mpu.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 116<LI>Call Chain = set_int_enable &rArr; MPU_Write_Len &rArr; IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
+<P><STRONG><a name="[73]"></a>set_int_enable</STRONG> (Thumb, 138 bytes, Stack size 16 bytes, inv_mpu.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Len
 </UL>
-<BR>[Calls]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Len
-</UL>
-<BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_lp_motion_interrupt
-<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_dmp_state
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_configure_fifo
+<BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_lp_motion_interrupt
+<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_dmp_state
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_configure_fifo
 </UL>
 
-<P><STRONG><a name="[8a]"></a>get_accel_prod_shift</STRONG> (Thumb, 190 bytes, Stack size 24 bytes, inv_mpu.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 132<LI>Call Chain = get_accel_prod_shift &rArr; MPU_Read_Len &rArr; IIC_Read_Byte &rArr; IIC_NAck &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
+<P><STRONG><a name="[89]"></a>get_accel_prod_shift</STRONG> (Thumb, 190 bytes, Stack size 24 bytes, inv_mpu.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Len
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Len
-</UL>
-<BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;accel_self_test
+<BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;accel_self_test
 </UL>
 
-<P><STRONG><a name="[8b]"></a>accel_self_test</STRONG> (Thumb, 182 bytes, Stack size 40 bytes, inv_mpu.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 172<LI>Call Chain = accel_self_test &rArr; get_accel_prod_shift &rArr; MPU_Read_Len &rArr; IIC_Read_Byte &rArr; IIC_NAck &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
+<P><STRONG><a name="[8a]"></a>accel_self_test</STRONG> (Thumb, 182 bytes, Stack size 40 bytes, inv_mpu.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_accel_prod_shift
 </UL>
-<BR>[Calls]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_accel_prod_shift
-</UL>
-<BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_run_self_test
+<BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_run_self_test
 </UL>
 
-<P><STRONG><a name="[8c]"></a>gyro_self_test</STRONG> (Thumb, 286 bytes, Stack size 40 bytes, inv_mpu.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 148<LI>Call Chain = gyro_self_test &rArr; MPU_Read_Len &rArr; IIC_Read_Byte &rArr; IIC_NAck &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
+<P><STRONG><a name="[8b]"></a>gyro_self_test</STRONG> (Thumb, 286 bytes, Stack size 40 bytes, inv_mpu.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Len
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Len
-</UL>
-<BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_run_self_test
+<BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_run_self_test
 </UL>
 
-<P><STRONG><a name="[8d]"></a>get_st_biases</STRONG> (Thumb, 1138 bytes, Stack size 64 bytes, inv_mpu.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 172<LI>Call Chain = get_st_biases &rArr; MPU_Read_Len &rArr; IIC_Read_Byte &rArr; IIC_NAck &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
+<P><STRONG><a name="[8c]"></a>get_st_biases</STRONG> (Thumb, 1138 bytes, Stack size 64 bytes, inv_mpu.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Delay_Ms
+<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Len
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Len
+<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ldivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Delay_Ms
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Write_Len
-<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Len
-<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ldivmod
-</UL>
-<BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_run_self_test
+<BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_run_self_test
 </UL>
 
 <P><STRONG><a name="[bd]"></a>decode_gesture</STRONG> (Thumb, 94 bytes, Stack size 24 bytes, inv_mpu_dmp_motion_driver.o(.text))
@@ -3487,8 +3375,8 @@ Local Symbols
 <P><STRONG><a name="[107]"></a>DBG_SysTick_Config</STRONG> (Thumb, 86 bytes, Stack size 12 bytes, bsp_delay.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = DBG_SysTick_Config
 </UL>
-<BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Delay_Ms
-<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Delay_Us
+<BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Delay_Ms
+<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Delay_Us
 </UL>
 
 <P><STRONG><a name="[18e]"></a>_printf_core</STRONG> (Thumb, 996 bytes, Stack size 104 bytes, printf8.o(i._printf_core), UNUSED)

@@ -1,7 +1,7 @@
 #include "n32g430.h"
 #include "pwm.h"
 
-uint32_t TimerPeriod   = 0;
+uint16_t TimerPeriod   = 0;
 uint16_t Channel1Pulse = 0, Channel2Pulse = 0, Channel3Pulse = 0, channel4Pulse = 0;
 
 uint32_t ADTIMClockFrequency = 0;
@@ -11,7 +11,7 @@ void TIMx_PWM_Init(void)
 	OCInitType TIM_OCInitStructure;
 	TIM_BDTRInitType TIM_BDTRInitStructure;
 	
-	ADTIMClockFrequency = Common_ADTIM_RCC_Initialize(ADTIM, RCC_HCLK_DIV2);	//TIM1 
+	ADTIMClockFrequency = Common_ADTIM_RCC_Initialize(ADTIM, RCC_HCLK_DIV4);	//TIM1 
 	
 	Common_ADTIM_GPIO_Initialize(ADTIM);
 	
@@ -22,7 +22,7 @@ void TIMx_PWM_Init(void)
 //    /*计算CCDAT2值，为通道2生成25%的占空比 */
 //    Channel2Pulse = (uint16_t)(((uint32_t)25 * (TimerPeriod - 1)) / 100);
 //    /* 计算CCDAT3值，为通道3生成12.5%的占空比 */
-    Channel3Pulse = (uint16_t)(((uint32_t)125 * (TimerPeriod - 1)) / 1000);
+    Channel3Pulse = (uint16_t)(((uint32_t)10 * (TimerPeriod - 1)) / 100);
 //    /* 计算CCDAT4值，为通道4生成12.5%的占空比 */
 //    channel4Pulse = (uint16_t)(((uint32_t)125 * (TimerPeriod - 1)) / 1000);
 	

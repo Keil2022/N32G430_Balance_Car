@@ -76,22 +76,15 @@ int main(void)
 	
 	log_init();
 	
-	MPU_Init();								//初始化MPU6050
-	while( mpu_dmp_init() )	{;}				//等待MPU初始化完成
+	//MPU_Init();								//初始化MPU6050
+	//while( mpu_dmp_init() )	{;}				//等待MPU初始化完成
 	LED_On;
 	
 	EXTI_Init(KEY_INPUT_PORT, KEY_INPUT_PIN);
 	
 	while(1)
 	{
-		if(KEY_Status == KEY_Press)
-		{
-			Load(Channel3Pulse,0);
-		}
-		else
-		{
-			Load(0,0);
-		}
+		Load(Channel3Pulse,0);
 	}
 }
 
