@@ -33,35 +33,12 @@
 **/
 
 #include "main.h"
-#include "log.h"
-//#include "i2c_drv.h"
-//#include "oled.h"
-//#include "math.h"
-#include "mpu6050.h"
-#include "inv_mpu.h"
-#include "inv_mpu_dmp_motion_driver.h"
-#include "bsp_delay.h"
-
-#include "esp12f_io0.h"
-#include "led.h"
-#include "key.h"
-#include "adc.h"
-#include "exti.h"
-#include "pwm.h"
-#include "encoder.h"
-#include "motor.h"
-
-int Speed_L,Speed_R;
 
 extern uint16_t Channel1Pulse;
 extern int Encoder_Left,Encoder_Right;	//编码器数据（速度）
+extern uint8_t NbrOfDataToRead;
 
-/**
- *\*\name   main.
- *\*\fun    main function.
- *\*\param  none.
- *\*\return none.
-**/
+/* 主函数 */
 int main(void)
 {
 	ESP12F_IO0_Init();
@@ -77,19 +54,17 @@ int main(void)
 	
 	log_init();
 	
-	MPU_Init();								//初始化MPU6050
-	while( mpu_dmp_init() )	{;}				//等待MPU初始化完成
-	LED_On;
+//	MPU_Init();								//初始化MPU6050
+//	while( mpu_dmp_init() )	{;}				//等待MPU初始化完成
+//	LED_On;
+//	
+//	EXTI_Init(KEY_INPUT_PORT, KEY_INPUT_PIN);
 	
-	EXTI_Init(KEY_INPUT_PORT, KEY_INPUT_PIN);
-	
+	Usart_DMA_Init();
+		
 	while(1)
 	{
-//		Load(Channel1Pulse,Channel1Pulse);
-//		Encoder_Left  = Read_Speed(2);	//电机是相对安装，刚好相差180度，为了编码器输出极性一致，就需要对其中一个取反。
-//		Encoder_Right = -Read_Speed(3);
-//		SysTick_Delay_Ms(100);
-		
+
 	}
 }
 

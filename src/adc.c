@@ -51,7 +51,7 @@ void ADC_Configuration(void)
     DMA_InitStructure.PeriphDataSize = DMA_PERIPH_DATA_WIDTH_HALFWORD;	//指定外设数据宽度。
     DMA_InitStructure.MemDataSize    = DMA_MEM_DATA_WIDTH_HALFWORD;		//指定内存数据宽度。
     DMA_InitStructure.CircularMode   = DMA_CIRCULAR_MODE_ENABLE;		//DMAy Channelx的操作模式。**)注意:如果在选择的通道上配置内存到内存的数据传输，则不能使用循环缓冲区模式。* /
-    DMA_InitStructure.Priority       = DMA_CH_PRIORITY_HIGH;			//指定DMAy Channelx的软件优先级。
+    DMA_InitStructure.Priority       = DMA_CH_PRIORITY_HIGHEST;			//指定DMAy Channelx的软件优先级。
     DMA_InitStructure.Mem2Mem        = DMA_MEM2MEM_DISABLE;				//指定是否在内存到内存传输中使用DMAy Channelx。
 	DMA_Initializes(DMA_CH1, &DMA_InitStructure);				//加载DMA配置
 	DMA_Channel_Request_Remap(DMA_CH1, DMA_REMAP_ADC);			//设置DMA Channelx的重映射请求。

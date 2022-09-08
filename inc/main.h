@@ -41,7 +41,26 @@ extern "C" {
 #endif
 
 #include "n32g430.h"
-	
+
+#include "log.h"
+//#include "i2c_drv.h"
+//#include "oled.h"
+//#include "math.h"
+#include "mpu6050.h"
+#include "inv_mpu.h"
+#include "inv_mpu_dmp_motion_driver.h"
+#include "bsp_delay.h"
+
+#include "esp12f_io0.h"
+#include "led.h"
+#include "key.h"
+#include "adc.h"
+#include "exti.h"
+#include "pwm.h"
+#include "encoder.h"
+#include "motor.h"
+#include "usart.h"
+
 #ifdef __cplusplus
 }
 #endif

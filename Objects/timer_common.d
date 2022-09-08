@@ -3,13 +3,13 @@
 .\objects\timer_common.o: ..\firmware\n32g430_std_periph_driver\inc\n32g430_tim.h
 .\objects\timer_common.o: ..\firmware\CMSIS\device\n32g430.h
 .\objects\timer_common.o: ..\firmware\CMSIS\core\core_cm4.h
-.\objects\timer_common.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\timer_common.o: D:\mdk5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\timer_common.o: ..\firmware\CMSIS\core\cmsis_version.h
 .\objects\timer_common.o: ..\firmware\CMSIS\core\cmsis_compiler.h
 .\objects\timer_common.o: ..\firmware\CMSIS\core\cmsis_armcc.h
 .\objects\timer_common.o: ..\firmware\CMSIS\core\mpu_armv7.h
 .\objects\timer_common.o: ..\firmware\CMSIS\device\system_n32g430.h
-.\objects\timer_common.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\timer_common.o: D:\mdk5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\objects\timer_common.o: ..\firmware\CMSIS\device\n32g430_conf.h
 .\objects\timer_common.o: ..\firmware\n32g430_std_periph_driver\inc\n32g430_adc.h
 .\objects\timer_common.o: ..\firmware\CMSIS\device\n32g430.h
