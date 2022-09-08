@@ -64,7 +64,7 @@ int main(void)
 		
 	while(1)
 	{
-
+		Load(Channel1Pulse, 0);
 	}
 }
 

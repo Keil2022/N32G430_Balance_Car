@@ -38,6 +38,8 @@ void Usart_DMA_Init(void)
 
     USART_Interrput_Enable(USARTy, USART_INT_RXDNE);	//启用USARTy接收中断
 
+	USART_Flag_Clear(USARTy, USART_FLAG_RXDNE);
+
     DMA_Channel_Enable(USARTy_Tx_DMA_Channel);	/*启用USARTy TX DMA通道*/
 
     USART_Enable(USARTy);				/*启用USARTy */

@@ -43,7 +43,7 @@ extern uint32_t indexFlag;
 
 /** Cortex-M4 Processor Exceptions Handlers **/
 
-void USART2_IRQHandler(void)
+void USART1_IRQHandler(void)
 {
 	if(USART_Flag_Status_Get(USARTy, USART_FLAG_RXDNE) == RESET)
 	{
