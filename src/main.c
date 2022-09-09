@@ -38,6 +38,8 @@ extern uint16_t Channel1Pulse;
 extern int Encoder_Left,Encoder_Right;	//编码器数据（速度）
 extern uint8_t NbrOfDataToRead;
 
+u8 FLAG;
+
 /* 主函数 */
 int main(void)
 {
@@ -64,7 +66,17 @@ int main(void)
 		
 	while(1)
 	{
-		Load(Channel1Pulse, 0);
+		//Load(Channel1Pulse, 0);
+		
+//		if(DMA_Flag_Status_Get(DMA,USARTy_Rx_DMA_FLAG) != RESET)
+//		{
+//			DMA_Flag_Status_Clear(DMA, USARTy_Rx_DMA_FLAG);
+//			
+//			FLAG ^= 1;
+//		}
+		
+		DMA_Restart();
+		SysTick_Delay_Ms(100);
 	}
 }
 

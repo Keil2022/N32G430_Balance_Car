@@ -37,7 +37,6 @@
 #include "n32g430_it.h"
 #include "usart.h"
 
-extern uint8_t NbrOfDataToRead2;
 extern uint8_t RxBuffer1[];
 extern uint32_t indexFlag;
 
@@ -45,12 +44,12 @@ extern uint32_t indexFlag;
 
 void USART1_IRQHandler(void)
 {
-	if(USART_Flag_Status_Get(USARTy, USART_FLAG_RXDNE) == RESET)
+	if(USART_Flag_Status_Get(USARTy, USART_FLAG_RXDNE) != RESET)
 	{
 		USART_Flag_Clear(USARTy, USART_FLAG_RXDNE);
 		
 		RxBuffer1[indexFlag++] = USART_Data_Receive(USARTy);
-		if(indexFlag >= NbrOfDataToRead2)	indexFlag = 0;
+		if(indexFlag >= TxBufferSize2)	indexFlag = 0;
 	}
 }
 
