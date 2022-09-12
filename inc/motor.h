@@ -5,7 +5,7 @@
 
 extern uint16_t TimerPeriod;
 
-#define PWM_MAX	( TimerPeriod + 1 )	//PWM限幅变量
+#define PWM_MAX	( TimerPeriod-1 )	//PWM限幅变量
 #define PWM_MIN ( -PWM_MAX )
 
 extern char PWM_Zero,stop;

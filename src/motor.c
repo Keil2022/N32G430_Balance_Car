@@ -17,7 +17,7 @@ void Limit(int *motoA,int *motoB)
 int GFP_abs(int p)
 {
 	int q;
-	q=p>0?p:(-p);
+	q=p>0?p:(-p); 
 	return q;
 }
 
@@ -28,11 +28,13 @@ extern uint16_t Channel1Pulse;
 void Load(int moto1,int moto2)//moto1=-200：反转200个脉冲
 {
 	//1.研究正负号，对应正反转
-	if(moto1>0)	{ TIM_Compare1_Set(ADTIM, 0 ); 				TIM_Compare2_Set(ADTIM, GFP_abs(moto1) ); }		//正转
-	else 		{ TIM_Compare1_Set(ADTIM, GFP_abs(moto1) ); TIM_Compare2_Set(ADTIM, 0 ); }					//反转
+	if(moto1>0)			{ TIM_Compare1_Set(ADTIM, TimerPeriod ); 					TIM_Compare2_Set(ADTIM, TimerPeriod - GFP_abs(moto1) ); }	//正转
+	else if(moto1<0) 	{ TIM_Compare1_Set(ADTIM, TimerPeriod - GFP_abs(moto1) ); 	TIM_Compare2_Set(ADTIM, TimerPeriod ); }					//反转
+	else 				{ TIM_Compare1_Set(ADTIM, TimerPeriod ); 					TIM_Compare2_Set(ADTIM, TimerPeriod	); }
 	
-	if(moto2>0)	{ TIM_Compare3_Set(ADTIM, GFP_abs(moto2) ); TIM_Compare4_Set(ADTIM, 0 ); }					//正转
-	else 		{ TIM_Compare3_Set(ADTIM, 0 ); 				TIM_Compare4_Set(ADTIM, GFP_abs(moto2) ); }		//反转	
+	if(moto2>0)			{ TIM_Compare3_Set(ADTIM, TimerPeriod - GFP_abs(moto2) ); 	TIM_Compare4_Set(ADTIM, TimerPeriod ); }					//正转
+	else if(moto2<0)	{ TIM_Compare3_Set(ADTIM, TimerPeriod ); 					TIM_Compare4_Set(ADTIM, TimerPeriod - GFP_abs(moto2) ); }	//反转
+	else				{ TIM_Compare3_Set(ADTIM, TimerPeriod ); 					TIM_Compare4_Set(ADTIM, TimerPeriod ); }
 }
 
 void Stop(float *Med_Jiaodu,float *Jiaodu)

@@ -56,11 +56,11 @@ int main(void)
 	
 	log_init();
 	
-//	MPU_Init();								//初始化MPU6050
-//	while( mpu_dmp_init() )	{;}				//等待MPU初始化完成
-//	LED_On;
-//	
-//	EXTI_Init(KEY_INPUT_PORT, KEY_INPUT_PIN);
+	MPU_Init();								//初始化MPU6050
+	while( mpu_dmp_init() )	{;}				//等待MPU初始化完成
+	LED_On;
+	
+	EXTI_Init(KEY_INPUT_PORT, KEY_INPUT_PIN);
 	
 	Usart_DMA_Init();
 		

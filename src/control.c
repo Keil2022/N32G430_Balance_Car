@@ -11,11 +11,11 @@ float Med_Angle = 0;	//机械中值。---在这里修改你的机械中值即可。
 float Target_Speed = 0;	//期望速度。---二次开发接口，用于控制小车前进后退及其速度。
 
 float 
-	Vertical_Kp = 200,//直立环KP、KD
-	Vertical_Kd = 0;
+	Vertical_Kp = -300,//直立环KP、KD
+	Vertical_Kd = -1;
 float 
-	Velocity_Kp = 0,//速度环KP、KI
-	Velocity_Ki = 0;
+	Velocity_Kp = -0.1,//速度环KP、KI
+	Velocity_Ki = -0.0005;
 
 int Vertical_out,Velocity_out,Turn_out;//直立环&速度环&转向环 的输出变量
 
@@ -52,7 +52,7 @@ void EXTI9_5_IRQHandler(void)
 //			PWM_out = Vertical_out;//最终输出
 			
 			//2.将数据压入闭环控制中，计算出控制输出量。
-			Vertical_out = Vertical(Med_Angle,Pitch,gyroy);				//直立环
+			Vertical_out = Vertical(Med_Angle,Pitch,gyroy);						//直立环
 			Velocity_out = Velocity(Target_Speed,Encoder_Left,Encoder_Right);			//速度环
 			//Turn_out = Turn(gyroz);										//转向环
 			
