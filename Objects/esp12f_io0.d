@@ -1,13 +1,13 @@
 .\objects\esp12f_io0.o: src\esp12f_io0.c
 .\objects\esp12f_io0.o: ..\firmware\CMSIS\device\n32g430.h
 .\objects\esp12f_io0.o: ..\firmware\CMSIS\core\core_cm4.h
-.\objects\esp12f_io0.o: D:\mdk5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\esp12f_io0.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\esp12f_io0.o: ..\firmware\CMSIS\core\cmsis_version.h
 .\objects\esp12f_io0.o: ..\firmware\CMSIS\core\cmsis_compiler.h
 .\objects\esp12f_io0.o: ..\firmware\CMSIS\core\cmsis_armcc.h
 .\objects\esp12f_io0.o: ..\firmware\CMSIS\core\mpu_armv7.h
 .\objects\esp12f_io0.o: ..\firmware\CMSIS\device\system_n32g430.h
-.\objects\esp12f_io0.o: D:\mdk5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\esp12f_io0.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\objects\esp12f_io0.o: ..\firmware\CMSIS\device\n32g430_conf.h
 .\objects\esp12f_io0.o: ..\firmware\n32g430_std_periph_driver\inc\n32g430_adc.h
 .\objects\esp12f_io0.o: ..\firmware\CMSIS\device\n32g430.h

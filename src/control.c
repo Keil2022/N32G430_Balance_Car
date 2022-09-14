@@ -46,7 +46,11 @@ void EXTI9_5_IRQHandler(void)
 			MPU_Get_Accelerometer(&aacx,&aacy,&aacz);		//得到加速度传感器数据
 			MPU_Get_Gyroscope(&gyrox,&gyroy,&gyroz);		//得到陀螺仪数据
 			
-			usart1_report_imu(aacx,aacy,aacz,gyrox,gyroy,gyroz,(int)(Roll*100),(int)(Pitch*100),(int)(Yaw*10));
+			//if(DMA_Flag_Status_Get(DMA,USARTy_Tx_DMA_FLAG) != RESET)
+			{
+				//DMA_Flag_Status_Clear(DMA,USARTy_Tx_DMA_FLAG);
+				//usart1_report_imu(aacx,aacy,aacz,gyrox,gyroy,gyroz,(int)(Roll*100),(int)(Pitch*100),(int)(Yaw*10));
+			}
 			
 //			//【2】将数据压入闭环控制中，计算出控制输出量。
 //			Velocity_out = Velocity(Target_Speed,Encoder_Left,Encoder_Right);	//速度环

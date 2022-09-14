@@ -6,7 +6,7 @@ uint8_t RxBuffer1[TxBufferSize2];
 uint8_t NbrOfDataToRead             = TxBufferSize1;
 uint32_t indexFlag                  = 0;
 
-u8 send_buf[32];
+u8 send_buf[32] = {1};
 
 void Usart_DMA_Init(void)
 {
@@ -54,6 +54,7 @@ void Usart_DMA_Init(void)
 //    while (DMA_Flag_Status_Get(DMA,USARTy_Tx_DMA_FLAG) == RESET)
 //    {		
 //    }
+		DMA_Flag_Status_Clear(DMA,USARTy_Tx_DMA_FLAG);
 }
 
 
@@ -110,9 +111,9 @@ void DMA_Configuration(void)
 	/* USARTy_Tx_DMA_Channel(由USARTy Tx事件触发)配置 */
     DMA_Reset(USARTy_Tx_DMA_Channel);
     DMA_Init_Structure.PeriphAddr     = USARTy_DAT_Base;			//外设基地址
-    DMA_Init_Structure.MemAddr        = (uint32_t)send_buf;			//内存基地址
+    DMA_Init_Structure.MemAddr        = (uint32_t)TxBuffer1;			//内存基地址
     DMA_Init_Structure.Direction      = DMA_DIR_PERIPH_DST;			//DMA数据传输方向：从内存到外设的数据传输
-    DMA_Init_Structure.BufSize        = 0;							//数据大小
+    DMA_Init_Structure.BufSize        = 2;				//数据大小
     DMA_Init_Structure.PeriphInc      = DMA_PERIPH_INC_MODE_DISABLE;	//指定外设地址寄存器是否递增。
     DMA_Init_Structure.MemoryInc      = DMA_MEM_INC_MODE_ENABLE;		//指定内存地址寄存器是否递增。
     DMA_Init_Structure.PeriphDataSize = DMA_PERIPH_DATA_WIDTH_BYTE;		//指定外设数据宽度。
@@ -141,7 +142,7 @@ void DMA_Restart(u8 len)
 	
 	DMA_Channel_Disable(USARTy_Tx_DMA_Channel);		/* 关闭USARTy TX DMA通道 */
 	
-	DMA_Current_Data_Transfer_Number_Set(USARTy_Tx_DMA_Channel, len);	/* 重新加载数据大小 */
+	DMA_Current_Data_Transfer_Number_Set(USARTy_Tx_DMA_Channel, (u16)len);	/* 重新加载数据大小 */
 	
 	DMA_Channel_Enable(USARTy_Tx_DMA_Channel);		/* 启用USARTy TX DMA通道 */
 }
@@ -157,7 +158,7 @@ void usart1_niming_report(u8 fun,u8*data,u8 len)
 	for(i=0;i<len;i++)send_buf[3+i]=data[i];					//复制数据
 	for(i=0;i<len+3;i++)send_buf[len+3]+=send_buf[i];			//计算校验和
 	//for(i=0;i<len+4;i++)Usart_SendByte(USART1,send_buf[i]);		//发送数据到串口1
-	DMA_Restart(len+4);		//启动DMA传输
+	DMA_Restart(len);		//启动DMA传输
 }
 
 void mpu6050_send_data(short aacx,short aacy,short aacz,short gyrox,short gyroy,short gyroz)

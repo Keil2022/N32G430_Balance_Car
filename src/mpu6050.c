@@ -29,11 +29,11 @@ u8 MPU_Init(void)
 		MPU_Write_Byte(MPU_PWR_MGMT1_REG,0X01);	//设置CLKSEL,PLL X轴为参考
 		MPU_Write_Byte(MPU_PWR_MGMT2_REG,0X00);	//加速度与陀螺仪都工作
 		MPU_Set_Rate(50);						//设置采样率为50Hz
-		log_info("MPU_Init success\r\n");
+		//log_info("MPU_Init success\r\n");
  	}
 	else 
 	{
-		log_info("MPU_Init failed\r\n");
+		//log_info("MPU_Init failed\r\n");
 		return 1;
 	}
 	return 0;

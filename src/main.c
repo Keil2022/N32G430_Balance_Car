@@ -38,7 +38,12 @@ extern uint16_t Channel1Pulse;
 extern int Encoder_Left,Encoder_Right;	//编码器数据（速度）
 extern uint8_t NbrOfDataToRead;
 
+extern float Pitch,Roll,Yaw;			//角度
+extern short gyrox,gyroy,gyroz;			//陀螺仪--角速度
+extern short aacx,aacy,aacz;			//加速度
+
 u8 FLAG;
+u32 num = 65535;
 
 /* 主函数 */
 int main(void)
@@ -54,7 +59,7 @@ int main(void)
 	Encoder_TIM2_Init();
 	Encoder_TIM3_Init();
 	
-	log_init();
+	//log_init();
 	
 	MPU_Init();								//初始化MPU6050
 	while( mpu_dmp_init() )	{;}				//等待MPU初始化完成
@@ -74,7 +79,10 @@ int main(void)
 //			
 //			FLAG ^= 1;
 //		}
-		SysTick_Delay_Ms(100);
+		
+		//DMA_Restart(2);
+		num = 5000000;
+		while(num--);
 	}
 }
 

@@ -3,13 +3,13 @@
 .\objects\usart.o: .\inc\main.h
 .\objects\usart.o: ..\firmware\CMSIS\device\n32g430.h
 .\objects\usart.o: ..\firmware\CMSIS\core\core_cm4.h
-.\objects\usart.o: D:\mdk5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\usart.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\usart.o: ..\firmware\CMSIS\core\cmsis_version.h
 .\objects\usart.o: ..\firmware\CMSIS\core\cmsis_compiler.h
 .\objects\usart.o: ..\firmware\CMSIS\core\cmsis_armcc.h
 .\objects\usart.o: ..\firmware\CMSIS\core\mpu_armv7.h
 .\objects\usart.o: ..\firmware\CMSIS\device\system_n32g430.h
-.\objects\usart.o: D:\mdk5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\usart.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\objects\usart.o: ..\firmware\CMSIS\device\n32g430_conf.h
 .\objects\usart.o: ..\firmware\n32g430_std_periph_driver\inc\n32g430_adc.h
 .\objects\usart.o: ..\firmware\CMSIS\device\n32g430.h
@@ -33,7 +33,7 @@
 .\objects\usart.o: ..\firmware\n32g430_std_periph_driver\inc\n32g430_beeper.h
 .\objects\usart.o: ..\firmware\n32g430_std_periph_driver\inc\misc.h
 .\objects\usart.o: .\inc\log.h
-.\objects\usart.o: D:\mdk5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\usart.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\usart.o: .\inc\mpu6050.h
 .\objects\usart.o: .\inc\myiic.h
 .\objects\usart.o: .\src\eMPL\inv_mpu.h
