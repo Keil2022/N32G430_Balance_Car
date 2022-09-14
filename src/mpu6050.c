@@ -12,7 +12,7 @@ u8 MPU_Init(void)
 { 
 	u8 res;
 	IIC_Init();//初始化IIC总线
-	//Set_Slaver_Address();  //set addr 0 low level
+	Set_Slaver_Address();  //set addr 0 low level
 	MPU_Write_Byte(MPU_PWR_MGMT1_REG,0X80);	//复位MPU6050
 	SysTick_Delay_Ms(100);
 	MPU_Write_Byte(MPU_PWR_MGMT1_REG,0X00);	//唤醒MPU6050 

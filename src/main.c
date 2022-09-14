@@ -43,7 +43,7 @@ u8 FLAG;
 /* 主函数 */
 int main(void)
 {
-	ESP12F_IO0_Init();
+	//ESP12F_IO0_Init();	//硬件已做修改
 	ADC_Configuration();
 	
 	LED_GPIO_Init();
@@ -74,8 +74,6 @@ int main(void)
 //			
 //			FLAG ^= 1;
 //		}
-		
-		DMA_Restart();
 		SysTick_Delay_Ms(100);
 	}
 }

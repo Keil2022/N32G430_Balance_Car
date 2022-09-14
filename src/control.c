@@ -6,6 +6,7 @@
 #include "exti.h"
 #include "encoder.h"
 #include "led.h"
+#include "usart.h"
 
 float Med_Angle = 0;	//机械中值。---在这里修改你的机械中值即可。
 float Target_Speed = 0;	//期望速度。---二次开发接口，用于控制小车前进后退及其速度。
@@ -44,6 +45,8 @@ void EXTI9_5_IRQHandler(void)
 			while(mpu_dmp_get_data(&Pitch,&Roll,&Yaw) != 0)	//获取当前的航向角
 			MPU_Get_Accelerometer(&aacx,&aacy,&aacz);		//得到加速度传感器数据
 			MPU_Get_Gyroscope(&gyrox,&gyroy,&gyroz);		//得到陀螺仪数据
+			
+			usart1_report_imu(aacx,aacy,aacz,gyrox,gyroy,gyroz,(int)(Roll*100),(int)(Pitch*100),(int)(Yaw*10));
 			
 //			//【2】将数据压入闭环控制中，计算出控制输出量。
 //			Velocity_out = Velocity(Target_Speed,Encoder_Left,Encoder_Right);	//速度环

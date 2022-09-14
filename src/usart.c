@@ -1,10 +1,12 @@
 #include "usart.h"
 
-uint8_t TxBuffer1[] = {150,150};
+uint8_t TxBuffer1[] = {0xaa,0x55};
 uint8_t RxBuffer1[TxBufferSize2];
 
 uint8_t NbrOfDataToRead             = TxBufferSize1;
 uint32_t indexFlag                  = 0;
+
+u8 send_buf[32];
 
 void Usart_DMA_Init(void)
 {
@@ -108,9 +110,9 @@ void DMA_Configuration(void)
 	/* USARTy_Tx_DMA_Channel(由USARTy Tx事件触发)配置 */
     DMA_Reset(USARTy_Tx_DMA_Channel);
     DMA_Init_Structure.PeriphAddr     = USARTy_DAT_Base;			//外设基地址
-    DMA_Init_Structure.MemAddr        = (uint32_t)TxBuffer1;			//内存基地址
+    DMA_Init_Structure.MemAddr        = (uint32_t)send_buf;			//内存基地址
     DMA_Init_Structure.Direction      = DMA_DIR_PERIPH_DST;			//DMA数据传输方向：从内存到外设的数据传输
-    DMA_Init_Structure.BufSize        = TxBufferSize1;				//数据大小
+    DMA_Init_Structure.BufSize        = 0;							//数据大小
     DMA_Init_Structure.PeriphInc      = DMA_PERIPH_INC_MODE_DISABLE;	//指定外设地址寄存器是否递增。
     DMA_Init_Structure.MemoryInc      = DMA_MEM_INC_MODE_ENABLE;		//指定内存地址寄存器是否递增。
     DMA_Init_Structure.PeriphDataSize = DMA_PERIPH_DATA_WIDTH_BYTE;		//指定外设数据宽度。
@@ -133,18 +135,74 @@ void DMA_Configuration(void)
     DMA_Channel_Request_Remap(USARTy_Rx_DMA_Channel, USARTy_Rx_DMA_REMAP);
 }
 
-void DMA_Restart(void)
+void DMA_Restart(u8 len)
 {
 	DMA_Flag_Status_Clear(DMA,USARTy_Tx_DMA_FLAG);	/* 清除DMA标志位 */
 	
 	DMA_Channel_Disable(USARTy_Tx_DMA_Channel);		/* 关闭USARTy TX DMA通道 */
 	
-	DMA_Current_Data_Transfer_Number_Set(USARTy_Tx_DMA_Channel, TxBufferSize1);	/* 重新加载数据大小 */
+	DMA_Current_Data_Transfer_Number_Set(USARTy_Tx_DMA_Channel, len);	/* 重新加载数据大小 */
 	
 	DMA_Channel_Enable(USARTy_Tx_DMA_Channel);		/* 启用USARTy TX DMA通道 */
 }
 
+void usart1_niming_report(u8 fun,u8*data,u8 len)
+{
+	u8 i;
+	if(len>28)return;	//最多28字节数据
+	send_buf[len+3]=0;	//校验数置零
+	send_buf[0]=0X88;	//帧头
+	send_buf[1]=fun;	//功能字
+	send_buf[2]=len;	//数据长度
+	for(i=0;i<len;i++)send_buf[3+i]=data[i];					//复制数据
+	for(i=0;i<len+3;i++)send_buf[len+3]+=send_buf[i];			//计算校验和
+	//for(i=0;i<len+4;i++)Usart_SendByte(USART1,send_buf[i]);		//发送数据到串口1
+	DMA_Restart(len+4);		//启动DMA传输
+}
 
+void mpu6050_send_data(short aacx,short aacy,short aacz,short gyrox,short gyroy,short gyroz)
+{
+	u8 tbuf[12]; 
+	tbuf[0]=(aacx>>8)&0XFF;
+	tbuf[1]=aacx&0XFF;
+	tbuf[2]=(aacy>>8)&0XFF;
+	tbuf[3]=aacy&0XFF;
+	tbuf[4]=(aacz>>8)&0XFF;
+	tbuf[5]=aacz&0XFF; 
+	tbuf[6]=(gyrox>>8)&0XFF;
+	tbuf[7]=gyrox&0XFF;
+	tbuf[8]=(gyroy>>8)&0XFF;
+	tbuf[9]=gyroy&0XFF;
+	tbuf[10]=(gyroz>>8)&0XFF;
+	tbuf[11]=gyroz&0XFF;
+	usart1_niming_report(0XA1,tbuf,12);//自定义帧,0XA1
+}
+
+void usart1_report_imu(short aacx,short aacy,short aacz,short gyrox,short gyroy,short gyroz,short roll,short pitch,short yaw)
+{
+	u8 tbuf[28]; 
+	u8 i;
+	for(i=0;i<28;i++)tbuf[i]=0;//清0
+	tbuf[0]=(aacx>>8)&0XFF;
+	tbuf[1]=aacx&0XFF;
+	tbuf[2]=(aacy>>8)&0XFF;
+	tbuf[3]=aacy&0XFF;
+	tbuf[4]=(aacz>>8)&0XFF;
+	tbuf[5]=aacz&0XFF; 
+	tbuf[6]=(gyrox>>8)&0XFF;
+	tbuf[7]=gyrox&0XFF;
+	tbuf[8]=(gyroy>>8)&0XFF;
+	tbuf[9]=gyroy&0XFF;
+	tbuf[10]=(gyroz>>8)&0XFF;
+	tbuf[11]=gyroz&0XFF;	
+	tbuf[18]=(roll>>8)&0XFF;
+	tbuf[19]=roll&0XFF;
+	tbuf[20]=(pitch>>8)&0XFF;
+	tbuf[21]=pitch&0XFF;
+	tbuf[22]=(yaw>>8)&0XFF;
+	tbuf[23]=yaw&0XFF;
+	usart1_niming_report(0XAF,tbuf,28);//飞控显示帧,0XAF
+} 
 
 
 

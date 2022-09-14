@@ -6,7 +6,7 @@
 #define countof(a) (sizeof(a) / sizeof(*(a)))	//数组内存大小/第一个数据内存大小 = 数据个数
 	
 #define TxBufferSize1 ( countof(TxBuffer1) )	//发送数据大小
-#define TxBufferSize2 4								//接收数据大小
+#define TxBufferSize2 4							//接收数据大小
 
 #define USARTy                  USART1
 #define USARTy_CLK              RCC_APB2_PERIPH_USART1
@@ -38,9 +38,9 @@ void RCC_Configuration(void);
 void GPIO_Configuration(void);
 void NVIC_Configuration(void);
 void DMA_Configuration(void);
-void DMA_Restart(void);
+void DMA_Restart(u8 len);
 void usart1_niming_report(u8 fun,u8*data,u8 len);
-
+void usart1_report_imu(short aacx,short aacy,short aacz,short gyrox,short gyroy,short gyroz,short roll,short pitch,short yaw);
 
 
 
