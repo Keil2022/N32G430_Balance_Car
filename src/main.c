@@ -80,7 +80,6 @@ int main(void)
 //			FLAG ^= 1;
 //		}
 		
-		//DMA_Restart(2);
 		num = 5000000;
 		while(num--);
 	}

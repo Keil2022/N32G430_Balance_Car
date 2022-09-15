@@ -3,9 +3,9 @@
 <title>Static Call Graph - [.\Objects\Balance_Car.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\Balance_Car.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Thu Sep 15 01:33:03 2022
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Thu Sep 15 23:27:54 2022
 <BR><P>
-<H3>Maximum Stack Usage =        348 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =        372 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
 EXTI9_5_IRQHandler &rArr; mpu_dmp_get_data &rArr; dmp_read_fifo &rArr; mpu_read_fifo_stream &rArr; mpu_reset_fifo &rArr; MPU_Write_Len &rArr; IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
 <P>
@@ -93,25 +93,25 @@ Global Symbols
 <P><STRONG><a name="[42]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry.o(.ARM.Collect$$$$00000000))
 <BR>[Address Reference Count : 1]<UL><LI> startup_n32g430.o(.text)
 </UL>
-<P><STRONG><a name="[1a9]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
+<P><STRONG><a name="[1aa]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
 
 <P><STRONG><a name="[44]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[198]"></a>__main_after_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
+<P><STRONG><a name="[199]"></a>__main_after_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
 <BR><BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[1aa]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
+<P><STRONG><a name="[1ab]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
 
-<P><STRONG><a name="[1ab]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
+<P><STRONG><a name="[1ac]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
 
-<P><STRONG><a name="[1ac]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
+<P><STRONG><a name="[1ad]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
 
-<P><STRONG><a name="[1ad]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
+<P><STRONG><a name="[1ae]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
 
-<P><STRONG><a name="[1ae]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
+<P><STRONG><a name="[1af]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
 
 <P><STRONG><a name="[1]"></a>Reset_Handler</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, startup_n32g430.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_n32g430.o(RESET)
@@ -281,7 +281,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_n32g430.o(.text)
 </UL>
-<P><STRONG><a name="[1af]"></a>System_Clock_Frequency_Update</STRONG> (Thumb, 182 bytes, Stack size 8 bytes, system_n32g430.o(.text), UNUSED)
+<P><STRONG><a name="[1b0]"></a>System_Clock_Frequency_Update</STRONG> (Thumb, 182 bytes, Stack size 8 bytes, system_n32g430.o(.text), UNUSED)
 
 <P><STRONG><a name="[40]"></a>main</STRONG> (Thumb, 92 bytes, Stack size 0 bytes, main.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 324<LI>Call Chain = main &rArr; mpu_dmp_init &rArr; run_self_test &rArr; mpu_run_self_test &rArr; mpu_set_dmp_state &rArr; mpu_set_sample_rate &rArr; mpu_lp_accel_mode &rArr; mpu_configure_fifo &rArr; set_int_enable &rArr; MPU_Write_Len &rArr; IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
@@ -786,9 +786,9 @@ Global Symbols
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_run_self_test
 </UL>
 
-<P><STRONG><a name="[1b0]"></a>mpu_get_compass_sample_rate</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, inv_mpu.o(.text), UNUSED)
+<P><STRONG><a name="[1b1]"></a>mpu_get_compass_sample_rate</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, inv_mpu.o(.text), UNUSED)
 
-<P><STRONG><a name="[1b1]"></a>mpu_set_compass_sample_rate</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, inv_mpu.o(.text), UNUSED)
+<P><STRONG><a name="[1b2]"></a>mpu_set_compass_sample_rate</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, inv_mpu.o(.text), UNUSED)
 
 <P><STRONG><a name="[9d]"></a>mpu_get_gyro_sens</STRONG> (Thumb, 74 bytes, Stack size 0 bytes, inv_mpu.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;run_self_test
@@ -804,7 +804,7 @@ Global Symbols
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_run_self_test
 </UL>
 
-<P><STRONG><a name="[1b2]"></a>mpu_get_power_state</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, inv_mpu.o(.text), UNUSED)
+<P><STRONG><a name="[1b3]"></a>mpu_get_power_state</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, inv_mpu.o(.text), UNUSED)
 
 <P><STRONG><a name="[88]"></a>mpu_get_int_status</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, inv_mpu.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Read_Len
@@ -825,7 +825,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_read_fifo
 </UL>
 
-<P><STRONG><a name="[1b3]"></a>mpu_set_int_level</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, inv_mpu.o(.text), UNUSED)
+<P><STRONG><a name="[1b4]"></a>mpu_set_int_level</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, inv_mpu.o(.text), UNUSED)
 
 <P><STRONG><a name="[90]"></a>mpu_set_dmp_state</STRONG> (Thumb, 138 bytes, Stack size 16 bytes, inv_mpu.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 180<LI>Call Chain = mpu_set_dmp_state &rArr; mpu_set_sample_rate &rArr; mpu_lp_accel_mode &rArr; mpu_configure_fifo &rArr; set_int_enable &rArr; MPU_Write_Len &rArr; IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
@@ -912,13 +912,13 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_load_motion_driver_firmware
 </UL>
 
-<P><STRONG><a name="[1b4]"></a>mpu_get_dmp_state</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, inv_mpu.o(.text), UNUSED)
+<P><STRONG><a name="[1b5]"></a>mpu_get_dmp_state</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, inv_mpu.o(.text), UNUSED)
 
-<P><STRONG><a name="[1b5]"></a>setup_compass</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, inv_mpu.o(.text), UNUSED)
+<P><STRONG><a name="[1b6]"></a>setup_compass</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, inv_mpu.o(.text), UNUSED)
 
-<P><STRONG><a name="[1b6]"></a>mpu_get_compass_reg</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, inv_mpu.o(.text), UNUSED)
+<P><STRONG><a name="[1b7]"></a>mpu_get_compass_reg</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, inv_mpu.o(.text), UNUSED)
 
-<P><STRONG><a name="[1b7]"></a>mpu_get_compass_fsr</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, inv_mpu.o(.text), UNUSED)
+<P><STRONG><a name="[1b8]"></a>mpu_get_compass_fsr</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, inv_mpu.o(.text), UNUSED)
 
 <P><STRONG><a name="[9b]"></a>mpu_lp_motion_interrupt</STRONG> (Thumb, 512 bytes, Stack size 24 bytes, inv_mpu.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_set_dmp_state
@@ -1036,7 +1036,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_dmp_init
 </UL>
 
-<P><STRONG><a name="[1b8]"></a>dmp_get_fifo_rate</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, inv_mpu_dmp_motion_driver.o(.text), UNUSED)
+<P><STRONG><a name="[1b9]"></a>dmp_get_fifo_rate</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, inv_mpu_dmp_motion_driver.o(.text), UNUSED)
 
 <P><STRONG><a name="[ad]"></a>dmp_set_tap_thresh</STRONG> (Thumb, 412 bytes, Stack size 40 bytes, inv_mpu_dmp_motion_driver.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 164<LI>Call Chain = dmp_set_tap_thresh &rArr; mpu_write_mem &rArr; MPU_Write_Len &rArr; IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
@@ -1167,7 +1167,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_dmp_init
 </UL>
 
-<P><STRONG><a name="[1b9]"></a>dmp_get_enabled_features</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, inv_mpu_dmp_motion_driver.o(.text), UNUSED)
+<P><STRONG><a name="[1ba]"></a>dmp_get_enabled_features</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, inv_mpu_dmp_motion_driver.o(.text), UNUSED)
 
 <P><STRONG><a name="[bd]"></a>dmp_set_interrupt_mode</STRONG> (Thumb, 66 bytes, Stack size 32 bytes, inv_mpu_dmp_motion_driver.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_write_mem
@@ -1184,9 +1184,9 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_dmp_get_data
 </UL>
 
-<P><STRONG><a name="[1ba]"></a>dmp_register_tap_cb</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, inv_mpu_dmp_motion_driver.o(.text), UNUSED)
+<P><STRONG><a name="[1bb]"></a>dmp_register_tap_cb</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, inv_mpu_dmp_motion_driver.o(.text), UNUSED)
 
-<P><STRONG><a name="[1bb]"></a>dmp_register_android_orient_cb</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, inv_mpu_dmp_motion_driver.o(.text), UNUSED)
+<P><STRONG><a name="[1bc]"></a>dmp_register_android_orient_cb</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, inv_mpu_dmp_motion_driver.o(.text), UNUSED)
 
 <P><STRONG><a name="[48]"></a>LED_GPIO_Init</STRONG> (Thumb, 56 bytes, Stack size 32 bytes, led.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = LED_GPIO_Init &rArr; GPIO_Peripheral_Initialize &rArr; GPIO_Mode_Set
@@ -1213,7 +1213,7 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Input_Pin_Data_Get
 </UL>
 
-<P><STRONG><a name="[1bc]"></a>KEY_Handle</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, key.o(.text), UNUSED)
+<P><STRONG><a name="[1bd]"></a>KEY_Handle</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, key.o(.text), UNUSED)
 
 <P><STRONG><a name="[c0]"></a>ADC_RCC_Configuration</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, adc.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = ADC_RCC_Configuration &rArr; ADC_Clock_Mode_Config
@@ -1413,7 +1413,7 @@ Global Symbols
 <LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Channel_Enable
 </UL>
 
-<P><STRONG><a name="[101]"></a>Limit</STRONG> (Thumb, 90 bytes, Stack size 0 bytes, motor.o(.text))
+<P><STRONG><a name="[104]"></a>Limit</STRONG> (Thumb, 90 bytes, Stack size 0 bytes, motor.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI9_5_IRQHandler
 </UL>
 
@@ -1440,73 +1440,76 @@ Global Symbols
 <LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GFP_abs
 </UL>
 
-<P><STRONG><a name="[100]"></a>Velocity</STRONG> (Thumb, 178 bytes, Stack size 8 bytes, control.o(.text))
+<P><STRONG><a name="[103]"></a>Velocity</STRONG> (Thumb, 178 bytes, Stack size 8 bytes, control.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Velocity
 </UL>
 <BR>[Called By]<UL><LI><a href="#[21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI9_5_IRQHandler
 </UL>
 
-<P><STRONG><a name="[ff]"></a>Vertical</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, control.o(.text))
+<P><STRONG><a name="[102]"></a>Vertical</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, control.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI9_5_IRQHandler
 </UL>
 
-<P><STRONG><a name="[21]"></a>EXTI9_5_IRQHandler</STRONG> (Thumb, 232 bytes, Stack size 8 bytes, control.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 348<LI>Call Chain = EXTI9_5_IRQHandler &rArr; mpu_dmp_get_data &rArr; dmp_read_fifo &rArr; mpu_read_fifo_stream &rArr; mpu_reset_fifo &rArr; MPU_Write_Len &rArr; IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
+<P><STRONG><a name="[21]"></a>EXTI9_5_IRQHandler</STRONG> (Thumb, 386 bytes, Stack size 32 bytes, control.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 372<LI>Call Chain = EXTI9_5_IRQHandler &rArr; mpu_dmp_get_data &rArr; dmp_read_fifo &rArr; mpu_read_fifo_stream &rArr; mpu_reset_fifo &rArr; MPU_Write_Len &rArr; IIC_Send_Byte &rArr; SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_dmp_get_data
 <LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Get_Accelerometer
 <LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Get_Gyroscope
+<LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart1_report_imu
 <LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Interrupt_Status_Get
 <LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Interrupt_Status_Clear
-<LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Vertical
-<LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Velocity
+<LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Flag_Status_Get
+<LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Flag_Status_Clear
+<LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Vertical
+<LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Velocity
 <LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Load
-<LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Limit
+<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Limit
 <LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Read_Speed
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_n32g430.o(RESET)
 </UL>
-<P><STRONG><a name="[102]"></a>Turn</STRONG> (Thumb, 48 bytes, Stack size 32 bytes, control.o(.text), UNUSED)
+<P><STRONG><a name="[105]"></a>Turn</STRONG> (Thumb, 48 bytes, Stack size 32 bytes, control.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2d
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
-<LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2iz
+<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2iz
 </UL>
 
-<P><STRONG><a name="[104]"></a>log_init</STRONG> (Thumb, 124 bytes, Stack size 48 bytes, log.o(.text), UNUSED)
+<P><STRONG><a name="[107]"></a>log_init</STRONG> (Thumb, 124 bytes, Stack size 48 bytes, log.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHB_Peripheral_Clock_Enable
 <LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Structure_Initialize
 <LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Peripheral_Initialize
-<LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Initializes
-<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Enable
+<LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Initializes
+<LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Enable
 <LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2_Peripheral_Clock_Enable
 </UL>
 
-<P><STRONG><a name="[107]"></a>Usart_SendByte</STRONG> (Thumb, 30 bytes, Stack size 16 bytes, log.o(.text), UNUSED)
+<P><STRONG><a name="[10a]"></a>Usart_SendByte</STRONG> (Thumb, 30 bytes, Stack size 16 bytes, log.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Flag_Status_Get
-<LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Data_Send
+<LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Data_Send
 </UL>
-<BR>[Called By]<UL><LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Usart_SendString
+<BR>[Called By]<UL><LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Usart_SendString
 </UL>
 
-<P><STRONG><a name="[109]"></a>Usart_SendString</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, log.o(.text), UNUSED)
+<P><STRONG><a name="[10c]"></a>Usart_SendString</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, log.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Flag_Status_Get
-<LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Usart_SendByte
+<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Usart_SendByte
 </UL>
 
 <P><STRONG><a name="[43]"></a>fputc</STRONG> (Thumb, 32 bytes, Stack size 16 bytes, log.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = fputc
 </UL>
 <BR>[Calls]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Flag_Status_Get
-<LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Data_Send
+<LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Data_Send
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> printf8.o(i.__0printf$8)
 </UL>
-<P><STRONG><a name="[10a]"></a>fgetc</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, log.o(.text), UNUSED)
+<P><STRONG><a name="[10d]"></a>fgetc</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, log.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Flag_Status_Get
 <LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Data_Receive
 </UL>
 
-<P><STRONG><a name="[10b]"></a>DMA_Configuration</STRONG> (Thumb, 116 bytes, Stack size 8 bytes, usart.o(.text))
+<P><STRONG><a name="[10e]"></a>DMA_Configuration</STRONG> (Thumb, 116 bytes, Stack size 8 bytes, usart.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = DMA_Configuration &rArr; DMA_Initializes
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Reset
@@ -1516,7 +1519,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Usart_DMA_Init
 </UL>
 
-<P><STRONG><a name="[10c]"></a>GPIO_Configuration</STRONG> (Thumb, 54 bytes, Stack size 32 bytes, usart.o(.text))
+<P><STRONG><a name="[10f]"></a>GPIO_Configuration</STRONG> (Thumb, 54 bytes, Stack size 32 bytes, usart.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = GPIO_Configuration &rArr; GPIO_Peripheral_Initialize &rArr; GPIO_Mode_Set
 </UL>
 <BR>[Calls]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Structure_Initialize
@@ -1525,7 +1528,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Usart_DMA_Init
 </UL>
 
-<P><STRONG><a name="[10d]"></a>NVIC_Configuration</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, usart.o(.text))
+<P><STRONG><a name="[110]"></a>NVIC_Configuration</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, usart.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = NVIC_Configuration &rArr; NVIC_Initializes
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_Initializes
@@ -1533,7 +1536,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Usart_DMA_Init
 </UL>
 
-<P><STRONG><a name="[10e]"></a>RCC_Configuration</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, usart.o(.text))
+<P><STRONG><a name="[111]"></a>RCC_Configuration</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, usart.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = RCC_Configuration
 </UL>
 <BR>[Calls]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHB_Peripheral_Clock_Enable
@@ -1546,47 +1549,55 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 116<LI>Call Chain = Usart_DMA_Init &rArr; USART_Initializes &rArr; USART_Baud_Rate_Config &rArr; RCC_Clocks_Frequencies_Value_Get
 </UL>
 <BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Flag_Clear
-<LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_DMA_Transfer_Enable
-<LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Flag_Status_Clear
-<LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_Configuration
-<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_Configuration
-<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Configuration
-<LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Configuration
-<LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Initializes
-<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Enable
+<LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_DMA_Transfer_Enable
+<LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_Configuration
+<LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_Configuration
+<LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Configuration
+<LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Configuration
+<LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Initializes
+<LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Enable
+<LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Flag_Status_Clear
 <LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Channel_Enable
 </UL>
 <BR>[Called By]<UL><LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[111]"></a>DMA_Restart</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, usart.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Flag_Status_Clear
-<LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Current_Data_Transfer_Number_Set
+<P><STRONG><a name="[113]"></a>DMA_Restart</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, usart.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = DMA_Restart
+</UL>
+<BR>[Calls]<UL><LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Current_Data_Transfer_Number_Set
+<LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Flag_Status_Clear
 <LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Channel_Disable
 <LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Channel_Enable
 </UL>
-<BR>[Called By]<UL><LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart1_niming_report
+<BR>[Called By]<UL><LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart1_niming_report
 </UL>
 
-<P><STRONG><a name="[113]"></a>usart1_niming_report</STRONG> (Thumb, 100 bytes, Stack size 24 bytes, usart.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Restart
+<P><STRONG><a name="[115]"></a>usart1_niming_report</STRONG> (Thumb, 102 bytes, Stack size 24 bytes, usart.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = usart1_niming_report &rArr; DMA_Restart
 </UL>
-<BR>[Called By]<UL><LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart1_report_imu
-<LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu6050_send_data
+<BR>[Calls]<UL><LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Restart
 </UL>
-
-<P><STRONG><a name="[114]"></a>mpu6050_send_data</STRONG> (Thumb, 110 bytes, Stack size 40 bytes, usart.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart1_niming_report
+<BR>[Called By]<UL><LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu6050_send_data
+<LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart1_report_imu
 </UL>
 
-<P><STRONG><a name="[115]"></a>usart1_report_imu</STRONG> (Thumb, 192 bytes, Stack size 64 bytes, usart.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart1_niming_report
+<P><STRONG><a name="[116]"></a>mpu6050_send_data</STRONG> (Thumb, 110 bytes, Stack size 40 bytes, usart.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart1_niming_report
+</UL>
+
+<P><STRONG><a name="[101]"></a>usart1_report_imu</STRONG> (Thumb, 192 bytes, Stack size 64 bytes, usart.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = usart1_report_imu &rArr; usart1_niming_report &rArr; DMA_Restart
+</UL>
+<BR>[Calls]<UL><LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart1_niming_report
+</UL>
+<BR>[Called By]<UL><LI><a href="#[21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI9_5_IRQHandler
 </UL>
 
 <P><STRONG><a name="[5b]"></a>SysTick_Delay_Us</STRONG> (Thumb, 72 bytes, Stack size 40 bytes, bsp_delay.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 60<LI>Call Chain = SysTick_Delay_Us &rArr; RCC_Clocks_Frequencies_Value_Get
 </UL>
-<BR>[Calls]<UL><LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DBG_SysTick_Config
+<BR>[Calls]<UL><LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DBG_SysTick_Config
 <LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_Clocks_Frequencies_Value_Get
 </UL>
 <BR>[Called By]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Read_Byte
@@ -1601,7 +1612,7 @@ Global Symbols
 <P><STRONG><a name="[6a]"></a>SysTick_Delay_Ms</STRONG> (Thumb, 74 bytes, Stack size 40 bytes, bsp_delay.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 60<LI>Call Chain = SysTick_Delay_Ms &rArr; RCC_Clocks_Frequencies_Value_Get
 </UL>
-<BR>[Calls]<UL><LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DBG_SysTick_Config
+<BR>[Calls]<UL><LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DBG_SysTick_Config
 <LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_Clocks_Frequencies_Value_Get
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_lp_motion_interrupt
@@ -1613,68 +1624,68 @@ Global Symbols
 <LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Init
 </UL>
 
-<P><STRONG><a name="[1bd]"></a>NVIC_Priority_Group_Set</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, misc.o(.text), UNUSED)
+<P><STRONG><a name="[1be]"></a>NVIC_Priority_Group_Set</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, misc.o(.text), UNUSED)
 
 <P><STRONG><a name="[d4]"></a>NVIC_Initializes</STRONG> (Thumb, 100 bytes, Stack size 16 bytes, misc.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = NVIC_Initializes
 </UL>
 <BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Init
-<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_Configuration
+<LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_Configuration
 <LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Common_TIM_NVIC_Initialize
 </UL>
 
-<P><STRONG><a name="[1be]"></a>NVIC_Vector_Table_Set</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, misc.o(.text), UNUSED)
+<P><STRONG><a name="[1bf]"></a>NVIC_Vector_Table_Set</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, misc.o(.text), UNUSED)
 
-<P><STRONG><a name="[1bf]"></a>NVIC_System_LowPower_Enable</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, misc.o(.text), UNUSED)
+<P><STRONG><a name="[1c0]"></a>NVIC_System_LowPower_Enable</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, misc.o(.text), UNUSED)
 
-<P><STRONG><a name="[1c0]"></a>NVIC_System_Low_Power_Disable</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, misc.o(.text), UNUSED)
+<P><STRONG><a name="[1c1]"></a>NVIC_System_Low_Power_Disable</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, misc.o(.text), UNUSED)
 
-<P><STRONG><a name="[1c1]"></a>SysTick_Clock_Source_Set</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, misc.o(.text), UNUSED)
+<P><STRONG><a name="[1c2]"></a>SysTick_Clock_Source_Set</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, misc.o(.text), UNUSED)
 
-<P><STRONG><a name="[1c2]"></a>ADC_Vrefint_Get</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, n32g430_adc.o(.text), UNUSED)
+<P><STRONG><a name="[1c3]"></a>ADC_Vrefint_Get</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, n32g430_adc.o(.text), UNUSED)
 
-<P><STRONG><a name="[117]"></a>ADC_Reset</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, n32g430_adc.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHB_Peripheral_Reset
+<P><STRONG><a name="[118]"></a>ADC_Reset</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, n32g430_adc.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHB_Peripheral_Reset
 </UL>
 
-<P><STRONG><a name="[119]"></a>ADC_Multichannels_Enable</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, n32g430_adc.o(.text))
+<P><STRONG><a name="[11a]"></a>ADC_Multichannels_Enable</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, n32g430_adc.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Initializes
 </UL>
 
-<P><STRONG><a name="[11a]"></a>ADC_Multichannels_Disable</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, n32g430_adc.o(.text))
+<P><STRONG><a name="[11b]"></a>ADC_Multichannels_Disable</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, n32g430_adc.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Initializes
 </UL>
 
-<P><STRONG><a name="[11b]"></a>ADC_Continue_Conversion_Enable</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g430_adc.o(.text))
+<P><STRONG><a name="[11c]"></a>ADC_Continue_Conversion_Enable</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g430_adc.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Initializes
 </UL>
 
-<P><STRONG><a name="[11c]"></a>ADC_Continue_Conversion_Disable</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g430_adc.o(.text))
+<P><STRONG><a name="[11d]"></a>ADC_Continue_Conversion_Disable</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g430_adc.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Initializes
 </UL>
 
-<P><STRONG><a name="[11d]"></a>ADC_Regular_Group_External_Trigger_Source_Config</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, n32g430_adc.o(.text))
+<P><STRONG><a name="[11e]"></a>ADC_Regular_Group_External_Trigger_Source_Config</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, n32g430_adc.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Initializes
 </UL>
 
-<P><STRONG><a name="[11e]"></a>ADC_Data_Alignment_Config</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, n32g430_adc.o(.text))
+<P><STRONG><a name="[11f]"></a>ADC_Data_Alignment_Config</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, n32g430_adc.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Initializes
 </UL>
 
-<P><STRONG><a name="[11f]"></a>ADC_Regular_Channels_Number_Config</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, n32g430_adc.o(.text))
+<P><STRONG><a name="[120]"></a>ADC_Regular_Channels_Number_Config</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, n32g430_adc.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Initializes
 </UL>
 
 <P><STRONG><a name="[c9]"></a>ADC_Initializes</STRONG> (Thumb, 52 bytes, Stack size 4 bytes, n32g430_adc.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = ADC_Initializes
 </UL>
-<BR>[Calls]<UL><LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Regular_Channels_Number_Config
-<LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Data_Alignment_Config
-<LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Regular_Group_External_Trigger_Source_Config
-<LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Continue_Conversion_Disable
-<LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Continue_Conversion_Enable
-<LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Multichannels_Disable
-<LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Multichannels_Enable
+<BR>[Calls]<UL><LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Regular_Channels_Number_Config
+<LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Data_Alignment_Config
+<LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Regular_Group_External_Trigger_Source_Config
+<LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Continue_Conversion_Disable
+<LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Continue_Conversion_Enable
+<LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Multichannels_Disable
+<LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Multichannels_Enable
 </UL>
 <BR>[Called By]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Configuration
 </UL>
@@ -1687,20 +1698,20 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Configuration
 </UL>
 
-<P><STRONG><a name="[1c3]"></a>ADC_OFF</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
+<P><STRONG><a name="[1c4]"></a>ADC_OFF</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
 
 <P><STRONG><a name="[cc]"></a>ADC_DMA_Transfer_Enable</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g430_adc.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Configuration
 </UL>
 
-<P><STRONG><a name="[1c4]"></a>ADC_DMA_Transfer_Disable</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
+<P><STRONG><a name="[1c5]"></a>ADC_DMA_Transfer_Disable</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
 
-<P><STRONG><a name="[125]"></a>ADC_Interrupts_Enable</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Initializes_Ex
+<P><STRONG><a name="[126]"></a>ADC_Interrupts_Enable</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Initializes_Ex
 </UL>
 
-<P><STRONG><a name="[126]"></a>ADC_Interrupts_Disable</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Initializes_Ex
+<P><STRONG><a name="[127]"></a>ADC_Interrupts_Disable</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Initializes_Ex
 </UL>
 
 <P><STRONG><a name="[cf]"></a>ADC_Calibration_Operation</STRONG> (Thumb, 72 bytes, Stack size 0 bytes, n32g430_adc.o(.text))
@@ -1711,9 +1722,9 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Configuration
 </UL>
 
-<P><STRONG><a name="[1c5]"></a>ADC_Discontinuous_Mode_Channel_Count_Config</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
+<P><STRONG><a name="[1c6]"></a>ADC_Discontinuous_Mode_Channel_Count_Config</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
 
-<P><STRONG><a name="[1c6]"></a>ADC_Discontinuous_Mode_Config</STRONG> (Thumb, 76 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
+<P><STRONG><a name="[1c7]"></a>ADC_Discontinuous_Mode_Config</STRONG> (Thumb, 76 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
 
 <P><STRONG><a name="[ca]"></a>ADC_Channel_Sample_Time_Config</STRONG> (Thumb, 140 bytes, Stack size 12 bytes, n32g430_adc.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = ADC_Channel_Sample_Time_Config
@@ -1727,237 +1738,240 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Configuration
 </UL>
 
-<P><STRONG><a name="[1c7]"></a>ADC_External_Trigger_Conversion_Config</STRONG> (Thumb, 110 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
+<P><STRONG><a name="[1c8]"></a>ADC_External_Trigger_Conversion_Config</STRONG> (Thumb, 110 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
 
-<P><STRONG><a name="[1c8]"></a>ADC_Regular_Group_Conversion_Data_Get</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
+<P><STRONG><a name="[1c9]"></a>ADC_Regular_Group_Conversion_Data_Get</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
 
-<P><STRONG><a name="[1c9]"></a>ADC_Injected_Group_Autoconversion_Enable</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
+<P><STRONG><a name="[1ca]"></a>ADC_Injected_Group_Autoconversion_Enable</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
 
-<P><STRONG><a name="[1ca]"></a>ADC_Injected_Group_Autoconversion_Disable</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
+<P><STRONG><a name="[1cb]"></a>ADC_Injected_Group_Autoconversion_Disable</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
 
-<P><STRONG><a name="[1cb]"></a>ADC_Injected_Group_External_Trigger_Source_Config</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
+<P><STRONG><a name="[1cc]"></a>ADC_Injected_Group_External_Trigger_Source_Config</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
 
-<P><STRONG><a name="[1cc]"></a>ADC_Injected_Channels_Software_Conversion_Operation</STRONG> (Thumb, 76 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
+<P><STRONG><a name="[1cd]"></a>ADC_Injected_Channels_Software_Conversion_Operation</STRONG> (Thumb, 76 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
 
-<P><STRONG><a name="[1cd]"></a>ADC_Injected_Sequence_Conversion_Number_Config</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, n32g430_adc.o(.text), UNUSED)
+<P><STRONG><a name="[1ce]"></a>ADC_Injected_Sequence_Conversion_Number_Config</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, n32g430_adc.o(.text), UNUSED)
 
-<P><STRONG><a name="[1ce]"></a>ADC_Injected_Channels_Number_Config</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
+<P><STRONG><a name="[1cf]"></a>ADC_Injected_Channels_Number_Config</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
 
-<P><STRONG><a name="[1cf]"></a>ADC_Injected_Channels_Offset_Config</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, n32g430_adc.o(.text), UNUSED)
+<P><STRONG><a name="[1d0]"></a>ADC_Injected_Channels_Offset_Config</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, n32g430_adc.o(.text), UNUSED)
 
-<P><STRONG><a name="[1d0]"></a>ADC_Injected_Group_Conversion_Data_Get</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, n32g430_adc.o(.text), UNUSED)
+<P><STRONG><a name="[1d1]"></a>ADC_Injected_Group_Conversion_Data_Get</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, n32g430_adc.o(.text), UNUSED)
 
-<P><STRONG><a name="[1d1]"></a>ADC_Analog_Watchdog_Mode_Channel_Config</STRONG> (Thumb, 58 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
+<P><STRONG><a name="[1d2]"></a>ADC_Analog_Watchdog_Mode_Channel_Config</STRONG> (Thumb, 58 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
 
-<P><STRONG><a name="[1d2]"></a>ADC_Analog_Watchdog_Enable</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
+<P><STRONG><a name="[1d3]"></a>ADC_Analog_Watchdog_Enable</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
 
-<P><STRONG><a name="[1d3]"></a>ADC_Analog_Watchdog_Disable</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
+<P><STRONG><a name="[1d4]"></a>ADC_Analog_Watchdog_Disable</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
 
-<P><STRONG><a name="[1d4]"></a>ADC_Analog_Watchdog_HighThresholds_Config</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
+<P><STRONG><a name="[1d5]"></a>ADC_Analog_Watchdog_HighThresholds_Config</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
 
-<P><STRONG><a name="[1d5]"></a>ADC_Analog_Watchdog_LowThresholds_Config</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
+<P><STRONG><a name="[1d6]"></a>ADC_Analog_Watchdog_LowThresholds_Config</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
 
-<P><STRONG><a name="[1d6]"></a>ADC_Temperature_Sensor_And_Vrefint_Channel_Enable</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
+<P><STRONG><a name="[1d7]"></a>ADC_Temperature_Sensor_And_Vrefint_Channel_Enable</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
 
-<P><STRONG><a name="[1d7]"></a>ADC_Temperature_Sensor_And_Vrefint_Channel_Disable</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
+<P><STRONG><a name="[1d8]"></a>ADC_Temperature_Sensor_And_Vrefint_Channel_Disable</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
 
-<P><STRONG><a name="[1d8]"></a>ADC_INTFlag_Status_Get</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
+<P><STRONG><a name="[1d9]"></a>ADC_INTFlag_Status_Get</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
 
 <P><STRONG><a name="[ce]"></a>ADC_Flag_Status_Get</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, n32g430_adc.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Configuration
 </UL>
 
-<P><STRONG><a name="[1d9]"></a>ADC_INTFlag_Status_Clear</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
+<P><STRONG><a name="[1da]"></a>ADC_INTFlag_Status_Clear</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
 
-<P><STRONG><a name="[1da]"></a>ADC_Flag_Status_Clear</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
+<P><STRONG><a name="[1db]"></a>ADC_Flag_Status_Clear</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
 
-<P><STRONG><a name="[121]"></a>ADC_Vbat_Monitor_Enable</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Initializes_Ex
+<P><STRONG><a name="[122]"></a>ADC_Vbat_Monitor_Enable</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Initializes_Ex
 </UL>
 
-<P><STRONG><a name="[122]"></a>ADC_Vbat_Monitor_Disable</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Initializes_Ex
+<P><STRONG><a name="[123]"></a>ADC_Vbat_Monitor_Disable</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Initializes_Ex
 </UL>
 
-<P><STRONG><a name="[123]"></a>ADC_Deep_Power_Mode_Enable</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Initializes_Ex
+<P><STRONG><a name="[124]"></a>ADC_Deep_Power_Mode_Enable</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Initializes_Ex
 </UL>
 
-<P><STRONG><a name="[124]"></a>ADC_Deep_Power_Mode_Disable</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Initializes_Ex
+<P><STRONG><a name="[125]"></a>ADC_Deep_Power_Mode_Disable</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Initializes_Ex
 </UL>
 
-<P><STRONG><a name="[128]"></a>ADC_AHB_Clock_Mode_Config</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g430_adc.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Initializes_Ex
+<P><STRONG><a name="[129]"></a>ADC_AHB_Clock_Mode_Config</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g430_adc.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Initializes_Ex
 <LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Clock_Mode_Config
 </UL>
 
-<P><STRONG><a name="[127]"></a>ADC_PLL_Clock_Mode_Config</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g430_adc.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Initializes_Ex
+<P><STRONG><a name="[128]"></a>ADC_PLL_Clock_Mode_Config</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g430_adc.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Initializes_Ex
 <LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Clock_Mode_Config
 </UL>
 
-<P><STRONG><a name="[129]"></a>ADC_Calibration_Auto_Load_Enable</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Initializes_Ex
+<P><STRONG><a name="[12a]"></a>ADC_Calibration_Auto_Load_Enable</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Initializes_Ex
 </UL>
 
-<P><STRONG><a name="[12a]"></a>ADC_Calibration_Auto_Load_Disable</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Initializes_Ex
+<P><STRONG><a name="[12b]"></a>ADC_Calibration_Auto_Load_Disable</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Initializes_Ex
 </UL>
 
-<P><STRONG><a name="[12b]"></a>ADC_Differential_Mode_Enable</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Initializes_Ex
+<P><STRONG><a name="[12c]"></a>ADC_Differential_Mode_Enable</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Initializes_Ex
 </UL>
 
-<P><STRONG><a name="[12c]"></a>ADC_Differential_Mode_Disable</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Initializes_Ex
+<P><STRONG><a name="[12d]"></a>ADC_Differential_Mode_Disable</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Initializes_Ex
 </UL>
 
-<P><STRONG><a name="[12d]"></a>ADC_Data_Resolution_Config</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Initializes_Ex
+<P><STRONG><a name="[12e]"></a>ADC_Data_Resolution_Config</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Initializes_Ex
 </UL>
 
-<P><STRONG><a name="[12e]"></a>ADC_Sample_Time_Level_Config</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Initializes_Ex
+<P><STRONG><a name="[12f]"></a>ADC_Sample_Time_Level_Config</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Initializes_Ex
 </UL>
 
-<P><STRONG><a name="[120]"></a>ADC_Initializes_Ex</STRONG> (Thumb, 134 bytes, Stack size 4 bytes, n32g430_adc.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[12e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Sample_Time_Level_Config
-<LI><a href="#[12d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Data_Resolution_Config
-<LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Differential_Mode_Disable
-<LI><a href="#[12b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Differential_Mode_Enable
-<LI><a href="#[12a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Calibration_Auto_Load_Disable
-<LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Calibration_Auto_Load_Enable
-<LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_PLL_Clock_Mode_Config
-<LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_AHB_Clock_Mode_Config
-<LI><a href="#[124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Deep_Power_Mode_Disable
-<LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Deep_Power_Mode_Enable
-<LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Vbat_Monitor_Disable
-<LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Vbat_Monitor_Enable
-<LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Interrupts_Disable
-<LI><a href="#[125]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Interrupts_Enable
+<P><STRONG><a name="[121]"></a>ADC_Initializes_Ex</STRONG> (Thumb, 134 bytes, Stack size 4 bytes, n32g430_adc.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[12f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Sample_Time_Level_Config
+<LI><a href="#[12e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Data_Resolution_Config
+<LI><a href="#[12d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Differential_Mode_Disable
+<LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Differential_Mode_Enable
+<LI><a href="#[12b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Calibration_Auto_Load_Disable
+<LI><a href="#[12a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Calibration_Auto_Load_Enable
+<LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_PLL_Clock_Mode_Config
+<LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_AHB_Clock_Mode_Config
+<LI><a href="#[125]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Deep_Power_Mode_Disable
+<LI><a href="#[124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Deep_Power_Mode_Enable
+<LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Vbat_Monitor_Disable
+<LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Vbat_Monitor_Enable
+<LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Interrupts_Disable
+<LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Interrupts_Enable
 </UL>
 
-<P><STRONG><a name="[1db]"></a>ADC_Initializes_StructureEx</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
+<P><STRONG><a name="[1dc]"></a>ADC_Initializes_StructureEx</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
 
-<P><STRONG><a name="[1dc]"></a>ADC_Bypass_Calibration_Enable</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
+<P><STRONG><a name="[1dd]"></a>ADC_Bypass_Calibration_Enable</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
 
-<P><STRONG><a name="[1dd]"></a>ADC_Bypass_Calibration_Disable</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
+<P><STRONG><a name="[1de]"></a>ADC_Bypass_Calibration_Disable</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
 
-<P><STRONG><a name="[1de]"></a>ADC_Differential_Channels_Config</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
+<P><STRONG><a name="[1df]"></a>ADC_Differential_Channels_Config</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, n32g430_adc.o(.text), UNUSED)
 
 <P><STRONG><a name="[c1]"></a>ADC_Clock_Mode_Config</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, n32g430_adc.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = ADC_Clock_Mode_Config
 </UL>
-<BR>[Calls]<UL><LI><a href="#[132]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_ADC_PLL_Clock_Prescaler_Enable
-<LI><a href="#[130]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_ADC_PLL_Clock_Disable
-<LI><a href="#[12f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_ADC_Hclk_Enable
-<LI><a href="#[131]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_ADC_Hclk_Config
-<LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_PLL_Clock_Mode_Config
-<LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_AHB_Clock_Mode_Config
+<BR>[Calls]<UL><LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_ADC_PLL_Clock_Prescaler_Enable
+<LI><a href="#[131]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_ADC_PLL_Clock_Disable
+<LI><a href="#[130]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_ADC_Hclk_Enable
+<LI><a href="#[132]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_ADC_Hclk_Config
+<LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_PLL_Clock_Mode_Config
+<LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_AHB_Clock_Mode_Config
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_RCC_Configuration
 </UL>
 
 <P><STRONG><a name="[c4]"></a>DMA_Reset</STRONG> (Thumb, 224 bytes, Stack size 0 bytes, n32g430_dma.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Configuration
-<LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Configuration
+<LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Configuration
 <LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Common_TIM_DMA_Config
 </UL>
 
-<P><STRONG><a name="[13d]"></a>DMA_Memory_2_Memory_Config</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_dma.o(.text))
+<P><STRONG><a name="[13e]"></a>DMA_Memory_2_Memory_Config</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_dma.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Initializes
 </UL>
 
-<P><STRONG><a name="[13c]"></a>DMA_Priority_Config</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_dma.o(.text))
+<P><STRONG><a name="[13d]"></a>DMA_Priority_Config</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_dma.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Initializes
 </UL>
 
-<P><STRONG><a name="[13b]"></a>DMA_Circular_Mode_Config</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_dma.o(.text))
+<P><STRONG><a name="[13c]"></a>DMA_Circular_Mode_Config</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_dma.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Initializes
 </UL>
 
-<P><STRONG><a name="[13a]"></a>DMA_Memory_Data_Width_Config</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_dma.o(.text))
+<P><STRONG><a name="[13b]"></a>DMA_Memory_Data_Width_Config</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_dma.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Initializes
 </UL>
 
-<P><STRONG><a name="[139]"></a>DMA_Peripheral_Data_Width_Config</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_dma.o(.text))
+<P><STRONG><a name="[13a]"></a>DMA_Peripheral_Data_Width_Config</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_dma.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Initializes
 </UL>
 
-<P><STRONG><a name="[138]"></a>DMA_Memory_Addr_Increment_Config</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_dma.o(.text))
+<P><STRONG><a name="[139]"></a>DMA_Memory_Addr_Increment_Config</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_dma.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Initializes
 </UL>
 
-<P><STRONG><a name="[137]"></a>DMA_Peripheral_Addr_Increment_Config</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_dma.o(.text))
+<P><STRONG><a name="[138]"></a>DMA_Peripheral_Addr_Increment_Config</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_dma.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Initializes
 </UL>
 
-<P><STRONG><a name="[136]"></a>DMA_Buffer_Size_Config</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, n32g430_dma.o(.text))
+<P><STRONG><a name="[137]"></a>DMA_Buffer_Size_Config</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, n32g430_dma.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Initializes
 </UL>
 
-<P><STRONG><a name="[135]"></a>DMA_Destination_Config</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_dma.o(.text))
+<P><STRONG><a name="[136]"></a>DMA_Destination_Config</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_dma.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Initializes
 </UL>
 
-<P><STRONG><a name="[134]"></a>DMA_Memory_Address_Config</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, n32g430_dma.o(.text))
+<P><STRONG><a name="[135]"></a>DMA_Memory_Address_Config</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, n32g430_dma.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Initializes
 </UL>
 
-<P><STRONG><a name="[133]"></a>DMA_Peripheral_Address_Config</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, n32g430_dma.o(.text))
+<P><STRONG><a name="[134]"></a>DMA_Peripheral_Address_Config</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, n32g430_dma.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Initializes
 </UL>
 
 <P><STRONG><a name="[c5]"></a>DMA_Initializes</STRONG> (Thumb, 96 bytes, Stack size 8 bytes, n32g430_dma.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = DMA_Initializes
 </UL>
-<BR>[Calls]<UL><LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Peripheral_Address_Config
-<LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Memory_Address_Config
-<LI><a href="#[135]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Destination_Config
-<LI><a href="#[136]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Buffer_Size_Config
-<LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Peripheral_Addr_Increment_Config
-<LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Memory_Addr_Increment_Config
-<LI><a href="#[139]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Peripheral_Data_Width_Config
-<LI><a href="#[13a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Memory_Data_Width_Config
-<LI><a href="#[13b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Circular_Mode_Config
-<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Priority_Config
-<LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Memory_2_Memory_Config
+<BR>[Calls]<UL><LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Peripheral_Address_Config
+<LI><a href="#[135]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Memory_Address_Config
+<LI><a href="#[136]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Destination_Config
+<LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Buffer_Size_Config
+<LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Peripheral_Addr_Increment_Config
+<LI><a href="#[139]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Memory_Addr_Increment_Config
+<LI><a href="#[13a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Peripheral_Data_Width_Config
+<LI><a href="#[13b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Memory_Data_Width_Config
+<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Circular_Mode_Config
+<LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Priority_Config
+<LI><a href="#[13e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Memory_2_Memory_Config
 </UL>
 <BR>[Called By]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Configuration
-<LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Configuration
+<LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Configuration
 <LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Common_TIM_DMA_Config
 </UL>
 
-<P><STRONG><a name="[1df]"></a>DMA_Structure_Initializes</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, n32g430_dma.o(.text), UNUSED)
+<P><STRONG><a name="[1e0]"></a>DMA_Structure_Initializes</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, n32g430_dma.o(.text), UNUSED)
 
 <P><STRONG><a name="[c7]"></a>DMA_Channel_Enable</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, n32g430_dma.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Usart_DMA_Init
 <LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Configuration
-<LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Restart
+<LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Restart
 <LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Common_TIM_DMA_Start
 </UL>
 
-<P><STRONG><a name="[f5]"></a>DMA_Channel_Disable</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, n32g430_dma.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Restart
+<P><STRONG><a name="[f5]"></a>DMA_Channel_Disable</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, n32g430_dma.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Restart
 <LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Common_TIM_DMA_Start
 </UL>
 
-<P><STRONG><a name="[1e0]"></a>DMA_Interrupts_Enable</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, n32g430_dma.o(.text), UNUSED)
+<P><STRONG><a name="[1e1]"></a>DMA_Interrupts_Enable</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, n32g430_dma.o(.text), UNUSED)
 
-<P><STRONG><a name="[1e1]"></a>DMA_Interrupts_Disable</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, n32g430_dma.o(.text), UNUSED)
+<P><STRONG><a name="[1e2]"></a>DMA_Interrupts_Disable</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, n32g430_dma.o(.text), UNUSED)
 
-<P><STRONG><a name="[112]"></a>DMA_Current_Data_Transfer_Number_Set</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, n32g430_dma.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Restart
+<P><STRONG><a name="[114]"></a>DMA_Current_Data_Transfer_Number_Set</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, n32g430_dma.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Restart
 </UL>
 
-<P><STRONG><a name="[1e2]"></a>DMA_Current_Data_Transfer_Number_Get</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, n32g430_dma.o(.text), UNUSED)
+<P><STRONG><a name="[1e3]"></a>DMA_Current_Data_Transfer_Number_Get</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, n32g430_dma.o(.text), UNUSED)
 
-<P><STRONG><a name="[1e3]"></a>DMA_Flag_Status_Get</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_dma.o(.text), UNUSED)
+<P><STRONG><a name="[ff]"></a>DMA_Flag_Status_Get</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_dma.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI9_5_IRQHandler
+</UL>
 
-<P><STRONG><a name="[110]"></a>DMA_Flag_Status_Clear</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, n32g430_dma.o(.text))
+<P><STRONG><a name="[100]"></a>DMA_Flag_Status_Clear</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, n32g430_dma.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Usart_DMA_Init
-<LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Restart
+<LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Restart
+<LI><a href="#[21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI9_5_IRQHandler
 </UL>
 
 <P><STRONG><a name="[1e4]"></a>DMA_Interrupt_Status_Get</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_dma.o(.text), UNUSED)
@@ -1966,25 +1980,25 @@ Global Symbols
 
 <P><STRONG><a name="[c6]"></a>DMA_Channel_Request_Remap</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, n32g430_dma.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Configuration
-<LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Configuration
+<LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Configuration
 <LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Common_TIM_DMA_Config
 </UL>
 
 <P><STRONG><a name="[1e6]"></a>EXTI_Reset</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, n32g430_exti.o(.text), UNUSED)
 
-<P><STRONG><a name="[140]"></a>EXTI_LineCmd_Disable</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, n32g430_exti.o(.text))
+<P><STRONG><a name="[141]"></a>EXTI_LineCmd_Disable</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, n32g430_exti.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = EXTI_LineCmd_Disable
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Peripheral_Initializes
 </UL>
 
-<P><STRONG><a name="[13f]"></a>EXTI_Trigger_Config</STRONG> (Thumb, 68 bytes, Stack size 8 bytes, n32g430_exti.o(.text))
+<P><STRONG><a name="[140]"></a>EXTI_Trigger_Config</STRONG> (Thumb, 68 bytes, Stack size 8 bytes, n32g430_exti.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = EXTI_Trigger_Config
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Peripheral_Initializes
 </UL>
 
-<P><STRONG><a name="[13e]"></a>EXTI_Work_Mode_Config</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, n32g430_exti.o(.text))
+<P><STRONG><a name="[13f]"></a>EXTI_Work_Mode_Config</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, n32g430_exti.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = EXTI_Work_Mode_Config
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Peripheral_Initializes
@@ -1993,9 +2007,9 @@ Global Symbols
 <P><STRONG><a name="[d3]"></a>EXTI_Peripheral_Initializes</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, n32g430_exti.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = EXTI_Peripheral_Initializes &rArr; EXTI_Work_Mode_Config
 </UL>
-<BR>[Calls]<UL><LI><a href="#[13e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Work_Mode_Config
-<LI><a href="#[13f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Trigger_Config
-<LI><a href="#[140]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_LineCmd_Disable
+<BR>[Calls]<UL><LI><a href="#[13f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Work_Mode_Config
+<LI><a href="#[140]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Trigger_Config
+<LI><a href="#[141]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_LineCmd_Disable
 </UL>
 <BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Init
 </UL>
@@ -2018,60 +2032,60 @@ Global Symbols
 
 <P><STRONG><a name="[1eb]"></a>EXTI_RTC_Time_Stamp_Select</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, n32g430_exti.o(.text), UNUSED)
 
-<P><STRONG><a name="[141]"></a>GPIO_Reset</STRONG> (Thumb, 66 bytes, Stack size 8 bytes, n32g430_gpio.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHB_Peripheral_Reset
+<P><STRONG><a name="[142]"></a>GPIO_Reset</STRONG> (Thumb, 66 bytes, Stack size 8 bytes, n32g430_gpio.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHB_Peripheral_Reset
 </UL>
 
-<P><STRONG><a name="[143]"></a>GPIOA_Pin_Reset</STRONG> (Thumb, 256 bytes, Stack size 12 bytes, n32g430_gpio.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[142]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ALLPin_Reset
+<P><STRONG><a name="[144]"></a>GPIOA_Pin_Reset</STRONG> (Thumb, 256 bytes, Stack size 12 bytes, n32g430_gpio.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[143]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ALLPin_Reset
 </UL>
 
-<P><STRONG><a name="[144]"></a>GPIOB_Pin_Reset</STRONG> (Thumb, 230 bytes, Stack size 12 bytes, n32g430_gpio.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[142]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ALLPin_Reset
+<P><STRONG><a name="[145]"></a>GPIOB_Pin_Reset</STRONG> (Thumb, 230 bytes, Stack size 12 bytes, n32g430_gpio.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[143]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ALLPin_Reset
 </UL>
 
-<P><STRONG><a name="[145]"></a>GPIOC_Pin_Reset</STRONG> (Thumb, 144 bytes, Stack size 12 bytes, n32g430_gpio.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[142]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ALLPin_Reset
+<P><STRONG><a name="[146]"></a>GPIOC_Pin_Reset</STRONG> (Thumb, 144 bytes, Stack size 12 bytes, n32g430_gpio.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[143]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ALLPin_Reset
 </UL>
 
-<P><STRONG><a name="[146]"></a>GPIOD_Pin_Reset</STRONG> (Thumb, 194 bytes, Stack size 12 bytes, n32g430_gpio.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[142]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ALLPin_Reset
+<P><STRONG><a name="[147]"></a>GPIOD_Pin_Reset</STRONG> (Thumb, 194 bytes, Stack size 12 bytes, n32g430_gpio.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[143]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ALLPin_Reset
 </UL>
 
 <P><STRONG><a name="[1ec]"></a>AFIO_EXTI_Reset</STRONG> (Thumb, 62 bytes, Stack size 16 bytes, n32g430_gpio.o(.text), UNUSED)
 
-<P><STRONG><a name="[142]"></a>GPIO_ALLPin_Reset</STRONG> (Thumb, 36 bytes, Stack size 4 bytes, n32g430_gpio.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOD_Pin_Reset
-<LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOC_Pin_Reset
-<LI><a href="#[144]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOB_Pin_Reset
-<LI><a href="#[143]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOA_Pin_Reset
+<P><STRONG><a name="[143]"></a>GPIO_ALLPin_Reset</STRONG> (Thumb, 36 bytes, Stack size 4 bytes, n32g430_gpio.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[147]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOD_Pin_Reset
+<LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOC_Pin_Reset
+<LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOB_Pin_Reset
+<LI><a href="#[144]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOA_Pin_Reset
 </UL>
 
-<P><STRONG><a name="[147]"></a>GPIO_Alternate_Set</STRONG> (Thumb, 86 bytes, Stack size 12 bytes, n32g430_gpio.o(.text))
+<P><STRONG><a name="[148]"></a>GPIO_Alternate_Set</STRONG> (Thumb, 86 bytes, Stack size 12 bytes, n32g430_gpio.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = GPIO_Alternate_Set
 </UL>
 <BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Peripheral_Initialize
 </UL>
 
-<P><STRONG><a name="[148]"></a>GPIO_Mode_Set</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, n32g430_gpio.o(.text))
+<P><STRONG><a name="[149]"></a>GPIO_Mode_Set</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, n32g430_gpio.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = GPIO_Mode_Set
 </UL>
 <BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Peripheral_Initialize
 </UL>
 
-<P><STRONG><a name="[149]"></a>GPIO_Pull_Set</STRONG> (Thumb, 28 bytes, Stack size 12 bytes, n32g430_gpio.o(.text))
+<P><STRONG><a name="[14a]"></a>GPIO_Pull_Set</STRONG> (Thumb, 28 bytes, Stack size 12 bytes, n32g430_gpio.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = GPIO_Pull_Set
 </UL>
 <BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Peripheral_Initialize
 </UL>
 
-<P><STRONG><a name="[14a]"></a>GPIO_SlewRate_Set</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, n32g430_gpio.o(.text))
+<P><STRONG><a name="[14b]"></a>GPIO_SlewRate_Set</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, n32g430_gpio.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = GPIO_SlewRate_Set
 </UL>
 <BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Peripheral_Initialize
 </UL>
 
-<P><STRONG><a name="[14b]"></a>GPIO_Driver_Set</STRONG> (Thumb, 28 bytes, Stack size 12 bytes, n32g430_gpio.o(.text))
+<P><STRONG><a name="[14c]"></a>GPIO_Driver_Set</STRONG> (Thumb, 28 bytes, Stack size 12 bytes, n32g430_gpio.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = GPIO_Driver_Set
 </UL>
 <BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Peripheral_Initialize
@@ -2080,11 +2094,11 @@ Global Symbols
 <P><STRONG><a name="[58]"></a>GPIO_Peripheral_Initialize</STRONG> (Thumb, 86 bytes, Stack size 20 bytes, n32g430_gpio.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = GPIO_Peripheral_Initialize &rArr; GPIO_Mode_Set
 </UL>
-<BR>[Calls]<UL><LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Driver_Set
-<LI><a href="#[14a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SlewRate_Set
-<LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Pull_Set
-<LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Mode_Set
-<LI><a href="#[147]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Alternate_Set
+<BR>[Calls]<UL><LI><a href="#[14c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Driver_Set
+<LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SlewRate_Set
+<LI><a href="#[14a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Pull_Set
+<LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Mode_Set
+<LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Alternate_Set
 </UL>
 <BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_Slaver_Address
 <LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Init
@@ -2093,15 +2107,15 @@ Global Symbols
 <LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Encoder_TIM3_Init
 <LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Encoder_TIM2_Init
 <LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Init
-<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Configuration
-<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;log_init
+<LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Configuration
+<LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;log_init
 <LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Common_GPTIM_GPIO_Initialize
 <LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Common_ADTIM_GPIO_Initialize
 <LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_GPIO_Configuration
 </UL>
 
-<P><STRONG><a name="[14c]"></a>GPIO_Alternate_Function_Reset</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, n32g430_gpio.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2_Peripheral_Reset
+<P><STRONG><a name="[14d]"></a>GPIO_Alternate_Function_Reset</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, n32g430_gpio.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2_Peripheral_Reset
 </UL>
 
 <P><STRONG><a name="[57]"></a>GPIO_Structure_Initialize</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, n32g430_gpio.o(.text))
@@ -2110,8 +2124,8 @@ Global Symbols
 <LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_GPIO_Init
 <LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Key_GPIO_Init
 <LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Init
-<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Configuration
-<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;log_init
+<LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Configuration
+<LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;log_init
 <LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Common_GPTIM_GPIO_Initialize
 <LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Common_ADTIM_GPIO_Initialize
 <LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_GPIO_Configuration
@@ -2193,11 +2207,11 @@ Global Symbols
 
 <P><STRONG><a name="[200]"></a>RCC_HSE_Config</STRONG> (Thumb, 60 bytes, Stack size 0 bytes, n32g430_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[14f]"></a>RCC_Flag_Status_Get</STRONG> (Thumb, 58 bytes, Stack size 0 bytes, n32g430_rcc.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[154]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_LSI_Stable_Wait
-<LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_LSE_Stable_Wait
-<LI><a href="#[150]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_HSI_Stable_Wait
-<LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_HSE_Stable_Wait
+<P><STRONG><a name="[150]"></a>RCC_Flag_Status_Get</STRONG> (Thumb, 58 bytes, Stack size 0 bytes, n32g430_rcc.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[155]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_LSI_Stable_Wait
+<LI><a href="#[154]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_LSE_Stable_Wait
+<LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_HSI_Stable_Wait
+<LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_HSE_Stable_Wait
 </UL>
 
 <P><STRONG><a name="[d8]"></a>RCC_Clocks_Frequencies_Value_Get</STRONG> (Thumb, 250 bytes, Stack size 20 bytes, n32g430_rcc.o(.text))
@@ -2207,16 +2221,16 @@ Global Symbols
 <LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Delay_Us
 <LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Common_GPTIM_RCC_Initialize
 <LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Common_ADTIM_RCC_Initialize
-<LI><a href="#[182]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Baud_Rate_Config
-<LI><a href="#[154]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_LSI_Stable_Wait
-<LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_LSE_Stable_Wait
-<LI><a href="#[150]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_HSI_Stable_Wait
-<LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_HSE_Stable_Wait
+<LI><a href="#[183]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Baud_Rate_Config
+<LI><a href="#[155]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_LSI_Stable_Wait
+<LI><a href="#[154]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_LSE_Stable_Wait
+<LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_HSI_Stable_Wait
+<LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_HSE_Stable_Wait
 </UL>
 
-<P><STRONG><a name="[14e]"></a>RCC_HSE_Stable_Wait</STRONG> (Thumb, 78 bytes, Stack size 40 bytes, n32g430_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[14f]"></a>RCC_HSE_Stable_Wait</STRONG> (Thumb, 78 bytes, Stack size 40 bytes, n32g430_rcc.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_Clocks_Frequencies_Value_Get
-<LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_Flag_Status_Get
+<LI><a href="#[150]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_Flag_Status_Get
 </UL>
 
 <P><STRONG><a name="[201]"></a>RCC_Clock_Security_System_Enable</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, n32g430_rcc.o(.text), UNUSED)
@@ -2229,9 +2243,9 @@ Global Symbols
 
 <P><STRONG><a name="[205]"></a>RCC_HSI_Disable</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, n32g430_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[150]"></a>RCC_HSI_Stable_Wait</STRONG> (Thumb, 78 bytes, Stack size 40 bytes, n32g430_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[151]"></a>RCC_HSI_Stable_Wait</STRONG> (Thumb, 78 bytes, Stack size 40 bytes, n32g430_rcc.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_Clocks_Frequencies_Value_Get
-<LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_Flag_Status_Get
+<LI><a href="#[150]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_Flag_Status_Get
 </UL>
 
 <P><STRONG><a name="[206]"></a>RCC_PLL_Config</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, n32g430_rcc.o(.text), UNUSED)
@@ -2264,37 +2278,37 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_RCC_Configuration
 </UL>
 
-<P><STRONG><a name="[132]"></a>RCC_ADC_PLL_Clock_Prescaler_Enable</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g430_rcc.o(.text))
+<P><STRONG><a name="[133]"></a>RCC_ADC_PLL_Clock_Prescaler_Enable</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g430_rcc.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Clock_Mode_Config
 </UL>
 
-<P><STRONG><a name="[130]"></a>RCC_ADC_PLL_Clock_Disable</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, n32g430_rcc.o(.text))
+<P><STRONG><a name="[131]"></a>RCC_ADC_PLL_Clock_Disable</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, n32g430_rcc.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Clock_Mode_Config
 </UL>
 
-<P><STRONG><a name="[131]"></a>RCC_ADC_Hclk_Config</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g430_rcc.o(.text))
+<P><STRONG><a name="[132]"></a>RCC_ADC_Hclk_Config</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g430_rcc.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Clock_Mode_Config
 </UL>
 
-<P><STRONG><a name="[12f]"></a>RCC_ADC_Hclk_Enable</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g430_rcc.o(.text))
+<P><STRONG><a name="[130]"></a>RCC_ADC_Hclk_Enable</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g430_rcc.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Clock_Mode_Config
 </UL>
 
 <P><STRONG><a name="[20f]"></a>RCC_ADC_Hclk_Disable</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g430_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[152]"></a>RCC_LSE_Trim_Config</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, n32g430_rcc.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_LSE_Config
+<P><STRONG><a name="[153]"></a>RCC_LSE_Trim_Config</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, n32g430_rcc.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[152]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_LSE_Config
 </UL>
 
 <P><STRONG><a name="[f0]"></a>RCC_APB1_Peripheral_Clock_Enable</STRONG> (Thumb, 70 bytes, Stack size 0 bytes, n32g430_rcc.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Common_GPTIM_RCC_Initialize
-<LI><a href="#[155]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_LPTIM_Clock_Config
-<LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_LSE_Config
+<LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_LPTIM_Clock_Config
+<LI><a href="#[152]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_LSE_Config
 </UL>
 
-<P><STRONG><a name="[151]"></a>RCC_LSE_Config</STRONG> (Thumb, 88 bytes, Stack size 8 bytes, n32g430_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[152]"></a>RCC_LSE_Config</STRONG> (Thumb, 88 bytes, Stack size 8 bytes, n32g430_rcc.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB1_Peripheral_Clock_Enable
-<LI><a href="#[152]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_LSE_Trim_Config
+<LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_LSE_Trim_Config
 </UL>
 
 <P><STRONG><a name="[210]"></a>RCC_LSE_Clock_Security_System_Enable</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, n32g430_rcc.o(.text), UNUSED)
@@ -2303,18 +2317,18 @@ Global Symbols
 
 <P><STRONG><a name="[212]"></a>RCC_LSE_Clock_Security_System_Status_Get</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g430_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[153]"></a>RCC_LSE_Stable_Wait</STRONG> (Thumb, 78 bytes, Stack size 40 bytes, n32g430_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[154]"></a>RCC_LSE_Stable_Wait</STRONG> (Thumb, 78 bytes, Stack size 40 bytes, n32g430_rcc.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_Clocks_Frequencies_Value_Get
-<LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_Flag_Status_Get
+<LI><a href="#[150]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_Flag_Status_Get
 </UL>
 
 <P><STRONG><a name="[213]"></a>RCC_LSI_Enable</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, n32g430_rcc.o(.text), UNUSED)
 
 <P><STRONG><a name="[214]"></a>RCC_LSI_Disable</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, n32g430_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[154]"></a>RCC_LSI_Stable_Wait</STRONG> (Thumb, 78 bytes, Stack size 40 bytes, n32g430_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[155]"></a>RCC_LSI_Stable_Wait</STRONG> (Thumb, 78 bytes, Stack size 40 bytes, n32g430_rcc.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_Clocks_Frequencies_Value_Get
-<LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_Flag_Status_Get
+<LI><a href="#[150]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_Flag_Status_Get
 </UL>
 
 <P><STRONG><a name="[215]"></a>RCC_RTC_Clock_Config</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, n32g430_rcc.o(.text), UNUSED)
@@ -2323,7 +2337,7 @@ Global Symbols
 
 <P><STRONG><a name="[217]"></a>RCC_RTC_Clock_Disable</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, n32g430_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[155]"></a>RCC_LPTIM_Clock_Config</STRONG> (Thumb, 46 bytes, Stack size 4 bytes, n32g430_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[156]"></a>RCC_LPTIM_Clock_Config</STRONG> (Thumb, 46 bytes, Stack size 4 bytes, n32g430_rcc.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB1_Peripheral_Clock_Enable
 </UL>
 
@@ -2339,8 +2353,8 @@ Global Symbols
 <LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_GPIO_Init
 <LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Key_GPIO_Init
 <LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Init
-<LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_Configuration
-<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;log_init
+<LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_Configuration
+<LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;log_init
 <LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Common_TIM_DMA_Config
 <LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Common_GPTIM_RCC_Initialize
 <LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Common_ADTIM_RCC_Initialize
@@ -2351,8 +2365,8 @@ Global Symbols
 
 <P><STRONG><a name="[d1]"></a>RCC_APB2_Peripheral_Clock_Enable</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, n32g430_rcc.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Init
-<LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_Configuration
-<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;log_init
+<LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_Configuration
+<LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;log_init
 <LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Common_GPTIM_RCC_Initialize
 <LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Common_ADTIM_RCC_Initialize
 </UL>
@@ -2361,20 +2375,20 @@ Global Symbols
 
 <P><STRONG><a name="[21d]"></a>RCC_APB1_Peripheral_Clock_Disable</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, n32g430_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[118]"></a>RCC_AHB_Peripheral_Reset</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, n32g430_rcc.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[141]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Reset
-<LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Reset
+<P><STRONG><a name="[119]"></a>RCC_AHB_Peripheral_Reset</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, n32g430_rcc.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[142]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Reset
+<LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Reset
 </UL>
 
-<P><STRONG><a name="[14d]"></a>RCC_APB2_Peripheral_Reset</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, n32g430_rcc.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[181]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Reset
-<LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Reset
-<LI><a href="#[14c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Alternate_Function_Reset
+<P><STRONG><a name="[14e]"></a>RCC_APB2_Peripheral_Reset</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, n32g430_rcc.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[182]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Reset
+<LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Reset
+<LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Alternate_Function_Reset
 </UL>
 
-<P><STRONG><a name="[157]"></a>RCC_APB1_Peripheral_Reset</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, n32g430_rcc.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[181]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Reset
-<LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Reset
+<P><STRONG><a name="[158]"></a>RCC_APB1_Peripheral_Reset</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, n32g430_rcc.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[182]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Reset
+<LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Reset
 </UL>
 
 <P><STRONG><a name="[21e]"></a>RCC_Backup_Reset</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, n32g430_rcc.o(.text), UNUSED)
@@ -2389,12 +2403,12 @@ Global Symbols
 
 <P><STRONG><a name="[223]"></a>RCC_Interrupt_Status_Clear</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, n32g430_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[156]"></a>TIM_Reset</STRONG> (Thumb, 102 bytes, Stack size 8 bytes, n32g430_tim.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2_Peripheral_Reset
-<LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB1_Peripheral_Reset
+<P><STRONG><a name="[157]"></a>TIM_Reset</STRONG> (Thumb, 102 bytes, Stack size 8 bytes, n32g430_tim.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2_Peripheral_Reset
+<LI><a href="#[158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB1_Peripheral_Reset
 </UL>
 
-<P><STRONG><a name="[158]"></a>TIM_Base_Count_Mode_Set</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
+<P><STRONG><a name="[159]"></a>TIM_Base_Count_Mode_Set</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Base_Initialize
 </UL>
 
@@ -2404,60 +2418,60 @@ Global Symbols
 
 <P><STRONG><a name="[226]"></a>TIM_Asymmetric_Disable</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, n32g430_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[15a]"></a>TIM_Base_Auto_Reload_Set</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
+<P><STRONG><a name="[15b]"></a>TIM_Base_Auto_Reload_Set</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Base_Initialize
 </UL>
 
-<P><STRONG><a name="[15b]"></a>TIM_Base_Prescaler_Set</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
+<P><STRONG><a name="[15c]"></a>TIM_Base_Prescaler_Set</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Base_Initialize
 </UL>
 
-<P><STRONG><a name="[15d]"></a>TIM_Base_Reload_Mode_Set</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
+<P><STRONG><a name="[15e]"></a>TIM_Base_Reload_Mode_Set</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Base_Initialize
 </UL>
 
-<P><STRONG><a name="[15c]"></a>TIM_Base_Repeat_Count_Set</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
+<P><STRONG><a name="[15d]"></a>TIM_Base_Repeat_Count_Set</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Base_Initialize
 </UL>
 
-<P><STRONG><a name="[15e]"></a>TIM_Base_Channel1</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
+<P><STRONG><a name="[15f]"></a>TIM_Base_Channel1</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Base_Initialize
 </UL>
 
-<P><STRONG><a name="[160]"></a>TIM_Base_Channel2</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
+<P><STRONG><a name="[161]"></a>TIM_Base_Channel2</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Base_Initialize
 </UL>
 
-<P><STRONG><a name="[161]"></a>TIM_Base_Channel3</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
+<P><STRONG><a name="[162]"></a>TIM_Base_Channel3</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Base_Initialize
 </UL>
 
-<P><STRONG><a name="[162]"></a>TIM_Base_Channel4</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
+<P><STRONG><a name="[163]"></a>TIM_Base_Channel4</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Base_Initialize
 </UL>
 
-<P><STRONG><a name="[15f]"></a>TIM_Base_OCrefClear</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
+<P><STRONG><a name="[160]"></a>TIM_Base_OCrefClear</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Base_Initialize
 </UL>
 
-<P><STRONG><a name="[159]"></a>TIM_Clock_Division_Set</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
+<P><STRONG><a name="[15a]"></a>TIM_Clock_Division_Set</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Base_Initialize
 </UL>
 
 <P><STRONG><a name="[e5]"></a>TIM_Base_Initialize</STRONG> (Thumb, 156 bytes, Stack size 12 bytes, n32g430_tim.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = TIM_Base_Initialize
 </UL>
-<BR>[Calls]<UL><LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Clock_Division_Set
-<LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Base_OCrefClear
-<LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Base_Channel4
-<LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Base_Channel3
-<LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Base_Channel2
-<LI><a href="#[15e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Base_Channel1
-<LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Base_Repeat_Count_Set
-<LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Base_Reload_Mode_Set
-<LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Base_Prescaler_Set
-<LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Base_Auto_Reload_Set
-<LI><a href="#[158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Base_Count_Mode_Set
+<BR>[Calls]<UL><LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Clock_Division_Set
+<LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Base_OCrefClear
+<LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Base_Channel4
+<LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Base_Channel3
+<LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Base_Channel2
+<LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Base_Channel1
+<LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Base_Repeat_Count_Set
+<LI><a href="#[15e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Base_Reload_Mode_Set
+<LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Base_Prescaler_Set
+<LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Base_Auto_Reload_Set
+<LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Base_Count_Mode_Set
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Encoder_TIM3_Init
 <LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Encoder_TIM2_Init
@@ -2590,94 +2604,94 @@ Global Symbols
 
 <P><STRONG><a name="[252]"></a>TIM_Compare_Capture4_D_Get</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, n32g430_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[164]"></a>TIM_Trigger_Source_Select</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g430_tim.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Trigger_As_External_Clock
-<LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Internal_Trig_To_Ext_Set
+<P><STRONG><a name="[165]"></a>TIM_Trigger_Source_Select</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g430_tim.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Trigger_As_External_Clock
+<LI><a href="#[164]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Internal_Trig_To_Ext_Set
 </UL>
 
-<P><STRONG><a name="[167]"></a>Input_Channel1_Config</STRONG> (Thumb, 104 bytes, Stack size 16 bytes, n32g430_tim.o(.text))
+<P><STRONG><a name="[168]"></a>Input_Channel1_Config</STRONG> (Thumb, 104 bytes, Stack size 16 bytes, n32g430_tim.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = Input_Channel1_Config
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Input_Channel_Initialize
-<LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_PWM_Input_Channel_Config
-<LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Trigger_As_External_Clock
+<LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_PWM_Input_Channel_Config
+<LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Trigger_As_External_Clock
 </UL>
 
-<P><STRONG><a name="[166]"></a>Input_Channel2_Config</STRONG> (Thumb, 116 bytes, Stack size 20 bytes, n32g430_tim.o(.text))
+<P><STRONG><a name="[167]"></a>Input_Channel2_Config</STRONG> (Thumb, 116 bytes, Stack size 20 bytes, n32g430_tim.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = Input_Channel2_Config
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Input_Channel_Initialize
-<LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_PWM_Input_Channel_Config
-<LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Trigger_As_External_Clock
+<LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_PWM_Input_Channel_Config
+<LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Trigger_As_External_Clock
 </UL>
 
-<P><STRONG><a name="[16f]"></a>Input_Channel3_Config</STRONG> (Thumb, 110 bytes, Stack size 20 bytes, n32g430_tim.o(.text))
+<P><STRONG><a name="[170]"></a>Input_Channel3_Config</STRONG> (Thumb, 110 bytes, Stack size 20 bytes, n32g430_tim.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = Input_Channel3_Config
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Input_Channel_Initialize
 </UL>
 
-<P><STRONG><a name="[171]"></a>Input_Channel4_Config</STRONG> (Thumb, 118 bytes, Stack size 20 bytes, n32g430_tim.o(.text))
+<P><STRONG><a name="[172]"></a>Input_Channel4_Config</STRONG> (Thumb, 118 bytes, Stack size 20 bytes, n32g430_tim.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = Input_Channel4_Config
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Input_Channel_Initialize
 </UL>
 
-<P><STRONG><a name="[169]"></a>TIM_External_Trigger_Filter_Set</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, n32g430_tim.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_External_Clock_Mode2_Set
-<LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_External_Clock_Mode1_Set
+<P><STRONG><a name="[16a]"></a>TIM_External_Trigger_Filter_Set</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, n32g430_tim.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_External_Clock_Mode2_Set
+<LI><a href="#[169]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_External_Clock_Mode1_Set
 </UL>
 
-<P><STRONG><a name="[16b]"></a>TIM_External_Trigger_Prescaler_Set</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_tim.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_External_Clock_Mode2_Set
-<LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_External_Clock_Mode1_Set
+<P><STRONG><a name="[16c]"></a>TIM_External_Trigger_Prescaler_Set</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_tim.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_External_Clock_Mode2_Set
+<LI><a href="#[169]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_External_Clock_Mode1_Set
 </UL>
 
-<P><STRONG><a name="[16a]"></a>TIM_External_Trigger_Polarity_Set</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, n32g430_tim.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_External_Clock_Mode2_Set
-<LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_External_Clock_Mode1_Set
+<P><STRONG><a name="[16b]"></a>TIM_External_Trigger_Polarity_Set</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, n32g430_tim.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_External_Clock_Mode2_Set
+<LI><a href="#[169]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_External_Clock_Mode1_Set
 </UL>
 
 <P><STRONG><a name="[253]"></a>TIM_Internal_Clock_Set</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, n32g430_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[16d]"></a>TIM_Input_Capture1_Prescaler_Set</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
+<P><STRONG><a name="[16e]"></a>TIM_Input_Capture1_Prescaler_Set</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Input_Channel_Initialize
-<LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_PWM_Input_Channel_Config
+<LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_PWM_Input_Channel_Config
 </UL>
 
-<P><STRONG><a name="[16e]"></a>TIM_Input_Capture2_Prescaler_Set</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
+<P><STRONG><a name="[16f]"></a>TIM_Input_Capture2_Prescaler_Set</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Input_Channel_Initialize
-<LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_PWM_Input_Channel_Config
+<LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_PWM_Input_Channel_Config
 </UL>
 
-<P><STRONG><a name="[170]"></a>TIM_Input_Capture3_Prescaler_Set</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Input_Channel_Initialize
-</UL>
-
-<P><STRONG><a name="[172]"></a>TIM_Input_Capture4_Prescaler_Set</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
+<P><STRONG><a name="[171]"></a>TIM_Input_Capture3_Prescaler_Set</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Input_Channel_Initialize
 </UL>
 
-<P><STRONG><a name="[163]"></a>TIM_Internal_Trig_To_Ext_Set</STRONG> (Thumb, 24 bytes, Stack size 12 bytes, n32g430_tim.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[164]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Trigger_Source_Select
+<P><STRONG><a name="[173]"></a>TIM_Input_Capture4_Prescaler_Set</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Input_Channel_Initialize
 </UL>
 
-<P><STRONG><a name="[165]"></a>TIM_Trigger_As_External_Clock</STRONG> (Thumb, 58 bytes, Stack size 20 bytes, n32g430_tim.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Input_Channel2_Config
-<LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Input_Channel1_Config
-<LI><a href="#[164]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Trigger_Source_Select
+<P><STRONG><a name="[164]"></a>TIM_Internal_Trig_To_Ext_Set</STRONG> (Thumb, 24 bytes, Stack size 12 bytes, n32g430_tim.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Trigger_Source_Select
 </UL>
 
-<P><STRONG><a name="[168]"></a>TIM_External_Clock_Mode1_Set</STRONG> (Thumb, 66 bytes, Stack size 24 bytes, n32g430_tim.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[16a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_External_Trigger_Polarity_Set
-<LI><a href="#[16b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_External_Trigger_Prescaler_Set
-<LI><a href="#[169]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_External_Trigger_Filter_Set
+<P><STRONG><a name="[166]"></a>TIM_Trigger_As_External_Clock</STRONG> (Thumb, 58 bytes, Stack size 20 bytes, n32g430_tim.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Input_Channel2_Config
+<LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Input_Channel1_Config
+<LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Trigger_Source_Select
 </UL>
 
-<P><STRONG><a name="[16c]"></a>TIM_External_Clock_Mode2_Set</STRONG> (Thumb, 44 bytes, Stack size 20 bytes, n32g430_tim.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[16a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_External_Trigger_Polarity_Set
-<LI><a href="#[16b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_External_Trigger_Prescaler_Set
-<LI><a href="#[169]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_External_Trigger_Filter_Set
+<P><STRONG><a name="[169]"></a>TIM_External_Clock_Mode1_Set</STRONG> (Thumb, 66 bytes, Stack size 24 bytes, n32g430_tim.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[16b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_External_Trigger_Polarity_Set
+<LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_External_Trigger_Prescaler_Set
+<LI><a href="#[16a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_External_Trigger_Filter_Set
+</UL>
+
+<P><STRONG><a name="[16d]"></a>TIM_External_Clock_Mode2_Set</STRONG> (Thumb, 44 bytes, Stack size 20 bytes, n32g430_tim.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[16b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_External_Trigger_Polarity_Set
+<LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_External_Trigger_Prescaler_Set
+<LI><a href="#[16a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_External_Trigger_Filter_Set
 </UL>
 
 <P><STRONG><a name="[254]"></a>TIM_Slave_Mode_Select</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g430_tim.o(.text), UNUSED)
@@ -2712,38 +2726,38 @@ Global Symbols
 <P><STRONG><a name="[e8]"></a>TIM_Input_Channel_Initialize</STRONG> (Thumb, 134 bytes, Stack size 12 bytes, n32g430_tim.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = TIM_Input_Channel_Initialize &rArr; Input_Channel4_Config
 </UL>
-<BR>[Calls]<UL><LI><a href="#[172]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Input_Capture4_Prescaler_Set
-<LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Input_Capture3_Prescaler_Set
-<LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Input_Capture2_Prescaler_Set
-<LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Input_Capture1_Prescaler_Set
-<LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Input_Channel4_Config
-<LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Input_Channel3_Config
-<LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Input_Channel2_Config
-<LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Input_Channel1_Config
+<BR>[Calls]<UL><LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Input_Capture4_Prescaler_Set
+<LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Input_Capture3_Prescaler_Set
+<LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Input_Capture2_Prescaler_Set
+<LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Input_Capture1_Prescaler_Set
+<LI><a href="#[172]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Input_Channel4_Config
+<LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Input_Channel3_Config
+<LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Input_Channel2_Config
+<LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Input_Channel1_Config
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Encoder_TIM3_Init
 <LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Encoder_TIM2_Init
 </UL>
 
-<P><STRONG><a name="[173]"></a>TIM_PWM_Input_Channel_Config</STRONG> (Thumb, 120 bytes, Stack size 20 bytes, n32g430_tim.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Input_Capture2_Prescaler_Set
-<LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Input_Capture1_Prescaler_Set
-<LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Input_Channel2_Config
-<LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Input_Channel1_Config
+<P><STRONG><a name="[174]"></a>TIM_PWM_Input_Channel_Config</STRONG> (Thumb, 120 bytes, Stack size 20 bytes, n32g430_tim.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Input_Capture2_Prescaler_Set
+<LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Input_Capture1_Prescaler_Set
+<LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Input_Channel2_Config
+<LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Input_Channel1_Config
 </UL>
 
-<P><STRONG><a name="[175]"></a>TIM_Output_Channel_Polarity_Set</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, n32g430_tim.o(.text))
+<P><STRONG><a name="[176]"></a>TIM_Output_Channel_Polarity_Set</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, n32g430_tim.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = TIM_Output_Channel_Polarity_Set
 </UL>
 <BR>[Called By]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel4_Initialize
 <LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel3_Initialize
 <LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel2_Initialize
 <LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel1_Initialize
-<LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel6_Initialize
-<LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel5_Initialize
+<LI><a href="#[17c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel6_Initialize
+<LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel5_Initialize
 </UL>
 
-<P><STRONG><a name="[177]"></a>TIM_Output_Channel_N_Polarity_Set</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, n32g430_tim.o(.text))
+<P><STRONG><a name="[178]"></a>TIM_Output_Channel_N_Polarity_Set</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, n32g430_tim.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = TIM_Output_Channel_N_Polarity_Set
 </UL>
 <BR>[Called By]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel4_Initialize
@@ -2752,32 +2766,32 @@ Global Symbols
 <LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel1_Initialize
 </UL>
 
-<P><STRONG><a name="[176]"></a>TIM_Capture_Compare_Ch_Enable</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
+<P><STRONG><a name="[177]"></a>TIM_Capture_Compare_Ch_Enable</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel4_Initialize
 <LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel3_Initialize
 <LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel2_Initialize
 <LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel1_Initialize
-<LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel6_Initialize
-<LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel5_Initialize
+<LI><a href="#[17c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel6_Initialize
+<LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel5_Initialize
 </UL>
 
-<P><STRONG><a name="[174]"></a>TIM_Capture_Compare_Ch_Disable</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
+<P><STRONG><a name="[175]"></a>TIM_Capture_Compare_Ch_Disable</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel4_Initialize
 <LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel3_Initialize
 <LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel2_Initialize
 <LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel1_Initialize
-<LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel6_Initialize
-<LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel5_Initialize
+<LI><a href="#[17c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel6_Initialize
+<LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel5_Initialize
 </UL>
 
-<P><STRONG><a name="[178]"></a>TIM_Capture_Compare_Ch_N_Enable</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
+<P><STRONG><a name="[179]"></a>TIM_Capture_Compare_Ch_N_Enable</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel4_Initialize
 <LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel3_Initialize
 <LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel2_Initialize
 <LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel1_Initialize
 </UL>
 
-<P><STRONG><a name="[179]"></a>TIM_Capture_Compare_Ch_N_Disable</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
+<P><STRONG><a name="[17a]"></a>TIM_Capture_Compare_Ch_N_Disable</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel4_Initialize
 <LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel3_Initialize
 <LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel2_Initialize
@@ -2827,12 +2841,12 @@ Global Symbols
 <P><STRONG><a name="[db]"></a>TIM_Output_Channel1_Initialize</STRONG> (Thumb, 140 bytes, Stack size 20 bytes, n32g430_tim.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = TIM_Output_Channel1_Initialize &rArr; TIM_Output_Channel_N_Polarity_Set
 </UL>
-<BR>[Calls]<UL><LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Capture_Compare_Ch_N_Disable
-<LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Capture_Compare_Ch_N_Enable
-<LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Capture_Compare_Ch_Disable
-<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Capture_Compare_Ch_Enable
-<LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel_N_Polarity_Set
-<LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel_Polarity_Set
+<BR>[Calls]<UL><LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Capture_Compare_Ch_N_Disable
+<LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Capture_Compare_Ch_N_Enable
+<LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Capture_Compare_Ch_Disable
+<LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Capture_Compare_Ch_Enable
+<LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel_N_Polarity_Set
+<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel_Polarity_Set
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMx_PWM_Init
 </UL>
@@ -2840,12 +2854,12 @@ Global Symbols
 <P><STRONG><a name="[dc]"></a>TIM_Output_Channel2_Initialize</STRONG> (Thumb, 152 bytes, Stack size 20 bytes, n32g430_tim.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = TIM_Output_Channel2_Initialize &rArr; TIM_Output_Channel_N_Polarity_Set
 </UL>
-<BR>[Calls]<UL><LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Capture_Compare_Ch_N_Disable
-<LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Capture_Compare_Ch_N_Enable
-<LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Capture_Compare_Ch_Disable
-<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Capture_Compare_Ch_Enable
-<LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel_N_Polarity_Set
-<LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel_Polarity_Set
+<BR>[Calls]<UL><LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Capture_Compare_Ch_N_Disable
+<LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Capture_Compare_Ch_N_Enable
+<LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Capture_Compare_Ch_Disable
+<LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Capture_Compare_Ch_Enable
+<LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel_N_Polarity_Set
+<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel_Polarity_Set
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMx_PWM_Init
 </UL>
@@ -2853,12 +2867,12 @@ Global Symbols
 <P><STRONG><a name="[dd]"></a>TIM_Output_Channel3_Initialize</STRONG> (Thumb, 146 bytes, Stack size 20 bytes, n32g430_tim.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = TIM_Output_Channel3_Initialize &rArr; TIM_Output_Channel_N_Polarity_Set
 </UL>
-<BR>[Calls]<UL><LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Capture_Compare_Ch_N_Disable
-<LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Capture_Compare_Ch_N_Enable
-<LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Capture_Compare_Ch_Disable
-<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Capture_Compare_Ch_Enable
-<LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel_N_Polarity_Set
-<LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel_Polarity_Set
+<BR>[Calls]<UL><LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Capture_Compare_Ch_N_Disable
+<LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Capture_Compare_Ch_N_Enable
+<LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Capture_Compare_Ch_Disable
+<LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Capture_Compare_Ch_Enable
+<LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel_N_Polarity_Set
+<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel_Polarity_Set
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMx_PWM_Init
 </UL>
@@ -2866,26 +2880,26 @@ Global Symbols
 <P><STRONG><a name="[de]"></a>TIM_Output_Channel4_Initialize</STRONG> (Thumb, 166 bytes, Stack size 20 bytes, n32g430_tim.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = TIM_Output_Channel4_Initialize &rArr; TIM_Output_Channel_N_Polarity_Set
 </UL>
-<BR>[Calls]<UL><LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Capture_Compare_Ch_N_Disable
-<LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Capture_Compare_Ch_N_Enable
-<LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Capture_Compare_Ch_Disable
-<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Capture_Compare_Ch_Enable
-<LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel_N_Polarity_Set
-<LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel_Polarity_Set
+<BR>[Calls]<UL><LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Capture_Compare_Ch_N_Disable
+<LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Capture_Compare_Ch_N_Enable
+<LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Capture_Compare_Ch_Disable
+<LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Capture_Compare_Ch_Enable
+<LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel_N_Polarity_Set
+<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel_Polarity_Set
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMx_PWM_Init
 </UL>
 
-<P><STRONG><a name="[17a]"></a>TIM_Output_Channel5_Initialize</STRONG> (Thumb, 102 bytes, Stack size 20 bytes, n32g430_tim.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Capture_Compare_Ch_Disable
-<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Capture_Compare_Ch_Enable
-<LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel_Polarity_Set
+<P><STRONG><a name="[17b]"></a>TIM_Output_Channel5_Initialize</STRONG> (Thumb, 102 bytes, Stack size 20 bytes, n32g430_tim.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Capture_Compare_Ch_Disable
+<LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Capture_Compare_Ch_Enable
+<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel_Polarity_Set
 </UL>
 
-<P><STRONG><a name="[17b]"></a>TIM_Output_Channel6_Initialize</STRONG> (Thumb, 110 bytes, Stack size 20 bytes, n32g430_tim.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Capture_Compare_Ch_Disable
-<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Capture_Compare_Ch_Enable
-<LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel_Polarity_Set
+<P><STRONG><a name="[17c]"></a>TIM_Output_Channel6_Initialize</STRONG> (Thumb, 110 bytes, Stack size 20 bytes, n32g430_tim.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Capture_Compare_Ch_Disable
+<LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Capture_Compare_Ch_Enable
+<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Output_Channel_Polarity_Set
 </UL>
 
 <P><STRONG><a name="[e2]"></a>TIM_PWM_Output_Enable</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
@@ -2898,34 +2912,34 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMx_PWM_Init
 </UL>
 
-<P><STRONG><a name="[17d]"></a>TIM_Lock_Up_Break_Enable</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
+<P><STRONG><a name="[17e]"></a>TIM_Lock_Up_Break_Enable</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Break_And_Dead_Time_Set
 </UL>
 
-<P><STRONG><a name="[17e]"></a>TIM_Lock_Up_Break_Disable</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
+<P><STRONG><a name="[17f]"></a>TIM_Lock_Up_Break_Disable</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Break_And_Dead_Time_Set
 </UL>
 
-<P><STRONG><a name="[17f]"></a>TIM_Pvd_Break_Enable</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
+<P><STRONG><a name="[180]"></a>TIM_Pvd_Break_Enable</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Break_And_Dead_Time_Set
 </UL>
 
-<P><STRONG><a name="[180]"></a>TIM_Pvd_Break_Disable</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
+<P><STRONG><a name="[181]"></a>TIM_Pvd_Break_Disable</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Break_And_Dead_Time_Set
 </UL>
 
-<P><STRONG><a name="[17c]"></a>TIM_IOM_Comp_Break</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
+<P><STRONG><a name="[17d]"></a>TIM_IOM_Comp_Break</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, n32g430_tim.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Break_And_Dead_Time_Set
 </UL>
 
 <P><STRONG><a name="[e0]"></a>TIM_Break_And_Dead_Time_Set</STRONG> (Thumb, 96 bytes, Stack size 8 bytes, n32g430_tim.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = TIM_Break_And_Dead_Time_Set
 </UL>
-<BR>[Calls]<UL><LI><a href="#[17c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_IOM_Comp_Break
-<LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Pvd_Break_Disable
-<LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Pvd_Break_Enable
-<LI><a href="#[17e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Lock_Up_Break_Disable
-<LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Lock_Up_Break_Enable
+<BR>[Calls]<UL><LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_IOM_Comp_Break
+<LI><a href="#[181]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Pvd_Break_Disable
+<LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Pvd_Break_Enable
+<LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Lock_Up_Break_Disable
+<LI><a href="#[17e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Lock_Up_Break_Enable
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMx_PWM_Init
 </UL>
@@ -3006,83 +3020,83 @@ Global Symbols
 
 <P><STRONG><a name="[28b]"></a>TIM_Break_Filter_Disable</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, n32g430_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[181]"></a>USART_Reset</STRONG> (Thumb, 68 bytes, Stack size 8 bytes, n32g430_usart.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2_Peripheral_Reset
-<LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB1_Peripheral_Reset
+<P><STRONG><a name="[182]"></a>USART_Reset</STRONG> (Thumb, 68 bytes, Stack size 8 bytes, n32g430_usart.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2_Peripheral_Reset
+<LI><a href="#[158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB1_Peripheral_Reset
 </UL>
 
-<P><STRONG><a name="[187]"></a>USART_Hardware_Flow_Control_Config</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_usart.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Initializes
+<P><STRONG><a name="[188]"></a>USART_Hardware_Flow_Control_Config</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_usart.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Initializes
 </UL>
 
-<P><STRONG><a name="[186]"></a>USART_Mode_Config</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_usart.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Initializes
+<P><STRONG><a name="[187]"></a>USART_Mode_Config</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_usart.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Initializes
 </UL>
 
-<P><STRONG><a name="[185]"></a>USART_Parity_Config</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_usart.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Initializes
+<P><STRONG><a name="[186]"></a>USART_Parity_Config</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_usart.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Initializes
 </UL>
 
-<P><STRONG><a name="[184]"></a>USART_Stop_Bits_Config</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_usart.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Initializes
+<P><STRONG><a name="[185]"></a>USART_Stop_Bits_Config</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_usart.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Initializes
 </UL>
 
-<P><STRONG><a name="[183]"></a>USART_Word_Length_Config</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_usart.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Initializes
+<P><STRONG><a name="[184]"></a>USART_Word_Length_Config</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_usart.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Initializes
 </UL>
 
-<P><STRONG><a name="[182]"></a>USART_Baud_Rate_Config</STRONG> (Thumb, 114 bytes, Stack size 56 bytes, n32g430_usart.o(.text))
+<P><STRONG><a name="[183]"></a>USART_Baud_Rate_Config</STRONG> (Thumb, 114 bytes, Stack size 56 bytes, n32g430_usart.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 76<LI>Call Chain = USART_Baud_Rate_Config &rArr; RCC_Clocks_Frequencies_Value_Get
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_Clocks_Frequencies_Value_Get
 </UL>
-<BR>[Called By]<UL><LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Initializes
+<BR>[Called By]<UL><LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Initializes
 </UL>
 
-<P><STRONG><a name="[105]"></a>USART_Initializes</STRONG> (Thumb, 56 bytes, Stack size 16 bytes, n32g430_usart.o(.text))
+<P><STRONG><a name="[108]"></a>USART_Initializes</STRONG> (Thumb, 56 bytes, Stack size 16 bytes, n32g430_usart.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 92<LI>Call Chain = USART_Initializes &rArr; USART_Baud_Rate_Config &rArr; RCC_Clocks_Frequencies_Value_Get
 </UL>
-<BR>[Calls]<UL><LI><a href="#[182]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Baud_Rate_Config
-<LI><a href="#[183]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Word_Length_Config
-<LI><a href="#[184]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Stop_Bits_Config
-<LI><a href="#[185]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Parity_Config
-<LI><a href="#[186]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Mode_Config
-<LI><a href="#[187]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Hardware_Flow_Control_Config
+<BR>[Calls]<UL><LI><a href="#[183]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Baud_Rate_Config
+<LI><a href="#[184]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Word_Length_Config
+<LI><a href="#[185]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Stop_Bits_Config
+<LI><a href="#[186]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Parity_Config
+<LI><a href="#[187]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Mode_Config
+<LI><a href="#[188]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Hardware_Flow_Control_Config
 </UL>
 <BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Usart_DMA_Init
-<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;log_init
+<LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;log_init
 </UL>
 
 <P><STRONG><a name="[28c]"></a>USART_Structure_Initializes</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, n32g430_usart.o(.text), UNUSED)
 
-<P><STRONG><a name="[18c]"></a>USART_Last_Bit_Config</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_usart.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[188]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Clock_Initializes
+<P><STRONG><a name="[18d]"></a>USART_Last_Bit_Config</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_usart.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[189]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Clock_Initializes
 </UL>
 
-<P><STRONG><a name="[18b]"></a>USART_Phase_Config</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_usart.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[188]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Clock_Initializes
+<P><STRONG><a name="[18c]"></a>USART_Phase_Config</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_usart.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[189]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Clock_Initializes
 </UL>
 
-<P><STRONG><a name="[18a]"></a>USART_Polarity_Config</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_usart.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[188]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Clock_Initializes
+<P><STRONG><a name="[18b]"></a>USART_Polarity_Config</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_usart.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[189]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Clock_Initializes
 </UL>
 
-<P><STRONG><a name="[189]"></a>USART_Clock_Config</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_usart.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[188]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Clock_Initializes
+<P><STRONG><a name="[18a]"></a>USART_Clock_Config</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_usart.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[189]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Clock_Initializes
 </UL>
 
-<P><STRONG><a name="[188]"></a>USART_Clock_Initializes</STRONG> (Thumb, 40 bytes, Stack size 12 bytes, n32g430_usart.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[189]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Clock_Config
-<LI><a href="#[18a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Polarity_Config
-<LI><a href="#[18b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Phase_Config
-<LI><a href="#[18c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Last_Bit_Config
+<P><STRONG><a name="[189]"></a>USART_Clock_Initializes</STRONG> (Thumb, 40 bytes, Stack size 12 bytes, n32g430_usart.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[18a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Clock_Config
+<LI><a href="#[18b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Polarity_Config
+<LI><a href="#[18c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Phase_Config
+<LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Last_Bit_Config
 </UL>
 
 <P><STRONG><a name="[28d]"></a>USART_Clock_Structure_Initializes</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, n32g430_usart.o(.text), UNUSED)
 
-<P><STRONG><a name="[106]"></a>USART_Enable</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, n32g430_usart.o(.text))
+<P><STRONG><a name="[109]"></a>USART_Enable</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, n32g430_usart.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Usart_DMA_Init
-<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;log_init
+<LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;log_init
 </UL>
 
 <P><STRONG><a name="[28e]"></a>USART_Disable</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, n32g430_usart.o(.text), UNUSED)
@@ -3091,7 +3105,7 @@ Global Symbols
 
 <P><STRONG><a name="[290]"></a>USART_Interrput_Disable</STRONG> (Thumb, 54 bytes, Stack size 16 bytes, n32g430_usart.o(.text), UNUSED)
 
-<P><STRONG><a name="[10f]"></a>USART_DMA_Transfer_Enable</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, n32g430_usart.o(.text))
+<P><STRONG><a name="[112]"></a>USART_DMA_Transfer_Enable</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, n32g430_usart.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Usart_DMA_Init
 </UL>
 
@@ -3111,14 +3125,14 @@ Global Symbols
 
 <P><STRONG><a name="[298]"></a>USART_LIN_Disable</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, n32g430_usart.o(.text), UNUSED)
 
-<P><STRONG><a name="[108]"></a>USART_Data_Send</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, n32g430_usart.o(.text))
+<P><STRONG><a name="[10b]"></a>USART_Data_Send</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, n32g430_usart.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fputc
-<LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Usart_SendByte
+<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Usart_SendByte
 </UL>
 
 <P><STRONG><a name="[54]"></a>USART_Data_Receive</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, n32g430_usart.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART1_IRQHandler
-<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fgetc
+<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fgetc
 </UL>
 
 <P><STRONG><a name="[299]"></a>USART_Break_Frame_Send</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, n32g430_usart.o(.text), UNUSED)
@@ -3147,10 +3161,10 @@ Global Symbols
 
 <P><STRONG><a name="[52]"></a>USART_Flag_Status_Get</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g430_usart.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART1_IRQHandler
-<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fgetc
+<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fgetc
 <LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fputc
-<LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Usart_SendString
-<LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Usart_SendByte
+<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Usart_SendString
+<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Usart_SendByte
 </UL>
 
 <P><STRONG><a name="[53]"></a>USART_Flag_Clear</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, n32g430_usart.o(.text))
@@ -3165,7 +3179,7 @@ Global Symbols
 <P><STRONG><a name="[8f]"></a>__aeabi_ldivmod</STRONG> (Thumb, 98 bytes, Stack size 24 bytes, ldiv.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = __aeabi_ldivmod &rArr; __aeabi_uldivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
+<BR>[Calls]<UL><LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_st_biases
 </UL>
@@ -3173,15 +3187,15 @@ Global Symbols
 <P><STRONG><a name="[ba]"></a>__aeabi_memset</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, memseta.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_enable_lp_quat
 <LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_enable_6x_lp_quat
-<LI><a href="#[18f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_memset$wrapper
-<LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
+<LI><a href="#[190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_memset$wrapper
+<LI><a href="#[18f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 </UL>
 
 <P><STRONG><a name="[2a7]"></a>__aeabi_memset4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
 <P><STRONG><a name="[2a8]"></a>__aeabi_memset8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
-<P><STRONG><a name="[18e]"></a>__aeabi_memclr</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[18f]"></a>__aeabi_memclr</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
 </UL>
 
@@ -3189,7 +3203,7 @@ Global Symbols
 
 <P><STRONG><a name="[2aa]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
-<P><STRONG><a name="[18f]"></a>_memset$wrapper</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[190]"></a>_memset$wrapper</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, memseta.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
 </UL>
 
@@ -3202,37 +3216,37 @@ Global Symbols
 <P><STRONG><a name="[6f]"></a>__aeabi_dadd</STRONG> (Thumb, 322 bytes, Stack size 48 bytes, dadd.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
-<BR>[Calls]<UL><LI><a href="#[191]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_lasr
-<LI><a href="#[190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
-<LI><a href="#[193]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_round
-<LI><a href="#[192]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
+<BR>[Calls]<UL><LI><a href="#[192]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_lasr
+<LI><a href="#[191]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
+<LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_round
+<LI><a href="#[193]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Get_Temperature
-<LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
-<LI><a href="#[1a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_poly
-<LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_infnan2
-<LI><a href="#[19c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_infnan
-<LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan
-<LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
+<LI><a href="#[196]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
+<LI><a href="#[1a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_poly
+<LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_infnan2
+<LI><a href="#[19d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_infnan
+<LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan
+<LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_asin
 </UL>
 
-<P><STRONG><a name="[194]"></a>__aeabi_dsub</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, dadd.o(.text))
+<P><STRONG><a name="[195]"></a>__aeabi_dsub</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, dadd.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = __aeabi_dsub &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan
+<BR>[Called By]<UL><LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan2
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_asin
 </UL>
 
-<P><STRONG><a name="[195]"></a>__aeabi_drsub</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, dadd.o(.text))
+<P><STRONG><a name="[196]"></a>__aeabi_drsub</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, dadd.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = __aeabi_drsub &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan
+<BR>[Called By]<UL><LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan2
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_asin
 </UL>
@@ -3240,39 +3254,39 @@ Global Symbols
 <P><STRONG><a name="[ab]"></a>__aeabi_dmul</STRONG> (Thumb, 228 bytes, Stack size 48 bytes, dmul.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = __aeabi_dmul &rArr; _double_epilogue &rArr; _double_round
 </UL>
-<BR>[Calls]<UL><LI><a href="#[192]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
+<BR>[Calls]<UL><LI><a href="#[193]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_dmp_get_data
-<LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Turn
-<LI><a href="#[1a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_poly
-<LI><a href="#[1a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_underflow
-<LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan
+<LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Turn
+<LI><a href="#[1a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_poly
+<LI><a href="#[1a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_underflow
+<LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_asin
 </UL>
 
 <P><STRONG><a name="[6e]"></a>__aeabi_ddiv</STRONG> (Thumb, 222 bytes, Stack size 32 bytes, ddiv.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = __aeabi_ddiv &rArr; _double_round
 </UL>
-<BR>[Calls]<UL><LI><a href="#[193]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_round
+<BR>[Calls]<UL><LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_round
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Get_Temperature
-<LI><a href="#[19e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_invalid
-<LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan
+<LI><a href="#[19f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_invalid
+<LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan2
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_asin
 </UL>
 
 <P><STRONG><a name="[6d]"></a>__aeabi_i2d</STRONG> (Thumb, 34 bytes, Stack size 16 bytes, dflti.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[192]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
+<BR><BR>[Calls]<UL><LI><a href="#[193]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Get_Temperature
-<LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Turn
+<LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Turn
 </UL>
 
-<P><STRONG><a name="[103]"></a>__aeabi_d2iz</STRONG> (Thumb, 62 bytes, Stack size 16 bytes, dfixi.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[196]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
+<P><STRONG><a name="[106]"></a>__aeabi_d2iz</STRONG> (Thumb, 62 bytes, Stack size 16 bytes, dfixi.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[197]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
 </UL>
-<BR>[Called By]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Turn
+<BR>[Called By]<UL><LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Turn
 </UL>
 
 <P><STRONG><a name="[a9]"></a>__aeabi_f2d</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, f2d.o(.text))
@@ -3282,40 +3296,40 @@ Global Symbols
 <P><STRONG><a name="[70]"></a>__aeabi_d2f</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, d2f.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __aeabi_d2f
 </UL>
-<BR>[Calls]<UL><LI><a href="#[197]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_float_round
+<BR>[Calls]<UL><LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_float_round
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_dmp_get_data
 <LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Get_Temperature
 </UL>
 
-<P><STRONG><a name="[18d]"></a>__aeabi_uldivmod</STRONG> (Thumb, 98 bytes, Stack size 40 bytes, uldiv.o(.text))
+<P><STRONG><a name="[18e]"></a>__aeabi_uldivmod</STRONG> (Thumb, 98 bytes, Stack size 40 bytes, uldiv.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = __aeabi_uldivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[196]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
-<LI><a href="#[190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
+<BR>[Calls]<UL><LI><a href="#[197]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
+<LI><a href="#[191]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
 </UL>
-<BR>[Called By]<UL><LI><a href="#[19b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+<BR>[Called By]<UL><LI><a href="#[19c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ldivmod
 </UL>
 
-<P><STRONG><a name="[190]"></a>__aeabi_llsl</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, llshl.o(.text))
+<P><STRONG><a name="[191]"></a>__aeabi_llsl</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, llshl.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
-<LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
-<LI><a href="#[192]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
+<LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
+<LI><a href="#[193]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
 </UL>
 
 <P><STRONG><a name="[2ab]"></a>_ll_shift_l</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llshl.o(.text), UNUSED)
 
-<P><STRONG><a name="[196]"></a>__aeabi_llsr</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, llushr.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2iz
-<LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
-<LI><a href="#[199]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dsqrt
-<LI><a href="#[192]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
+<P><STRONG><a name="[197]"></a>__aeabi_llsr</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, llushr.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2iz
+<LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
+<LI><a href="#[19a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dsqrt
+<LI><a href="#[193]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
 </UL>
 
 <P><STRONG><a name="[2ac]"></a>_ll_ushift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llushr.o(.text), UNUSED)
 
-<P><STRONG><a name="[191]"></a>__aeabi_lasr</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, llsshr.o(.text))
+<P><STRONG><a name="[192]"></a>__aeabi_lasr</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, llsshr.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 </UL>
 
@@ -3323,27 +3337,27 @@ Global Symbols
 
 <P><STRONG><a name="[2ae]"></a>__I$use$fp</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, iusefp.o(.text), UNUSED)
 
-<P><STRONG><a name="[197]"></a>_float_round</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, fepilogue.o(.text))
+<P><STRONG><a name="[198]"></a>_float_round</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, fepilogue.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2f
 </UL>
 
 <P><STRONG><a name="[2af]"></a>_float_epilogue</STRONG> (Thumb, 92 bytes, Stack size 4 bytes, fepilogue.o(.text), UNUSED)
 
-<P><STRONG><a name="[193]"></a>_double_round</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, depilogue.o(.text))
+<P><STRONG><a name="[194]"></a>_double_round</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, depilogue.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = _double_round
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
 <LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
-<LI><a href="#[199]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dsqrt
-<LI><a href="#[192]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
+<LI><a href="#[19a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dsqrt
+<LI><a href="#[193]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
 </UL>
 
-<P><STRONG><a name="[192]"></a>_double_epilogue</STRONG> (Thumb, 156 bytes, Stack size 32 bytes, depilogue.o(.text))
+<P><STRONG><a name="[193]"></a>_double_epilogue</STRONG> (Thumb, 156 bytes, Stack size 32 bytes, depilogue.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = _double_epilogue &rArr; _double_round
 </UL>
-<BR>[Calls]<UL><LI><a href="#[196]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
-<LI><a href="#[190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
-<LI><a href="#[193]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_round
+<BR>[Calls]<UL><LI><a href="#[197]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
+<LI><a href="#[191]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
+<LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_round
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2d
 <LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
@@ -3351,24 +3365,24 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[45]"></a>__scatterload</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, init.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main_after_scatterload
+<BR><BR>[Calls]<UL><LI><a href="#[199]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main_after_scatterload
 </UL>
 <BR>[Called By]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
 </UL>
 
 <P><STRONG><a name="[2b0]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
 
-<P><STRONG><a name="[199]"></a>_dsqrt</STRONG> (Thumb, 162 bytes, Stack size 32 bytes, dsqrt.o(.text))
+<P><STRONG><a name="[19a]"></a>_dsqrt</STRONG> (Thumb, 162 bytes, Stack size 32 bytes, dsqrt.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = _dsqrt &rArr; _double_round
 </UL>
-<BR>[Calls]<UL><LI><a href="#[196]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
-<LI><a href="#[193]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_round
+<BR>[Calls]<UL><LI><a href="#[197]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
+<LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_round
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sqrt
+<BR>[Called By]<UL><LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sqrt
 </UL>
 
-<P><STRONG><a name="[19a]"></a>__0printf$8</STRONG> (Thumb, 22 bytes, Stack size 24 bytes, printf8.o(i.__0printf$8), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[19b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+<P><STRONG><a name="[19b]"></a>__0printf$8</STRONG> (Thumb, 22 bytes, Stack size 24 bytes, printf8.o(i.__0printf$8), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[19c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
 <P><STRONG><a name="[2b1]"></a>__1printf$8</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf8.o(i.__0printf$8), UNUSED)
@@ -3380,10 +3394,10 @@ Global Symbols
 <LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_reg_dump
 </UL>
 
-<P><STRONG><a name="[19f]"></a>__ARM_fpclassify</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, fpclassify.o(i.__ARM_fpclassify))
+<P><STRONG><a name="[1a0]"></a>__ARM_fpclassify</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, fpclassify.o(i.__ARM_fpclassify))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __ARM_fpclassify
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan
+<BR>[Called By]<UL><LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_asin
 </UL>
 
@@ -3392,71 +3406,71 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
 <LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
-<LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
+<LI><a href="#[196]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
-<LI><a href="#[1a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sqrt
-<LI><a href="#[1a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_poly
-<LI><a href="#[19f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_fpclassify
-<LI><a href="#[1a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fabs
-<LI><a href="#[1a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_underflow
-<LI><a href="#[19e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_invalid
-<LI><a href="#[19c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_infnan
-<LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
-<LI><a href="#[19d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__set_errno
+<LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sqrt
+<LI><a href="#[1a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_poly
+<LI><a href="#[1a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_fpclassify
+<LI><a href="#[1a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fabs
+<LI><a href="#[1a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_underflow
+<LI><a href="#[19f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_invalid
+<LI><a href="#[19d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_infnan
+<LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
+<LI><a href="#[19e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__set_errno
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_dmp_get_data
 </UL>
 
-<P><STRONG><a name="[1a4]"></a>__hardfp_atan</STRONG> (Thumb, 622 bytes, Stack size 48 bytes, atan.o(i.__hardfp_atan))
+<P><STRONG><a name="[1a5]"></a>__hardfp_atan</STRONG> (Thumb, 622 bytes, Stack size 48 bytes, atan.o(i.__hardfp_atan))
 <BR><BR>[Stack]<UL><LI>Max Depth = 160<LI>Call Chain = __hardfp_atan &rArr; __kernel_poly &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
 <LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
-<LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
+<LI><a href="#[196]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
-<LI><a href="#[1a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_poly
-<LI><a href="#[19f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_fpclassify
-<LI><a href="#[1a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fabs
-<LI><a href="#[1a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_underflow
-<LI><a href="#[19c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_infnan
-<LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
+<LI><a href="#[1a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_poly
+<LI><a href="#[1a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_fpclassify
+<LI><a href="#[1a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fabs
+<LI><a href="#[1a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_underflow
+<LI><a href="#[19d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_infnan
+<LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atan
+<BR>[Called By]<UL><LI><a href="#[1a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atan
 </UL>
 
 <P><STRONG><a name="[ac]"></a>__hardfp_atan2</STRONG> (Thumb, 432 bytes, Stack size 48 bytes, atan2.o(i.__hardfp_atan2))
 <BR><BR>[Stack]<UL><LI>Max Depth = 216<LI>Call Chain = __hardfp_atan2 &rArr; atan &rArr; __hardfp_atan &rArr; __kernel_poly &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
-<LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
-<LI><a href="#[1a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fabs
-<LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_infnan2
-<LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atan
-<LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
+<LI><a href="#[196]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
+<LI><a href="#[1a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fabs
+<LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_infnan2
+<LI><a href="#[1a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atan
+<LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_dmp_get_data
 </UL>
 
-<P><STRONG><a name="[1a1]"></a>__kernel_poly</STRONG> (Thumb, 248 bytes, Stack size 24 bytes, poly.o(i.__kernel_poly))
+<P><STRONG><a name="[1a2]"></a>__kernel_poly</STRONG> (Thumb, 248 bytes, Stack size 24 bytes, poly.o(i.__kernel_poly))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = __kernel_poly &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan
+<BR>[Called By]<UL><LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_asin
 </UL>
 
-<P><STRONG><a name="[19c]"></a>__mathlib_dbl_infnan</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, dunder.o(i.__mathlib_dbl_infnan))
+<P><STRONG><a name="[19d]"></a>__mathlib_dbl_infnan</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, dunder.o(i.__mathlib_dbl_infnan))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = __mathlib_dbl_infnan &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan
+<BR>[Called By]<UL><LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_asin
 </UL>
 
-<P><STRONG><a name="[1a5]"></a>__mathlib_dbl_infnan2</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, dunder.o(i.__mathlib_dbl_infnan2))
+<P><STRONG><a name="[1a6]"></a>__mathlib_dbl_infnan2</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, dunder.o(i.__mathlib_dbl_infnan2))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = __mathlib_dbl_infnan2 &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
@@ -3464,7 +3478,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan2
 </UL>
 
-<P><STRONG><a name="[19e]"></a>__mathlib_dbl_invalid</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, dunder.o(i.__mathlib_dbl_invalid))
+<P><STRONG><a name="[19f]"></a>__mathlib_dbl_invalid</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, dunder.o(i.__mathlib_dbl_invalid))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = __mathlib_dbl_invalid &rArr; __aeabi_ddiv &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
@@ -3472,12 +3486,12 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_asin
 </UL>
 
-<P><STRONG><a name="[1a0]"></a>__mathlib_dbl_underflow</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, dunder.o(i.__mathlib_dbl_underflow))
+<P><STRONG><a name="[1a1]"></a>__mathlib_dbl_underflow</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, dunder.o(i.__mathlib_dbl_underflow))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = __mathlib_dbl_underflow &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan
+<BR>[Called By]<UL><LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_asin
 </UL>
 
@@ -3487,32 +3501,32 @@ Global Symbols
 
 <P><STRONG><a name="[2b4]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 
-<P><STRONG><a name="[19d]"></a>__set_errno</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, errno.o(i.__set_errno))
-<BR><BR>[Called By]<UL><LI><a href="#[1a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sqrt
+<P><STRONG><a name="[19e]"></a>__set_errno</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, errno.o(i.__set_errno))
+<BR><BR>[Called By]<UL><LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sqrt
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_asin
 </UL>
 
-<P><STRONG><a name="[1a6]"></a>atan</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, atan.o(i.atan))
+<P><STRONG><a name="[1a7]"></a>atan</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, atan.o(i.atan))
 <BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = atan &rArr; __hardfp_atan &rArr; __kernel_poly &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan
+<BR>[Calls]<UL><LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan2
 </UL>
 
-<P><STRONG><a name="[1a2]"></a>fabs</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, fabs.o(i.fabs))
+<P><STRONG><a name="[1a3]"></a>fabs</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, fabs.o(i.fabs))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = fabs
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan
+<BR>[Called By]<UL><LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan2
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_asin
 </UL>
 
-<P><STRONG><a name="[1a3]"></a>sqrt</STRONG> (Thumb, 110 bytes, Stack size 32 bytes, sqrt.o(i.sqrt))
+<P><STRONG><a name="[1a4]"></a>sqrt</STRONG> (Thumb, 110 bytes, Stack size 32 bytes, sqrt.o(i.sqrt))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = sqrt &rArr; _dsqrt &rArr; _double_round
 </UL>
-<BR>[Calls]<UL><LI><a href="#[199]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dsqrt
-<LI><a href="#[19d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__set_errno
+<BR>[Calls]<UL><LI><a href="#[19a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dsqrt
+<LI><a href="#[19e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__set_errno
 </UL>
 <BR>[Called By]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_asin
 </UL>
@@ -3588,27 +3602,27 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmp_read_fifo
 </UL>
 
-<P><STRONG><a name="[116]"></a>DBG_SysTick_Config</STRONG> (Thumb, 86 bytes, Stack size 12 bytes, bsp_delay.o(.text))
+<P><STRONG><a name="[117]"></a>DBG_SysTick_Config</STRONG> (Thumb, 86 bytes, Stack size 12 bytes, bsp_delay.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = DBG_SysTick_Config
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Delay_Ms
 <LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Delay_Us
 </UL>
 
-<P><STRONG><a name="[19b]"></a>_printf_core</STRONG> (Thumb, 996 bytes, Stack size 104 bytes, printf8.o(i._printf_core), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
-<LI><a href="#[1a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_pre_padding
-<LI><a href="#[1a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_post_padding
+<P><STRONG><a name="[19c]"></a>_printf_core</STRONG> (Thumb, 996 bytes, Stack size 104 bytes, printf8.o(i._printf_core), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
+<LI><a href="#[1a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_pre_padding
+<LI><a href="#[1a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_post_padding
 </UL>
-<BR>[Called By]<UL><LI><a href="#[19a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0printf$8
-</UL>
-
-<P><STRONG><a name="[1a8]"></a>_printf_post_padding</STRONG> (Thumb, 36 bytes, Stack size 24 bytes, printf8.o(i._printf_post_padding), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[19b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+<BR>[Called By]<UL><LI><a href="#[19b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0printf$8
 </UL>
 
-<P><STRONG><a name="[1a7]"></a>_printf_pre_padding</STRONG> (Thumb, 46 bytes, Stack size 24 bytes, printf8.o(i._printf_pre_padding), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[19b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+<P><STRONG><a name="[1a9]"></a>_printf_post_padding</STRONG> (Thumb, 36 bytes, Stack size 24 bytes, printf8.o(i._printf_post_padding), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[19c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+</UL>
+
+<P><STRONG><a name="[1a8]"></a>_printf_pre_padding</STRONG> (Thumb, 46 bytes, Stack size 24 bytes, printf8.o(i._printf_pre_padding), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[19c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 <P>
 <H3>
