@@ -6,7 +6,7 @@
 #define countof(a) (sizeof(a) / sizeof(*(a)))	//数组内存大小/第一个数据内存大小 = 数据个数
 	
 #define TxBufferSize1 32	//发送数据大小
-#define TxBufferSize2 4		//接收数据大小
+#define TxBufferSize2 2		//接收数据大小
 
 #define USARTy                  USART1
 #define USARTy_CLK              RCC_APB2_PERIPH_USART1

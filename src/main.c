@@ -73,13 +73,17 @@ int main(void)
 	{
 		//Load(Channel1Pulse, 0);
 		
-//		if(DMA_Flag_Status_Get(DMA,USARTy_Rx_DMA_FLAG) != RESET)
-//		{
-//			DMA_Flag_Status_Clear(DMA, USARTy_Rx_DMA_FLAG);
-//			
-//			FLAG ^= 1;
-//		}
-		
+		if(DMA_Flag_Status_Get(DMA,USARTy_Rx_DMA_FLAG) != RESET)
+		{
+			DMA_Flag_Status_Clear(DMA, USARTy_Rx_DMA_FLAG);
+			
+			if(RxBuffer1[0] == 0x5a)
+			{
+				if(RxBuffer1[1] == 0x01) FLAG = 1;
+				if(RxBuffer1[1] == 0x02) FLAG = 0;
+			}
+		}
+		//usart1_report_imu(aacx,aacy,aacz,gyrox,gyroy,gyroz,(int)(Roll*100),(int)(Pitch*100),(int)(Yaw*10));
 		num = 5000000;
 		while(num--);
 	}

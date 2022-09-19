@@ -21,7 +21,7 @@ void Usart_DMA_Init(void)
     DMA_Configuration();				//配置DMA
 
     /* USARTy and USARTz configuration */
-    USART_InitStructure.BaudRate            = 115200;			//波特率
+    USART_InitStructure.BaudRate            = 500000;			//波特率
     USART_InitStructure.WordLength          = USART_WL_8B;		//数据长度
     USART_InitStructure.StopBits            = USART_STPB_1;		//1个停止位
     USART_InitStructure.Parity              = USART_PE_NO;		//无校验码
