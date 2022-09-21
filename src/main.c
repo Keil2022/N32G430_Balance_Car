@@ -34,6 +34,8 @@
 
 #include "main.h"
 
+RCC_ClocksType RCC_ClockFreq;
+
 extern uint16_t Channel1Pulse;
 extern int Encoder_Left,Encoder_Right;	//编码器数据（速度）
 extern uint8_t NbrOfDataToRead;
@@ -48,6 +50,8 @@ u32 num = 65535;
 /* 主函数 */
 int main(void)
 {
+	RCC_Clocks_Frequencies_Value_Get(&RCC_ClockFreq);
+	
 	//ESP12F_IO0_Init();	//硬件已做修改
 	ADC_Configuration();
 	
