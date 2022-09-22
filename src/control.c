@@ -12,11 +12,11 @@ float Med_Angle = 0;	//机械中值。---在这里修改你的机械中值即可。
 float Target_Speed = 0;	//期望速度。---二次开发接口，用于控制小车前进后退及其速度。
 
 float 
-	Vertical_Kp = -300,//直立环KP、KD
+	Vertical_Kp = -200,//直立环KP、KD
 	Vertical_Kd = -1;
 float 
-	Velocity_Kp = -0.1,//速度环KP、KI
-	Velocity_Ki = -0.0005;
+	Velocity_Kp = -0.3,//速度环KP、KI
+	Velocity_Ki = -0.0015;
 
 int Vertical_out,Velocity_out,Turn_out;//直立环&速度环&转向环 的输出变量
 
@@ -53,18 +53,17 @@ void EXTI9_5_IRQHandler(void)
 				//DMA_Restart(TxBufferSize1);
 			}
 			
-//			//【2】将数据压入闭环控制中，计算出控制输出量。
+			//【2】将数据压入闭环控制中，计算出控制输出量。
+			Velocity_out = Velocity(Target_Speed,Encoder_Left,Encoder_Right);	//速度环
+			Vertical_out = Vertical(Velocity_out+Med_Angle,Pitch,gyroy);		//直立环
+			Turn_out = Turn(gyroz);												//转向环
+			PWM_out = Vertical_out;												//最终输出
+			
+//			//2.将数据压入闭环控制中，计算出控制输出量。
+//			Vertical_out = Vertical(Med_Angle,Pitch,gyroy);						//直立环
 //			Velocity_out = Velocity(Target_Speed,Encoder_Left,Encoder_Right);	//速度环
-//			Vertical_out = Vertical(Velocity_out+Med_Angle,Pitch,gyroy);		//直立环
 //			//Turn_out = Turn(gyroz);											//转向环
-//			PWM_out = Vertical_out;//最终输出
-			
-			//2.将数据压入闭环控制中，计算出控制输出量。
-			Vertical_out = Vertical(Med_Angle,Pitch,gyroy);						//直立环
-			Velocity_out = Velocity(Target_Speed,Encoder_Left,Encoder_Right);			//速度环
-			//Turn_out = Turn(gyroz);										//转向环
-			
-			PWM_out=Vertical_out-Vertical_Kp*Velocity_out;//最终输出
+//			PWM_out=Vertical_out-Vertical_Kp*Velocity_out;						//最终输出
 			
 			//【3】把控制输出量加载到电机上，完成最终的的控制。
 			MOTO1 = PWM_out-Turn_out;	//左电机
@@ -72,7 +71,7 @@ void EXTI9_5_IRQHandler(void)
 			Limit(&MOTO1,&MOTO2);	 	//PWM限幅			
 			Load(MOTO1,MOTO2);		 	//加载到电机上。
 			
-//			Stop(&Med_Angle,&Pitch);
+			Stop(&Med_Angle,&Pitch);
 			//LED_Off;
 		}
 	}
@@ -102,6 +101,7 @@ int Vertical(float Med,float Angle,float gyro_Y)
 int Velocity(int Target,int encoder_left,int encoder_right)
 {
 	static int Encoder_S,EnC_Err_Lowout_last,PWM_out,Encoder_Err,EnC_Err_Lowout;
+	static int Encoder_S_Max = 15000;
 	float a=0.7;
 	
 	//1.计算速度偏差
@@ -113,7 +113,7 @@ int Velocity(int Target,int encoder_left,int encoder_right)
 	//3.对速度偏差积分，积分出位移
 	Encoder_S+=EnC_Err_Lowout;
 	//4.积分限幅
-	Encoder_S=Encoder_S>10000?10000:(Encoder_S<(-10000)?(-10000):Encoder_S);
+	Encoder_S=Encoder_S>Encoder_S_Max?Encoder_S_Max:(Encoder_S<(-Encoder_S_Max)?(-Encoder_S_Max):Encoder_S);
 	
 	//5.速度环控制输出计算
 	PWM_out=Velocity_Kp*EnC_Err_Lowout+Velocity_Ki*Encoder_S;
@@ -129,7 +129,7 @@ int Turn(int gyro_Z)
 {
 	int PWM_out;
 	
-	PWM_out = (-0.6)*gyro_Z;
+	PWM_out = (0.6)*gyro_Z;
 	return PWM_out;
 }
 

@@ -1,7 +1,7 @@
 #include "n32g430.h"
 #include "motor.h"
 
-char PWM_Zero = 0;
+int PWM_Zero = 0;
 
 /*ÏÞ·ùº¯Êý*/
 void Limit(int *motoA,int *motoB)

@@ -44,8 +44,19 @@ extern float Pitch,Roll,Yaw;			//角度
 extern short gyrox,gyroy,gyroz;			//陀螺仪--角速度
 extern short aacx,aacy,aacz;			//加速度
 
+extern uint8_t RxBuffer1[TxBufferSize2];
+
+extern float 
+	Vertical_Kp,	//直立环KP、KD
+	Vertical_Kd;
+extern float 
+	Velocity_Kp,	//速度环KP、KI
+	Velocity_Ki;
+
 u8 FLAG;
 u32 num = 65535;
+
+u8 KP, KD, V_KP, V_KI;
 
 /* 主函数 */
 int main(void)
@@ -83,13 +94,22 @@ int main(void)
 			
 			if(RxBuffer1[0] == 0x5a)
 			{
-				if(RxBuffer1[1] == 0x01) FLAG = 1;
-				if(RxBuffer1[1] == 0x02) FLAG = 0;
+//				Vertical_Kp = -(float)( RxBuffer1[1]<<8 | RxBuffer1[2] );
+//				Vertical_Kd = -(float)(RxBuffer1[3]);
+//				Velocity_Kp = -( (float)(RxBuffer1[4]) )/10;
+//				Velocity_Ki = Velocity_Kp/200;
+				
+				Vertical_Kp = -(float)( (RxBuffer1[1]>>4)*1000 + (RxBuffer1[1]&0x0f)*100 + (RxBuffer1[2]>>4)*10 + (RxBuffer1[2]&0x0f) );
+				Vertical_Kd = -(float)( (RxBuffer1[3]>>4)*10 + (RxBuffer1[3]&0x0f) );
+				Velocity_Kp = -( (float)( (RxBuffer1[4]>>4)*10 + (RxBuffer1[4]&0x0f) ) )/10;
+				Velocity_Ki = Velocity_Kp/200;
+			}
+			else if(RxBuffer1[0] == 0x5e)
+			{
+				
 			}
 		}
 		//usart1_report_imu(aacx,aacy,aacz,gyrox,gyroy,gyroz,(int)(Roll*100),(int)(Pitch*100),(int)(Yaw*10));
-		num = 5000000;
-		while(num--);
 	}
 }
 
