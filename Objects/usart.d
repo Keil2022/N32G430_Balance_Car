@@ -51,3 +51,5 @@
 .\objects\usart.o: .\inc\encoder.h
 .\objects\usart.o: .\inc\motor.h
 .\objects\usart.o: .\inc\usart.h
+.\objects\usart.o: .\inc\ultr.h
+.\objects\usart.o: .\inc\main.h

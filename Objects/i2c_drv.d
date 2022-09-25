@@ -51,4 +51,5 @@
 .\objects\i2c_drv.o: .\inc\motor.h
 .\objects\i2c_drv.o: .\inc\usart.h
 .\objects\i2c_drv.o: .\inc\main.h
+.\objects\i2c_drv.o: .\inc\ultr.h
 .\objects\i2c_drv.o: .\inc\i2c_drv.h

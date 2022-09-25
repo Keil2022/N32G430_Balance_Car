@@ -20,6 +20,7 @@
 ".\objects\timer_common.o"
 ".\objects\motor.o"
 ".\objects\control.o"
+".\objects\ultr.o"
 ".\objects\log.o"
 ".\objects\usart.o"
 ".\objects\bsp_delay.o"

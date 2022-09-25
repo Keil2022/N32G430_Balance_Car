@@ -52,3 +52,5 @@
 .\objects\control.o: .\inc\key.h
 .\objects\control.o: .\inc\adc.h
 .\objects\control.o: .\inc\usart.h
+.\objects\control.o: .\inc\ultr.h
+.\objects\control.o: .\inc\main.h

@@ -52,3 +52,5 @@
 .\objects\n32g430_it.o: .\inc\encoder.h
 .\objects\n32g430_it.o: .\inc\motor.h
 .\objects\n32g430_it.o: .\inc\usart.h
+.\objects\n32g430_it.o: .\inc\ultr.h
+.\objects\n32g430_it.o: .\inc\main.h

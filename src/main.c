@@ -44,7 +44,7 @@ extern float Pitch,Roll,Yaw;			//角度
 extern short gyrox,gyroy,gyroz;			//陀螺仪--角速度
 extern short aacx,aacy,aacz;			//加速度
 
-extern uint8_t RxBuffer1[TxBufferSize2];
+extern uint8_t RxBuffer1[TxBufferSize2];	//数据接收缓存
 
 extern float 
 	Vertical_Kp,	//直立环KP、KD
@@ -53,10 +53,9 @@ extern float
 	Velocity_Kp,	//速度环KP、KI
 	Velocity_Ki;
 
-u8 FLAG;
-u32 num = 65535;
+extern float Target_Speed;	//期望速度
 
-u8 KP, KD, V_KP, V_KI;
+int Speed_Coeff; //速度系数
 
 /* 主函数 */
 int main(void)
@@ -83,7 +82,9 @@ int main(void)
 	EXTI_Init(KEY_INPUT_PORT, KEY_INPUT_PIN);
 	
 	Usart_DMA_Init();
-		
+	
+	ULTR_Init();	
+	
 	while(1)
 	{
 		//Load(Channel1Pulse, 0);
@@ -106,9 +107,14 @@ int main(void)
 			}
 			else if(RxBuffer1[0] == 0x5e)
 			{
+				if(RxBuffer1[3] == 0)	Speed_Coeff = -1;
+				else 					Speed_Coeff = 1;
 				
+				Target_Speed = Speed_Coeff * ( (RxBuffer1[4]>>4)*10 + (RxBuffer1[4]&0x0f) );
 			}
 		}
+		
+		if(ULTR_Status && Speed_Coeff) Target_Speed = 0;
 		//usart1_report_imu(aacx,aacy,aacz,gyrox,gyroy,gyroz,(int)(Roll*100),(int)(Pitch*100),(int)(Yaw*10));
 	}
 }

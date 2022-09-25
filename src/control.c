@@ -12,11 +12,11 @@ float Med_Angle = 0;	//机械中值。---在这里修改你的机械中值即可。
 float Target_Speed = 0;	//期望速度。---二次开发接口，用于控制小车前进后退及其速度。
 
 float 
-	Vertical_Kp = -200,//直立环KP、KD
+	Vertical_Kp = -450,//直立环KP、KD
 	Vertical_Kd = -1;
 float 
-	Velocity_Kp = -0.3,//速度环KP、KI
-	Velocity_Ki = -0.0015;
+	Velocity_Kp = -0.1,//速度环KP、KI
+	Velocity_Ki = -0.0005;
 
 int Vertical_out,Velocity_out,Turn_out;//直立环&速度环&转向环 的输出变量
 

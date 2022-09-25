@@ -3,6 +3,8 @@
 
 int PWM_Zero = 0;
 
+extern u16 ADC_Value;
+
 /*限幅函数*/
 void Limit(int *motoA,int *motoB)
 {
@@ -39,7 +41,7 @@ void Load(int moto1,int moto2)//moto1=-200：反转200个脉冲
 
 void Stop(float *Med_Jiaodu,float *Jiaodu)
 {
-	if(GFP_abs(*Jiaodu-*Med_Jiaodu)>20)	Load(PWM_Zero,PWM_Zero);
+	if(GFP_abs(*Jiaodu-*Med_Jiaodu)>30 || ADC_Value >= 2500)	Load(PWM_Zero,PWM_Zero);
 }
 
 

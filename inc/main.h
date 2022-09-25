@@ -60,6 +60,7 @@ extern "C" {
 #include "encoder.h"
 #include "motor.h"
 #include "usart.h"
+#include "ultr.h"
 
 #ifdef __cplusplus
 }

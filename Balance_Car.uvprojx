@@ -497,6 +497,11 @@
               <FileType>1</FileType>
               <FilePath>.\src\control.c</FilePath>
             </File>
+            <File>
+              <FileName>ultr.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\ultr.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

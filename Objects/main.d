@@ -51,3 +51,4 @@
 .\objects\main.o: .\inc\motor.h
 .\objects\main.o: .\inc\usart.h
 .\objects\main.o: .\inc\main.h
+.\objects\main.o: .\inc\ultr.h
